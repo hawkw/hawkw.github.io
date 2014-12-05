@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+  Main template for http://hawkw.github.io
+  Based on the Jekyll default template.
+-->
+<html>
+  <head>
+    <meta name="viewport" content="width=720, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div class="site">
+
+      <div class="top-menu">
+        <a class="extra" href="/">main</a>
+        <a class="extra" href="resume.pdf">r&eacute;sum&eacute;</a>
+        <a class="extra" href="https://github.com/hawkw/">github</a>
+        <a class="extra" href="https://keybase.io/hawk">public key</a>
+      </div>
+      {% if page.pic %}
+        <div class="picheader">
+        {% if page.piclink %}
+          <a href="{{ page.piclink }}">
+        {% endif %}
+        {% if page.picalt %}
+          <img class="titleimage" src="{{ page.pic }}" alt="{{ page.picalt }}">
+        {% else %}
+          <img class="titleimage" src="{{ page.pic }}">
+        {% endif %}
+        {% if page.piclink %}
+          </a>
+        {% endif %}
+          <div class="halftitle">
+          <h1 class="halftitle">
+      {% else %}
+        <div class="textheader">
+          <h1 class="title">
+      {% endif %}
+      {% if page.bigtext %}
+        {{ page.bigtext }}
+      {% else %}
+        {{ page.title }}
+      {% endif %}
+          </h1>
+      {% if page.pic %}
+          </div>
+      {% endif %}
+        </div>
+      <!-- begin subtemplate -->
+      {{ content }}
+      <!-- end subtemplate -->
+
+      <div class="footer">
+        <div class="contact-left">
+          <p>
+            Hawk Weisman<br />
+            Meadville, PA
+          </p>
+        </div>
+        <div class="contact-right">
+          <p>
+            hawk.weisman <small>AT</small> gmail.com<br />
+            <a class="extra" href="https://github.com/hawkw">github.com/hawkw</a>
+          </p>
+        </div>
+        <!--
+        <p class="navigation">
+          <a href="#" class="extra">&mdash;&nbsp;&nbsp;top&nbsp;&nbsp;&mdash;</a>
+        </p>
+        -->
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+/*** common ***/
+
+body {
+  background-color: #FFF;
+  font: 13.34px "Helvetica Neue", "Helvetica", serif;
+  font-size: small;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Helvetica", serif;
+  line-height: 1;
+  margin-top: .8em;
+  margin-bottom: .4em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+}
+
+h1.title, h1.halftitle {
+  font-weight: 900;
+}
+
+h1.title {
+  text-align: center;
+  margin: 0 auto;
+}
+
+div.picheader, div.textheader {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+div.halftitle {
+  height: 124px;
+  width: 430px;
+  float: right;
+  margin: auto;
+}
+
+h1.halftitle {
+  display: inline-block;
+  float: right;
+  width: auto;
+  height: auto;
+  margin: auto 0;
+  text-align: right;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: .6em;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+  padding-left: 15px;
+  margin-bottom: .6em;
+}
+
+h4 {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  padding-left: 20px;
+  margin-top: 1em;
+  margin-bottom: .6em;
+}
+
+.content p {
+  clear: both;
+  margin: 1em 0;
+  text-align: justify;
+  line-height: 2;
+}
+
+a         { color: #479; }
+a:hover   { color: #000; }
+a:visited { color: #696969; }
+
+img.titleimage {
+  float: left;
+  border:2px solid black;
+  border-radius:8px;
+}
+
+div.highlight {
+  border:5px solid #002B36;
+  border-radius:10px;
+  overflow: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.3em;
+}
+
+div.clear {
+  clear: both;
+}
+
+div.content {
+  clear: both;
+}
+
+/*** site ***/
+
+.site {
+  font-size: 115%;
+  width: 580px;
+  margin: 2em auto;
+}
+
+div.top-menu, div.footer {
+  height: auto;
+  width: 100%;
+  display: inline-block;
+  clear: both;
+}
+
+div.top-menu {
+  background-color: #eee;
+  border: 2px solid #eee;
+ }
+
+.top-menu a {
+   font-weight: bold;
+   text-decoration: none;
+   text-transform: uppercase;
+    border: 2px solid #eee;
+}
+.top-menu a:hover {
+  background-color: white;
+  border: 2px solid white;
+}
+
+div.above-post, div.below-post {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  float: left;
+}
+
+div.above-post {
+  margin-bottom: .7em;
+}
+
+div.below-post {
+  margin-top: .7em;
+}
+
+.above-post .back, .below-post .back {
+  float:left;
+}
+
+.above-post .meta, .below-post .meta {
+  color: #000;
+  padding: 2px;
+  width: 75%;
+}
+
+.above-post .meta {
+  padding-top: .4em;
+  float: right;
+  text-align: right;
+}
+
+.below-post .meta {
+  color: #aaa;
+  padding-top: 2em;
+  float: left;
+  text-align: left;
+}
+
+.below-post .author {
+  padding-above: -800px;
+  font-size: 120%;
+  width: auto;
+  height: auto;
+  float: right;
+  text-align: right;
+  color: #000;
+}
+
+div.footer {
+  font-size: 80%;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  color: #666;
+  border-top: 4px solid #eee;
+  margin: 2.5em auto 1em;
+  padding-top: 1em;
+  line-height: 1.5;
+}
+
+.footer .contact-left, .footer .contact-right {
+  width: 49%;
+}
+
+.footer .contact-left {
+  text-align: right;
+  float: left;
+  margin-right: 1%;
+}
+
+.footer .contact-right {
+  text-align: left;
+  float: right;
+  margin-left: 1%;
+}
+
+.title a, .halftitle a {
+  color: #a00;
+}
+
+.title a:hover, .halftitle a:hover {
+  color: #000;
+}
+
+a.extra {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.top-menu a.extra {
+  margin-left: 1em;
+}
+
+.contact-left a.extra, .contact-right a.extra, .below-post a.extra {
+  color: #8085C1;
+}
+
+a.extra:hover {
+  color: #000;
+}
+
+p.navigation {
+  clear: both;
+  text-align: center;
+  width: 100%;
+  padding-top: 2em;
+  font-size: 80%;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 1;
+}
+
+/*** lists ***/
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 3em;
+}
+
+li {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 95%;
+  line-height: 1.5;
+}
+
+ul li:before {
+  display: inline-block;
+  content: "–";
+  width: 1em;
+  margin-left: -1em;
+  font-weight: bold;
+}
+
+ul.posts {
+  content: "–";
+  margin-left: -1em;
+  font-weight: bold;
+}

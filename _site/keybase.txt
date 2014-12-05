@@ -1,0 +1,70 @@
+==================================================================
+https://keybase.io/hawk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://hawkw.github.io
+  * I am hawk (https://keybase.io/hawk) on keybase.
+  * I have a public key with fingerprint 9A77 1653 A5C4 FB3C BD1C  E3E2 A895 A887 1AF5 403E
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "9a771653a5c4fb3cbd1ce3e2a895a8871af5403e",
+            "host": "keybase.io",
+            "key_id": "a895a8871af5403e",
+            "uid": "d79cf5c4d4c10d76f1f066006dd29300",
+            "username": "hawk"
+        },
+        "service": {
+            "hostname": "hawkw.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1417796677,
+    "expire_in": 157680000,
+    "prev": "2c26f2ec429aec9237ab6b63ce8f1e08f27e170f26dde559f6cf3b6b977fd97f",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.1.6
+Comment: https://keybase.io/crypto
+
+yMLyAnicO8LLzMDF+DPx46Ur7KkGjKcPfCplCGm841qtlJSfUqlkVa2UnQqm0jLz
+0lOLCooy80qUrJQsE83NDc1MjRNNk03SkoyTk1IMk1ONU40SLSxNEy0szA0T00xN
+DIxTlXSUMvKLQTqAxiQlFqfqZeYDxYCc+MwUoCgW9aVgiRRzy+Q0oOEpJsmGBinm
+ZmmGaQZmZgYGZikpRpbGBgYghcWpRXmJualA1RmJ5dlKtTpKQJGyzORUkHtB1iLJ
+luulZ5ZklCZB7C8oyi/JT87PAUmWlBQUW4E0l1QWgFSXpybFQ82JT8rMSwH6G6ij
+LLWoODM/T8nKEKgyuSQTZLChiaG5uaWZmbm5jlJqRUFmUWp8JkiFqbmZhQEQgOxJ
+LQMaaZRsZJZmlJpsYmSZmJpsaWRsnphklmRmnJxqkWaYamCRZmSeamhukGYE9F2q
+qallmllymjFQhaW5eVqKpXmaEshnhXn5QLOBhpYkpgPNLM5Mz0ssKS1KVao9dDCG
+hYGRi4GNlQkUdQxcnAKwCNWuFGDonFss7fMgzCNi8/ufrp9McpZnfrsVcfX4riVG
+An67IrauEWFf3zPdKUC+ZI6MorfQ5v+MHnqdtS8PmzlXR4mJOOvGFX/okvjNeJUz
+Z0t/dOSVSXrpPpMXzf7vnnXGhHdTuiHH7AX3uTTPWa0Q2ahjFP7WcGLGoTdrdvMd
+2jElZWe+QuvpCYeieXNS2Y+8l/5tNuO62WPG/nqNuHvuU9ndnJ/cupHespGn+ZuF
+1UdP8RTTxxdn+syZkXTGR/TE/BmTw+8kFLVc42lQko83fnZX7/TsbwmX773xneTF
+/id41dSJz9Vn62/Pf/s34G6aYVDeeb305I0ac57M+fbgZqTYzTcXvkieFzETkxfl
+75z3as7StaVzmdrrGIINnm9UtYzjWVE++d76O/I1HFbS62f+flZWOGfbyZAblurG
+994+MtjMfXxuyLMtIlt1PpTOfNUhVO+7KzXY9dKSVdrrV7gmOARrJE01Wq648zEf
+S7L97fOGxbxGhsrK2ycWWf9vDM08vDarwG5e1CGVi+lHb8YIl1puUlxxM5IhyJ9r
+n6FIR9KR5f5pRxfUzFz+3DdxeWNa9Me0rArPoh08LEfFGvhtKuvW8YX1nZj89xf7
+pNbQtcpstbOenkrM6164od7qWugK/r5jz7aV/32slfXuwvVX0x3P3Dt/7JDAn896
+u1KkFVkZN6jZugqtY5ddzvqupqVirwvfxqBfit8TgmoA0iCPaw==
+=uyxY
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/hawk
+
+==================================================================
