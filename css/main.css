@@ -123,20 +123,17 @@ div.top-menu, div.footer {
 }
 
 div.top-menu {
-  background-color: #eee;
-  border: 2px solid #eee;
+  border-bottom: 3px solid #eee;
  }
 
 .top-menu a {
-   font-weight: bold;
+   font-weight: 250;
    text-decoration: none;
-   text-transform: uppercase;
-    border: 2px solid #eee;
 }
-.top-menu a:hover {
+/*.top-menu a:hover {
   background-color: white;
   border: 2px solid white;
-}
+}*/
 
 div.above-post, div.below-post {
   display: inline-block;
@@ -190,7 +187,7 @@ div.footer {
   font-size: 80%;
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   color: #666;
-  border-top: 4px solid #eee;
+  border-top: 3px solid #eee;
   margin: 2.5em auto 1em;
   padding-top: 1em;
   line-height: 1.5;
@@ -243,7 +240,6 @@ p.navigation {
   width: 100%;
   padding-top: 2em;
   font-size: 80%;
-  text-transform: uppercase;
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   line-height: 1;
 }
