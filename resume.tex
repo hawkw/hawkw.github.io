@@ -1,0 +1,124 @@
+% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res} 
+\usepackage{url}
+% the margin option causes section titles to appear to the left of body text 
+\textwidth=5.2in % increase textwidth to get smaller right margin
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+\begin{document} 
+ 
+\name{Hawk Weisman\\[12pt]} % the \\[12pt] adds a blank line after name
+ 
+\address{990 First St,\\ Meadville, PA, 16335  \\
+        +1 (814) 853-1501}
+\address{hawk@meteorcodelabs.com \\ weismanm@allegheny.edu \\ \url{http://hawkw.github.io}}
+
+ 
+\begin{resume} 
+ 
+%\section{Objective} 
+%Auditing/Analysis of Operations 
+
+\section{EDUCATION} {\sl Bachelor of Science} \\
+                Double Major in Applied Computing \& Environmental Studies \\
+                % \sl will be bold italic in New Century Schoolbook (or
+	            % any postscript font) and just slanted in
+	           	% Computer Modern (default) font
+                Allegheny College, Meadville, PA \\
+                Degree expected: May 2016 \\
+                GPA: 3.6
+ 
+% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
+\section{SKILLS}
+   \begin{tabular}{l p{3in}}
+                \textit{Proficient with} & Scala, Java, Python \\
+                \textit{Capable with} & C, R, Lisp, SQL, HTML/CSS \\
+                \textit{Familiar with} & Haskell, Go, CoffeeScript, JavaScript, Polymer \\
+   	            \textit{Build and CI}  & Gradle, Ant, sbt, Travis, Jenkins \\
+                \textit{Testing}  & JUnit, ScalaTest, Mockito, ScalaMock, JaCoCo, Scoverage \\
+                \textit{IDEs/Editors}  & SublimeText, Atom, IntelliJ IDEA, Eclipse \\
+                \textit{Source Control} &Git, GitHub, GitLab
+ \end{tabular}
+
+
+\section{WORK \\ EXPERIENCE} 
+
+                {\sl Lead Software Engineer} \hfill  2014 --- Ongoing \\
+                MeteorCode Laboratories, Meadville, PA
+                 \begin{itemize}  \itemsep -2pt % reduce space between items
+                    \item Cofounded a small business to develop and publish independently-developed computer games. 
+                    \item Developed a game engine in Scala and Java, contributing a majority of source code to the project.
+                    \item Set up and maintained a development environment using GitLab, Jenkins CI, and Gradle.
+		\item Contributed to the design and development of a Web site, meteorcode.com, using HTML/CSS, SASS/SCSS, and Polymer.
+                 \end{itemize}
+                
+                %{\sl Aquaponics Technician} \hfill Winter Break 2013 \\
+                %Environmental Science Department, Allegheny College, Meadville, PA
+                % \begin{itemize}  \itemsep -2pt % reduce space between items
+                %    \item Responsible for independently maintaining multiple decorative and production aquaponics systems.
+                %    \item Performed maintenance tasks such as cleaning filters, feeding fish, and maintaining water levels.
+                %\end{itemize}
+ 
+                %{\sl Darkroom Technician} \hfill            2012-2013 \\
+                %Art Department, Allegheny College
+                % \begin{itemize}  \itemsep -2pt %reduce space between items
+                %    \item Responsible for preparing chemicals and maintaining a well-stocked darkroom, as well as ensuring workspace cleanliness.
+                %    \item Assisted and instructed art students in the use of darkroom materials and techniques.
+                % \end{itemize} 
+
+                %{\sl Computer Art Studio Technician} \hfill        2012-2013 \\
+                %Art Department, Allegheny College
+                %  \begin{itemize} \itemsep -2pt %reduce space between items
+                %   \item Instructed other students in the use of computer art tools, such as drawing tablets, digital video cameras, and large-format printers.
+                %   \item Instructed other students in the use of software such as Photoshop, Illustrator, and Final Cut.
+                %   \item Diagnosed and repaired technical difficulties with studio equipment.
+                %   \end{itemize} 
+\section{SELECTED \\ PROJECTS}
+		{\sl Pathway Game Engine} \hfill Spring 2014 --- Ongoing \\
+        		MeteorCode Laboratories \\ 
+		\url{https://github.com/MeteorCode/Pathway}
+		\begin{itemize} \itemsep -2pt % reduce space between items
+		\item Developed an open-source event driven game engine for the JVM platform.
+		\item Implemented features such as file I/O, event system, and scripting systems.
+		\item Contributed over 9,000 lines of Java and Scala source code.
+		\item Designed an extensible architecture for a software development framework.
+		\item Wrote a comprehensive test fixture using tools such as JUnit, Mockito, and JaCoCo.
+		\end{itemize}
+		
+		{\sl Remote Collab SublimeText Plugin } \hfill Spring 2014 \\
+		CMPSC440: Principles of Operating Systems, Allegheny College \\
+		\url{https://github.com/TeamRemote/remote-sublime}
+		\begin{itemize}  \itemsep -2pt % reduce space between items
+			\item Developed an open-source SublimeText plugin to facilitate remote pair programming.
+			\item Contributed over 1,000 lines of python source code.
+		\end{itemize}
+		
+                {\sl Filesystem Traversal Study} \hfill Spring 2014 \\ 
+                CMPSC440: Principles of Operating Systems, Allegheny College \\
+                \url{https://github.com/hawkw/traverse}
+                 \begin{itemize} \itemsep -2pt % reduce space between items
+                    \item Independently organized a research project to collect and analyze filesystem data.
+                    \item Programmed data-collection tools in Python.
+                    \item Prepared an IPython notebook to analyze and visualize data.
+                    \item Encouraged other students to voluntarily contribute datasets.
+                \end{itemize}
+
+                {\sl Knightingale Twitter Analysis System} \hfill Fall 2013 \\
+                CMPSC290, Software Engineering, Allegheny College \\
+                \url{https://github.com/TeamKnightengale/Knightingale}
+                 \begin{itemize}  \itemsep -2pt % reduce space between items
+                    \item Collaborated with other students to create an open-source software system to analyze Twitter account archive data.
+                    \item Responsible for programming analytics and visualization, input/output, and unit testing.
+                    \item Contributed a majority of Java code to the project.
+                    \item Practiced Agile software development techniques.
+                \end{itemize}
+
+
+\end{resume} 
+\end{document} 
+
+
+
