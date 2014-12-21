@@ -14,7 +14,7 @@ Open-Source Projects
 
 + [Pathway](https://github.com/MeteorCode/Pathway): An open-source event-based game engine for the JVM. (Scala, Java)
 + [DeeBee](https://github.com/hawkw/deebee): A tiny relational database supporting a subset of SQL. For educational purposes only. (Scala)
-+ [Decaf](https://github.com/hawkw/decaf): An alleged compiler for a so-called programming language. (Scala)
++ [Decaf](decaf): An alleged compiler for a so-called programming language. (Scala)
 + [USL](https://github.com/hawkw/USL): The Useless Stack Language. A simple toy language with some interestingly weird semantics (think Lisp meets PostScript). (Scala)
 + [remote-collab](http://teamremote.github.io/remote-sublime/): A SublimeText 3 plugin for remote pair programming. (Python 3)
 + [breadplan](https://github.com/hawkw/breadplan): A Python script for calculating recipes for the bread from Chad Robertson's _Tartine Bread_. (Python 3)
