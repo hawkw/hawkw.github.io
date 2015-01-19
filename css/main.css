@@ -1,40 +1,4 @@
 
-/*
- * Body resets
- *
- * Update the foundational and global aspects of the page.
- */
-
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-@media (min-width: 38em) {
-  html {
-    font-size: 20px;
-  }
-}
-
-body {
-  color: #515151;
-  background-color: #fff;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-}
-
 
 /*** common ***/
 
@@ -128,14 +92,6 @@ img.titleimage {
   border-radius:8px;
 }
 
-div.highlight {
-  border:5px solid #002B36;
-  border-radius:10px;
-  overflow: auto;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0.3em;
-}
 
 div.clear {
   clear: both;
@@ -354,14 +310,14 @@ code {
   font-size: 85%;
   color: #bf616a;
   background-color: #f9f9f9;
-  border-radius: 3px;
+  /*border-radius: 3px;*/
 }
 pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
   padding: 1rem;
-  font-size: .8rem;#002B35
+  font-size: .8rem;
   line-height: 1.4;
   white-space: pre;
   white-space: pre-wrap;
