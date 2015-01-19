@@ -1,0 +1,29 @@
+---
+layout: main
+---
+
+<div class="above-post">
+  <a class="meta">
+      {{ page.date | date_to_string }}
+  </a>
+  <a class="extra back" href="javascript:history.back()">
+    <span style="font-size: 150%; font-weight: bold;">&larr;</span>
+    &nbsp;back</a>
+</div>
+<div class="content">
+  <!-- begin content -->
+  {{ content }}
+  <!-- end content -->
+</div>
+<div class="below-post">
+{% if page.tags.size != 0 %}
+  <a class="meta">tagged:{% for tag in page.tags %} {{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}</a>
+{% endif %}
+{% if page.author %}
+  {% if page.authorlink %}
+    <p class="author">&mdash;<a class="extra" href="{{ page.authorlink }}">{{ page.author}}</a></p>
+  {% else %}
+    <p class="author">&mdash;{{ page.author}}</p>
+  {% endif %}
+{% endif %}
+</div>
