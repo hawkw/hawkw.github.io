@@ -62,7 +62,7 @@ It's also possible to define implementations for methods on `enum` and `struct` 
 {% highlight rust %}
 impl<T> List<T> {
 
-    /// Prepends the given item to the list
+    // Prepends the given item to the list
     pub fn prepend(self, it: T) -> List<T> {
         Cons(it, box self)
     }
