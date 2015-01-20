@@ -92,6 +92,7 @@ This problem is aggravated by the fact that the available official documentation
 
 My final complaint is that while Rust has type inference, it's type inference seems more easily confused than the type inference in Scala and Haskell, requiring more explicit type annotations. However, this could just be me, and I haven't had enough experience to make a real judgement yet.
 
+### Closing Thoughts
 
 All in all, Rust is a very interesting language with a lot of unique ideas and a lot of promise. Right now, there are a lot of excellent modern programming languages available, with syntax and ideas that allow programmers to write elegant, expressive, and safe code. 
 
