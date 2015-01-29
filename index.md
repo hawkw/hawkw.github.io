@@ -13,6 +13,7 @@ Open-Source Projects
 --------------------
 
 + [Pathway](https://github.com/MeteorCode/Pathway): An open-source event-based game engine for the JVM. (Scala, Java)
++ [seax](https://github.com/hawkw/seax): A SECD VM for evaluating programs in functional languages, Scheme interpreter, and assorted other fun stuff (work in progress) (Rust)
 + [DeeBee](https://github.com/hawkw/deebee): A tiny relational database supporting a subset of SQL. For educational purposes only. (Scala)
 + [Decaf](decaf): An alleged compiler for a so-called programming language. (Scala)
 + [USL](https://github.com/hawkw/USL): The Useless Stack Language. A simple toy language with some interestingly weird semantics (think Lisp meets PostScript). (Scala)
