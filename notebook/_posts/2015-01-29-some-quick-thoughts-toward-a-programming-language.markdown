@@ -39,6 +39,9 @@ I think we need a resurgence in compiled languages these days. Maybe it's the We
 Readable Programming vs Literate Programming
 --------------------------------------------
 
+In this section, I will discuss two competing approaches towards programming language syntax and documentation. A series of increasingly ridiculous quotes from a conversation in which my colleagues and I repeatedly permuted a sentence and attempted to rationalize each permutation will be used to highlight the various competing perspective.
+
+
 > "Properly written code doesn't need documentation." 
 ~ Radu Creanga
 
@@ -57,8 +60,10 @@ I'm not necessarily arguing in favor of natural-language programming, mind you. 
 
 In order to implement readable code, you have to make sacrifices somewhere. In Python, they essentially sacrificed programmer freedom for code readability. I think that the Python vs Perl holy war ("runnable pseudocode" vs "runnable line noise") is one of the most significant events in the history of programming language design. Perl let you do whatever you wanted, and therefore let you produce programs that just looked like a bunch of random characters. Python, on the other hand, adopted a philosohphy of "there's only one way to do it", which seems like an overly strict approach but the next major plank in the Python philosophy was "...and that way should be beautiful." It's the old debate of freedom versus conceptual integrity that Brooks writes about in *The Mythical Man-Month*. 
 
+
 > "Documented code doesn't need properly written." 
 ~ Tristan Challener
+
 
 I'd like to avoid sacrificing programmer freedom, at least, I'd like to not have to sacrifice it as much as Python does. I think code is art, and (this is where I wax philosophical for a bit) you can't have true aesthetic beauty in art without freedom & diversity. I like how, for example, Scala lets you write Haskell-esque functional code, "Java without the semicolons", or pretty much anywhere in between; depending on your background, skills, experience, and the needs of the situation. But you have to make the sacrifice somewhere, and I'd rather sacrifice compile time and compiler complexity than programmer freedom, whenever that's possible, going back to the idea of "let the compiler do the work" I mentioned earlier. Of course, this is easy for me to say since I'm just coming up with programming language ideas I'll never actually have to implement.
 
