@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "A Documentation-Based Test Generator for Scala"
+categories: scala,testing,ideas,programming
+---
+
+Our discussion of software testing in the current Computer Science 580 module has made me think about my preferred methods for testing my programs. One of my favourite methods for unit testing is documentation-based testing, such as that provided by Python's [`doctest`](https://docs.python.org/2/library/doctest.html) module or the Rust standard library's [`test`](http://doc.rust-lang.org/book/testing.html#documentation-tests) module. 
+
+### What's documentation-based testing?
+
+In documentation-based testing, source code snippets and the expected results of executing those snippets are included in documentation comments within the source code of the program under test. The test tool then runs those source code snippets and asserts that the actual result of executing the example is the same as the expected result given in the documentation.
+
+Here's a quick Python example (which I came up with for this blog post):
+{% highlight python %}
+def factorial(n):
+    """
+    Returns the factorial of n.
+
+    For example:
+
+    >>> factorial(10)
+    3628800
+    >>> factorial(4)
+    24
+    """
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+{% endhighlight %}
+
+And here's an example in Rust (from [seax](https://github.com/hawkw/seax/blob/master/seax_svm/src/svm/slist.rs)):
+{% highlight rust %}
+/// Push an item to the top of the stack, returning a new stack.
+///
+/// # Examples:
+/// ```
+/// use seax_svm::svm::slist::{List,Stack};
+///
+/// let mut s: List<isize> = Stack::empty();
+/// assert_eq!(s.peek(), None);
+/// s = s.push(1);
+/// assert_eq!(s.peek(), Some(&1));
+/// s = s.push(6);
+/// assert_eq!(s.peek(), Some(&6));
+/// ```
+fn push(self, item: T) -> List<T> {
+    Cons(item, box self)
+}
+{% endhighlight %}
+
+When the appropriate unit-testing tool is invoked on these examples (`cargo test` for Rust, ` python example.py` for the Python example), the testing tool will attempt to run the source code snippets and assert that the results match the expected ones.
+
+### Why documentation-based testing?
+
+So what advantages does this method have over traditional methods of unit testing such as JUnit, Python's `unittest`, or the Rust standard library's testing methods?
+
+1. __Documentation-based testing puts tests next to source code.__ If the tests for some function are in a different file, there is often additional time overhead related to moving between files. If a developer wants to follow test-driven development practices and write only the code that is necessary to make a test pass, and the test is in a separate file, then they will have to refer to that separate file every time they wish to see what behaviour the test expects. If a developer is debugging a failed test and wishes to refer to the specific line in the test that failed, then they will again have to refer to a seperate file.
+2. __Documentation-based testing encourages the use of examples in documentation._ This is especially important when the software system in question is a public API. Many developers prefer axample-based learning; I know I personally have often wished that there were code examples in the API documentation demonstrating how to call some particular method. Documentation-based testing not only ensures that code examples are provided in the API documentation, but also ensures that those code examples are correct.
+3. __Documentation-based testing encourages thinking of tests as specifications.__ We often think of test cases as _testing_ our code, but the philosophy of test-driven development encourages us to instead think of them as _describing_ the requirements for our code. Other tools, such as [ScalaTest](http://www.scalatest.org) and [specs2](http://etorreborre.github.io/specs2/) also encourage programmers to write literate tests as specifications for behaviour.
+
+### Documentation-based testing for Scala
+
+There are essentially two methods through which a documentation-based testing tool for Scala might be implemented. Both of these approaches have mixed advantages and disadvantages.
+
+Since Scala has a read-eval-print loop (REPL), one method would be to view the examples as excerpts from interactive REPL sessions, as `doctest` does. This approach would be relatively easy to implement: the tool would simply need to search the documentation for code blocks, pipe them into the Scala REPL, and expect the results given in the examples. However, this approach would be difficult to use for testing Java code in mixed Scala/Java projects, as the Java compiler does not have an interactive REPL mode.
+
+The other approach would be to parse the examples and use them to generate ScalaTest test suites. This would allow strings describing the specified behaviour to be included to produce the literate, specification-style test suites generated by ScalaTest, which allows for useful output explaining what failures have taken place. Additionally, the generated test suites could be used for testing Java as well as Scala. However, this approach would likely be more difficult to implement, as it involves automated code generation, and would require a method for ensuring that the generated test suites are up-to-date with the examples in the source code.
+
+I'd love to see a documentation-based testing tool for Scala, since it's one of the few tools that exist in other languages that I really miss when programming in Scala. I might start implementing such a tool as an open-source project.
+
+
+
