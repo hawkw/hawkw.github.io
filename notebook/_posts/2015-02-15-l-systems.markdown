@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "L-Systems"
+categories: programming,computer science,scala
+---
+
+Lindenmeyer systems, or [L-systems](http://en.wikipedia.org/wiki/L-system), are a type of string rewriting systems that can be used to generate fractals. They were first described in 1968 by Aristid Lindenmayer, a Hungarian botanist who was trying to develop mathematical models of plant growth, and can be used to generate a number of convincingly organic forms (as well as more traditional fractals such as Sierpinski triangles).
+
+!['acacia' l-system](https://raw.githubusercontent.com/hawkw/l-systems/master/doc/acacia.png)
+
+An L-system is a form of formal grammar, not unlike those we studied in Computer Science 420 last semester. The grammar consists of an alphabet of terminal and non-terminal symbols, a set of production rules, and an axiom, or start string. In order to create graphical visualizations of the L-system, there is typically also a set of rules for transforming symbols in the grammar into geometric structures, typically by controlling a graphics turtle.
+
+I had been reading about L-systems on the Internet for the past few days, and I ended up writing a quick implementation in Scala using the Processing graphics library (which I'll write more on later). The source code for my L-systems project is available on GitHub [here](https://github.com/hawkw/l-systems).
+
+My implementation includes grammars for a number of forms that the L-system can draw. There are grammars for some pleasantly organic-looking axial trees and several more traditional fractals such as a Pythagoras tree, Sierpinski triangles, and a dragon curve. Here are a few images:
+
+![axial tree 'a'](https://raw.githubusercontent.com/hawkw/l-systems/master/doc/axial-a.png)
+
+![axial tree 'b'](https://raw.githubusercontent.com/hawkw/l-systems/master/doc/axial-b.png)
+
+![Sierpinski triangles](https://raw.githubusercontent.com/hawkw/l-systems/master/doc/sierpinski-3.png)
+
+![dragon curve](https://raw.githubusercontent.com/hawkw/l-systems/master/doc/dragon.png)
+
+While my L-systems implementation is more or less complete, there are still a few ideas that would be interesting to play around with:
+
+- __3D L-systems:__ there are some really neat [examples](http://upload.wikimedia.org/wikipedia/commons/7/74/Dragon_trees.jpg) on the Internet of L-systems drawn in three dimensions. These 3D tree models are really convincingly organic, and could be used to create realistic vegetation, rivers, and stress fractures in a video game or animated film. I don't know very much about 3D graphics, so this might be a fun exercise to learn more about 3D graphics.
+- __A more performant L-system renderer:__ Processing isn't the fastest graphics library, and it struggles to draw deep iterations of some of the fractals. Also, there's an issue with some L-systems, such as the axial trees, which use a stack to create branching structures: Processing's [`pushMatrix()`](https://processing.org/reference/pushMatrix_.html) command only allows 32 consecutive pushes, failing with an exception after the 33rd push. This breaks deep iterations of some of the L-systems I have grammars for. Rewriting the implementation with a different graphics backend could be a good opportunity to learn more graphics libraries.
+- __Stochastic L-systems:__ it's possible to [introduce an element of probability](http://en.wikipedia.org/wiki/L-system#Stochastic_grammars) into L-system grammars. Adding a probibilistic element to the L-system grammars might allow for even more natural-appearing structures. 
+
+This project was really fun to work on and was a great opportunity to learn more about Processing, a tool I'd wanted to explore for a long time. I'm really happy with some of the images produced by my L-systems implementation --- they're pretty neat for just an afternoon's worth of work. Graphics programming and fractals are both topics I'm interested in and don't know that much about, so this is definitely an area of computer science I'd like to continue explroing.
