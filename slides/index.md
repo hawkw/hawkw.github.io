@@ -5,7 +5,7 @@ title: Slide Deck
 
 Here are the slides for a few presentations I've given in the past.
 
-+ __Functional Programming on the Java Virtual Machine__ ([html](FuncProgJVM.html)) 
++ __Functional Programming on the Java Virtual Machine__ ([html](FuncProgJVM)) 
     Computer Science 580 lightning talk. Spring 2015.
 + __Implementing the DeeBee Query Processing System__ ([pdf](cs420-deebee.pdf)) 
     Computer Science 420 final project presentation. Fall 2014.
