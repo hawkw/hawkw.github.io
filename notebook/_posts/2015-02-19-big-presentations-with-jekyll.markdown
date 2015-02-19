@@ -12,7 +12,7 @@ Big is great, but making presentations using Big is less great. Since slides are
 This morning, I threw together a quick Jekyll template for Big presentations. You can find it on GitHub [here](https://github.com/hawkw/bigyll).
 
 With my template, you can format presentations like this:
-{% highlight markdown %}
+```
 ---
 layout: big
 title:  "Bigyll example"
@@ -25,7 +25,7 @@ sections:
 - | 
     this slide has [a link](github.com/hawkw/bigyll)
 ---
-{% endhighlight %}
+```
 
 In my opinion, this is much cleaner and easier than writing the presentation using HTML:
 {% highlight html %}
