@@ -103,7 +103,7 @@ window.onload = function() {
 };
 </script></head><body>
 {% for section in page.sections %}
-<div>{{ section | textilize }}</div>
+<div>{{ section | markdownify }}</div>
 {% endfor %}
 <body>
 <script type="text/javascript">
