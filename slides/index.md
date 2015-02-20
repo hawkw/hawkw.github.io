@@ -5,11 +5,11 @@ title: Slide Deck
 
 Here are the slides for a few presentations I've given in the past:
 
-+ __Asset Management for JVM Applications__ ([pdf](Mod1StudentLightningTalk-weismanm.pdf))
++ __Asset Management for JVM Applications__ ([pdf](Mod1StudentLightningTalk-weismanm.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/asset-management-for-jvm-applications))
     Computer Science 580 lightning talk. Spring 2015.
 + __Functional Programming on the Java Virtual Machine__ ([html](FuncProgJVM)) 
     Computer Science 580 lightning talk. Spring 2015.
-+ __Implementing the DeeBee Query Processing System__ ([pdf](cs420-deebee.pdf)) 
++ __Implementing the DeeBee Query Processing System__ ([pdf](cs420-deebee.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/cs420-deebee)) 
     Computer Science 420 final project presentation. Fall 2014.
-+ __Scala for Java Programmers__ ([pdf](scala-for-java-programmers.pdf))
++ __Scala for Java Programmers__ ([pdf](scala-for-java-programmers.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/scala-for-java-programmers-in-five-slides))
     "Frontiers in Computing" event lightning talk. Fall 2014.
