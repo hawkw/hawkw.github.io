@@ -7,6 +7,8 @@ Here are the slides for a few presentations I've given in the past:
 
 + __Asset Management for JVM Applications__ ([pdf](Mod1StudentLightningTalk-weismanm.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/asset-management-for-jvm-applications))
     Computer Science 580 lightning talk. Spring 2015.
++ __Incremental Testing__ ([pdf](Mod1ModuleLightningTalk-weismanm.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/incremental-testing))
+    Computer Science 580 lightning talk. Spring 2015.
 + __Functional Programming on the Java Virtual Machine__ ([html](FuncProgJVM)) 
     Computer Science 580 lightning talk. Spring 2015.
 + __Implementing the DeeBee Query Processing System__ ([pdf](cs420-deebee.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/cs420-deebee)) 
