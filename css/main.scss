@@ -1,10 +1,22 @@
-
+---
+---
 
 /*** common ***/
 
+
+/* Common vars */
+
+$text-body-grey: #515151;
+$text-light-grey: #666666;
+$ultralight-grey: #aaa;
+$text-header-black:  #333;
+$font-stack: "Helvetica Neue", Helvetica, Arial, serif;
+$code-font-stack: Menlo, Monaco, "Source Code Pro", "Courier New", monospace;
+
+
 body {
   background-color: #FFF;
-  font: 13.34px "Helvetica Neue", "Helvetica", serif;
+  font: 13.34px $font-stack;
   font-size: small;
   color: #515151;
   -webkit-text-size-adjust: 100%;
@@ -12,33 +24,45 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", serif;
-  color: #000;
+  font-family: $font-stack;
+  color: $text-header-black;
   line-height: 1;
-  margin-top: .8em;
-  margin-bottom: .4em;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
 }
 
 h1 {
-  text-align: center;
-  font-size: 60px;
   font-weight: 900;
 }
 
-h1.title, h1.halftitle {
-  font-weight: 900;
-}
 
-h1.title {
-  text-align: center;
-  margin: 0 auto;
-}
+  h1.title {
+    letter-spacing: 0.1px;
+    text-align: center;
+    outline: none;
+    font-size: 60px;
+    border: none;
+  }
+
+  h1.halftitle {
+    display: inline-block;
+    float: right;
+    width: auto;
+    height: auto;
+    text-align: right;
+  }
+
+h1.blog-title {
+    text-align: left;
+    font-size: 20px;
+  }
 
 div.picheader, div.textheader {
   width: 100%;
   height: auto;
   display: inline-block;
-  margin: 10px 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 div.halftitle {
@@ -47,16 +71,7 @@ div.halftitle {
   float: right;
   margin: auto;
 }
-
-h1.halftitle {
-  display: inline-block;
-  float: right;
-  width: auto;
-  height: auto;
-  margin: auto 0;
-  text-align: right;
-}
-
+/* Old
 h2 {
   font-size: 35px;
   font-weight: 900;
@@ -78,7 +93,22 @@ h4 {
   margin-top: 1em;
   margin-bottom: .6em;
 }
-
+*/
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
 .content p {
   clear: both;
   margin: 1em 0;
@@ -152,7 +182,6 @@ div.above-post, div.below-post {
   display: inline-block;
   height: auto;
   width: 100%;
-  float: left;
 }
 
 div.above-post {
@@ -198,8 +227,8 @@ div.below-post {
 
 div.footer {
   font-size: 80%;
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  color: #666;
+  font-family: $font-stack;
+  color: $text-light-grey;
   border-top: 3px solid #eee;
   margin: 2.5em auto 1em;
   padding-top: 1em;
@@ -322,7 +351,7 @@ abbr[title] {
 /* Code */
 code,
 pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-family: $code-font-stack;
 }
 code {
   padding: .25em .5em;
@@ -362,7 +391,7 @@ pre code {
 
 /* Gist via GitHub Pages */
 .gist .gist-file {
-  font-family: Menlo, Monaco, "Courier New", monospace !important;
+  font-family: $code-font-stack !important;
 }
 .gist .markdown-body {
   padding: 15px;
@@ -450,12 +479,11 @@ tbody tr:nth-child(odd) th {
 
 /* Meta data line below post title */
 .post-date {
-  /*display: block;/*
-  margin-top: -.5rem;
+  display: block;
+  margin-top: -1.7rem;
   margin-bottom: 1rem;
-  */
-  float: right;
-  color: black;
+  float: left;
+  color: $ultralight-grey;
 }
 
 /* Related posts */
