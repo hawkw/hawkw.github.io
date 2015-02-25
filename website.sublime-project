@@ -4,7 +4,8 @@
 		{
 			"follow_symlinks": true,
 			"path": ".",
-            "folder_exclude_patterns": ["_site"]
+            "folder_exclude_patterns": ["_site"],
+            "file_exclude_patterns": ["*.log", "*.fdb_latexmk", "*.synctex.gz", "*.aux", "*.lock"]
 		}
 	]
 }
