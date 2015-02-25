@@ -8,3 +8,6 @@ _site/
 *.fdb_latexmk
 *.log
 *.synctex.gz
+
+### Sublime ###########################
+*.sublime-workspace
