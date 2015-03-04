@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Interactive Plots in Python"
+categories: programming,python,data analysis
+---
+
+I've used a number of tools for visualizing statistical data, including R's `ggplot2` and `lattice` packages and Mathematica, but my first choice is typically Python. Since Python is a general-purpose programming language that I've used for a number of projects, I'm much more familiar with its' syntax and libraries than languages intended specifically for data analysis.
+
+Since Python is such a popular tool for data analysis, there are a number of  libraries which provide functionality similar to those of alternative tools. For example, Mathematica is really not one of my favorite data analysis tools. I find its' syntax very confusing and difficult to use, and it's expensive, proprietary software. However, there are a number of features of Mathematica which I like quite a lot, and would love to have access to in other languages, such as Python. One of my favourite Mathematica features is the [notebook interface](http://reference.wolfram.com/language/tutorial/UsingANotebookInterface.html), which brings together text, code, and images in a single document. Fortunately, [IPython](http://ipython.org)/[Jupyter](https://jupyter.org) provides a similar notebook interface for Python, which I've used [a](http://nbviewer.ipython.org/gist/hawkw/8906418) [number](http://nbviewer.ipython.org/gist/hawkw/9191019) [of](http://nbviewer.ipython.org/gist/hawkw/9439505) [times](http://nbviewer.ipython.org/github/hawkw/breadplan/blob/master/Breadplan%20Science.ipynb).
+
+One feature I've often wished I had access to in Python is the excellent interactive plots Mathematica generate. These plots allow the viewer to pan and zoom, and to hover over data points to display their numerical value. Until quite recently, I was not aware of a way to create similar plots with Python's `matplotlib`.
+
+Enter `plot.ly`. `plot.ly` is a web service which creates interactive plots. Users can create the plots through a web interface, but there are also APIs for a number of technical computing languages and statistical computing tools, including Python, Julia, MATLAB, R, and even Microsoft Excel. The `plot.ly` Python and R APIs even allow existing `matplotlib` or `ggplot2` plots to be converted directly to `plot.ly` plots. These plots can be embedded directly into an IPython notebook, as in [this notebook](http://nbviewer.ipython.org/github/hawkw/cs383s2015-lab4/blob/master/Analysis.ipynb) containing a lab report for CMPSC383. 
+
+Another tool, called [Bokeh](http://bokeh.pydata.org/en/latest/), provides similar interactive plotting functionality for Python as well, but I haven't yet had an opportunity to try it out.
+
+The primary Mathematica feature these tools lack is the creation of three-dimensional plots, which as far as I know is only possible in Mathematica. However, this isn't that much of a problem, since `matplotlib` is not capable of creating three-dimensional plots anyway, interactive or otherwise. If you need to allow a user to pan and zoom a 3-dimensional visualization, Mathematica is still likely your only option, but otherwise, these Python tools for interactive plotting are definitely worth a look.
