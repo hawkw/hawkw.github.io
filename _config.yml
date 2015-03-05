@@ -12,6 +12,22 @@ author:
   url:            https://hawkweisman.me
   email:          hawk@hawkweisman.me
 
+exclude: ["website.sublime-project", "website.sublime-workspace", "*.log", "*.fdb_latexmk", "*.synctex.gz", "*.aux"]
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: main"
+  -
+    scope:
+      path: "notebook"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Hawk Weisman"
 
 kramdown:
   input: GFM
