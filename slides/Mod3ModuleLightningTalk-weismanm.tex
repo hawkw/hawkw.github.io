@@ -1,0 +1,121 @@
+\documentclass{beamer}
+%\documentclass[handout]{beamer}
+
+\usecolortheme[]{solarized}
+\usetheme[]{Bergen}
+
+\title{Information Fusion for Environmental Health Assessment}
+\author[Hawk Weisman]{Hawk Weisman\\ \url{hawk@hawkweisman.me} \\ \url{http://hawkweisman.me}}
+\institute[Allegheny College]{Department of Computer Science \\ Allegheny College}
+\date{March 6$^{th}$, 2015}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+    %\frametitle{Problem}
+    \huge{Problem}\normalsize
+    \begin{itemize}
+        \item<1->\large{Assessing the health of an ecosystem...}\normalsize
+        \begin{enumerate}
+            \item<1-> ...is difficult
+            \item<1-> ...is time-consuming
+            \item<1-> ...requires specially-trained professionals
+        \end{enumerate}
+        \item<2->\large{How to \alert<2>{prioritize} regions for assessment?}\normalsize
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \huge{Solution}\normalsize
+    \begin{itemize}
+        \item<1->\large{\alert{Summarize and classify} information from multiple sources into a single score}\normalsize
+        \begin{enumerate}
+            \item<2-> \alert<2>{Discretize region into cells}
+            \item<3-> \alert<3-5>{Machine learning:}
+            \begin{itemize}
+                \item<4-> Assign scores to known healthy and unhealthy sites
+                \item<5-> Train classifier with scores ($k$-fold cross-validation)
+            \end{itemize}
+            \item<6-> \alert<6-7>{Information fusion:}
+            \begin{itemize}
+                \item<6-> Develop error model for sensors
+                \item<7-> Determine value of information in different situations
+            \end{itemize}
+        \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \huge{Solution}\normalsize
+    \begin{itemize}
+        \item<1->\large{Summarize and classify information from \alert{multiple sources} into a single score}\normalsize
+        \begin{enumerate}
+            \item<2-> \alert<2-5>{Inexpensive sensors}
+            \begin{itemize}
+                \item<3->\textbf{Soil:} moisture, pH, temperature
+                \item<4->\textbf{Water:} pH, dissolved oxygen, temperature
+                \item<5->\textbf{Atomosphere:} gas pollutant sensors
+            \end{itemize}
+            \item<6-> \alert<6-8>{Remotely-sensed data}
+            \begin{itemize}
+                \item<7->\textbf{Satellite imagery:} visual, IR
+                \item<8->Aerial photography
+            \end{itemize}
+            \item<9->\alert<9-10>Past records
+            \begin{itemize}
+                \item<10-> Temperature, rainfall, etc
+            \end{itemize}
+        \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \huge{Solution}\normalsize
+    \begin{itemize}
+        \item<1->\large{Summarize and classify information from multiple sources into \alert{a single score}}\normalsize
+        \begin{enumerate}
+            \item<2-> Use classifier to generate health score
+            \item<3-> Output to GIS, produce heat maps
+            \item<4-> Prioritize least-healthy areas for investigation
+        \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \huge{Evaluation}\normalsize
+    \begin{itemize}
+        \item<1->\large{\alert<2-5>{Testing the classifier}}\normalsize
+        \begin{enumerate}
+            \item<2-> Simulated inputs
+            \item<3-> Real sites with expected scores
+            \item<4-> $k$-fold cross-validation
+        \end{enumerate}
+        \item<5->\large{Assessing the Whole System}\normalsize
+        \begin{enumerate}
+            \item<6-> Release to environmental health organizations and professionals
+            \item<7-> Collect feedback and assessments
+        \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \huge{Challenges}\large
+    \begin{enumerate}
+        \item<2-> \textbf{Cost:} may be expensive at scale
+        \item<3-> \textbf{Computationally Expensive:} running classifier over large data sets
+        \item<4-> \textbf{Intedisciplinary:} need input from other fields
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \huge{Questions?}
+\end{frame}
+\end{document}
+
+\end{document}
