@@ -25,11 +25,12 @@ layout: common
 {% if page.tags.size != 0 %}
   <a class="meta">tagged:{% for tag in page.tags %} {{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}</a>
 {% endif %}
+<!-- disable the Big Ugly Author Block
 {% if page.author %}
   {% if page.authorlink %}
     <p class="author">&mdash;<a class="extra" href="{{ page.authorlink }}">{{ page.author}}</a></p>
   {% else %}
     <p class="author">&mdash;{{ page.author}}</p>
   {% endif %}
-{% endif %}
+{% endif %} -->
 </div>
