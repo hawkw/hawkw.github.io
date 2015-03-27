@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Build Scripts for LeJOS EV3 Projects"
+title:  "Building LeJOS EV3 Projects Using Gradle"
 categories: robotics,programming,scala,java
 ---
 
