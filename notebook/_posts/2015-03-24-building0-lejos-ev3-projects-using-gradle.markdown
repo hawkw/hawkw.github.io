@@ -103,6 +103,6 @@ task deployEV3 << {
             }
         }
 }
-{% ndhighlight %}
+{% endhighlight %}
 
 The username and password on the EV3 brick (which are by default set to the empty string), and the robot's IP address, are stored in the project's `gradle.properties` file.
