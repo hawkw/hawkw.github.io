@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Navigating the File System with Ranger"
+categories: tools
 ---
 
 I like to do as much work as possible from the command line, rather than using the GUI. A lot of my favourite programming tools run in the terminal, so I often find switching between GUI applications and terminal applications to be jarring and distracting. Therefore, I do a lot of filesystem navigation in the terminal.

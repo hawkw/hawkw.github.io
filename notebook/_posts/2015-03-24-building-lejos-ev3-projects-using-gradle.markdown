@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Building LeJOS EV3 Projects Using Gradle"
-categories: robotics,programming,scala,java
+categories: robotics,programming,scala,java,tools
 ---
 
 Lego EV3 robots are often used for teaching robotics, and occasionally in research, as they are inexpensive and easy to reconfigure. For this reason, alternative operating systems for the EV3 exist which allow them to be programmed in a variety of programming languages. In Computer Science 383, we have used robots running the [Lego Java OS](http://www.lejos.org) (LeJOS), which allows the EV3 robot to be programmed using Java.
@@ -60,7 +60,11 @@ jar {
             'Implementation-Version': '1.0', 
             'Main-Class' : 'edu.allegheny.beecolony.Worker'
         }
-        from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+        from { 
+            configurations.compile.collect { 
+                it.isDirectory() ? it : zipTree(it) 
+                } 
+            }
     }
 }
 {% endhighlight %}
@@ -94,8 +98,12 @@ Then, a new task may be added to deploy the JAR files to the EV3 brick using `sc
 
 {% highlight groovy %}
 task deployEV3 << {
-    ant.taskdef(name: 'scp', classname: 'org.apache.tools.ant.taskdefs.optional.ssh.Scp', classpath: configurations.sshAntTask.asPath)
-    ant.scp(todir: ev3_username+'@'+ev3_server+':/home/lejos/programs',
+    ant.taskdef(
+        name: 'scp', 
+        classname: 'org.apache.tools.ant.taskdefs.optional.ssh.Scp', classpath: configurations.sshAntTask.asPath
+        )
+    ant.scp(
+        todir: ev3_username+'@'+ev3_server+':/home/lejos/programs',
         password: ev3_password,
         verbose: 'true') {
             fileset(dir: './build/libs') {

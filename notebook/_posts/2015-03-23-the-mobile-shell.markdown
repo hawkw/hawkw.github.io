@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "The Mobile Shell"
+categories: tools
 ---
 
 I've used `ssh(1)` quite frequently for administrating a remote computer over a network connection. Using `ssh` is very easy - it ships with pretty much any POSIX-compatible operating system and requires very little configuration and setup to use, unlike graphical remote desktop tools.

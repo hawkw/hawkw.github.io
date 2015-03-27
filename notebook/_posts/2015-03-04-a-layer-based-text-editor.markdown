@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A Layer-Based Text Editor"
-categories: ideas
+categories: ideas, tools
 ---
 
 
@@ -41,6 +41,6 @@ In addition, there is room for some more sophisticated functionality not current
 
 In this example, the editor forks off a process which performs some static analysis. It traverses the source code and searches for definitions of identifiers, building a type table for the program. Then, whenever a name is referenced, the editor can overlay a line reminding the programmer of the type with which those names are annotated. The types of library functions could be collected as well. This kind of functionality could potentially be very useful, but most programmers would not want to have it displayed all the time, in orer to reduce screen clutter. Therefore, the layer-based display paradigm allows the information to be displayed only when demanded. The editor could pre-process and cache information which takes a long time to collect, so that it may be displayed immediately when that layer is enabled. Providing each layer with its' own thread for performing computations in the background inherently takes advantage of the multi-processor capability of modern computer architectures.
 
-Terminal based text editors popular today, such as `vim` or `emacs`, are highly extensible, and do allow information from analysis of the source code being edited to be presented to the user. However, they aren't designed from the ground up for this layer-based paradigm, so the kind of information overlaying in Bernhardt's fictional `aneditor` unfortunately isn't really possible. A layer-based text editor that functions in the same manner as the fake one from "A Whole New World" would be, in my opinion, an extremely useful tool, and one I'd love to build. 
+Terminal based text editors popular today, such as `vim(1)` or `emacs(1)`, are highly extensible, and do allow information from analysis of the source code being edited to be presented to the user. However, they aren't designed from the ground up for this layer-based paradigm, so the kind of information overlaying in Bernhardt's fictional `aneditor` unfortunately isn't really possible. A layer-based text editor that functions in the same manner as the fake one from "A Whole New World" would be, in my opinion, an extremely useful tool, and one I'd love to build. 
 
 While it may be a bit too ambitious for a senior project to be completed over the course of a single semester, one of the goals for such a project would be a high level of modoularity. The editor would only provide a common infrastructure for creating layers, leaving the implementation of layers for specific types of information, different programming languages, and interfacing with external tools up to users who desire those components.

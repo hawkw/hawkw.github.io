@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Big Presentations with Jekyll
+categories: projects,programming
 ---
 
 I have always thought that presentations which accompany talks should be as minimalist as possible, in order to avoid distracting from the speaker. Unless specific graphics, such as diagrams or data visualizations, are to be presented present, I think that the ideal presentation slide should consist of two to five words, at maximum. 
