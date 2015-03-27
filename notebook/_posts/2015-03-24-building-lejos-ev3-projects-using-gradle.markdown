@@ -92,7 +92,7 @@ dependencies {
 
 Then, a new task may be added to deploy the JAR files to the EV3 brick using `scp`:
 
-{% highlight grooby %}
+{% highlight groovy %}
 task deployEV3 << {
     ant.taskdef(name: 'scp', classname: 'org.apache.tools.ant.taskdefs.optional.ssh.Scp', classpath: configurations.sshAntTask.asPath)
     ant.scp(todir: ev3_username+'@'+ev3_server+':/home/lejos/programs',
