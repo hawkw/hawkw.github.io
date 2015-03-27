@@ -5,6 +5,7 @@ title: Slide Deck
 
 Here are the slides for a few presentations I've given in the past:
 
++ __Creating a Layer-Based Text Editor__ ([pdf](Mod3StudentLightningTalk-weismanm.pdf))
 + __Information Fusion for Environmental Health Assessment__ ([pdf](Mod3ModuleLightningTalk-weismanm.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/information-fusion-for-environmental-health-assessment))
     Computer Science 580 lightning talk. Spring 2015.
 + __Asset Management for JVM Applications__ ([pdf](Mod1StudentLightningTalk-weismanm.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/asset-management-for-jvm-applications))
