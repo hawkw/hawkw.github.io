@@ -8,6 +8,8 @@
 
 $text-body-grey: #515151;
 $text-light-grey: #666666;
+$text-link-grey: #479;
+
 $ultralight-grey: #aaa;
 $text-header-black:  #333;
 $font-stack: "Helvetica Neue", Helvetica, Arial, serif;
@@ -16,9 +18,9 @@ $code-font-stack: Menlo, Monaco, "Source Code Pro", "Courier New", monospace;
 
 body {
   background-color: #FFF;
-  font: 13.34px $font-stack;
+  font: 13px $font-stack;
   font-size: small;
-  color: #515151;
+  color: $text-body-grey;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -116,9 +118,10 @@ h4, h5, h6 {
   line-height: 2;
 }
 
-a         { color: #479; }
-a:hover   { color: #000; }
-a:visited { color: #696969; }
+a         { color: #479;
+            text-decoration: none; }
+a:hover   { color: $text-header-black; border-bottom: 2px solid $text-header-black;}
+//a:visited { color: #696969; }
 
 img.titleimage {
   float: left;
