@@ -3,7 +3,7 @@ layout: main
 title: Hawk Weisman
 ---
 
-I'm a junior studying Applied Computing with a focus in Software Engineering at Allegheny College in Meadville, Pennsylvania. I I love programming and making things, and I'm especially motivated by the desire to solve interesting problems and to learn new things.
+I'm a junior studying Applied Computing with a focus in Software Engineering at Allegheny College in Meadville, Pennsylvania. I love programming and making things, and I'm especially motivated by the desire to solve interesting problems and to learn new things.
 
 My favourite programming languages are Scala, Rust, and Python, and I also have a lot of experience with Java and some with C and Lisp. I'm a big fan of the functional programming paradigm. My main interests are programming languages and their design and implementation, autonomous systems and AI, systems programming, and tools for software developers, although I'm always interested to learn more about just about any area of computer science.
 
