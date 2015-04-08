@@ -12,10 +12,11 @@ Rust has a powerful [macro system](http://rustbyexample.com/staging/macros.html)
 
 {% highlight rust %}
 
+#[macro_export]
 macro_rules! list(
     ( $e:expr, $($rest:expr),+ ) => ( Cons($e, Box::new(list!( $( $rest ),+ )) ));
     ( $e:expr ) => ( Cons($e, Box::new(Nil)) );
-    () => ( @Empty )
+    () => ( Box::new(Nil) );
 );
 
 {% endhighlight %}
