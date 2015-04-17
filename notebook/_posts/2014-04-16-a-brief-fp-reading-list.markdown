@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Brief Functional Programming Reading List
+categories: programming
 ---
 
 Frequent readers of my notebook are probably aware that I frequently advocate for the use of functional programming languages such as Lisp, Haskell, and Scala. [Functional programming](http://en.wikipedia.org/wiki/Functional_programming) (FP), a programming paradigm which models program execution as the evaluation of a series of functions and places an emphasis on immutable data structures and avoiding global state, has a number of advantages, including improved testability, more understandable and expressive code, and safer parallelization and concurrency. 
