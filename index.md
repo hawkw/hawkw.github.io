@@ -5,7 +5,7 @@ title: Hawk Weisman
 
 I'm a junior studying Applied Computing with a focus in Software Engineering at Allegheny College in Meadville, Pennsylvania. I love programming and making things, and I'm especially motivated by the desire to solve interesting problems and to learn new things.
 
-My favourite programming languages are Scala, Rust, and Python, and I also have a lot of experience with Java and some with C and Lisp. I'm a big fan of the functional programming paradigm. My main interests are programming languages and their design and implementation, autonomous systems and AI, systems programming, and tools for software developers, although I'm always interested to learn more about just about any area of computer science.
+My favourite programming languages are Scala, Rust, and Python, and I also have a lot of experience with Java and some with C and Lisp. My primary interests are programming languages and their design and implementation, systems programming, and improving tools for programmers and software developers, although I'm always interested to learn more about just about any area of computer science.
 
 My friend Max Clive and I founded [MeteorCode Labs](https://meteorcodelabs.com) to develop and publish indie games. We've currently released an open-source game engine, [Pathway](https://github.com/MeteorCode/Pathway), and we're working on some more fun stuff.
 
