@@ -15,8 +15,8 @@ Open-Source Projects
 --------------------
 
 + [Pathway](https://github.com/MeteorCode/Pathway): An open-source event-based game engine for the JVM. (Scala, Java)
-+ [seax](https://hawkweisman.me/seax): A SECD VM for evaluating programs in functional languages, Scheme interpreter, and assorted other fun stuff (work in progress) (Rust)
-+ [DeeBee](https://hawkweisman.me/deebee): A tiny relational database supporting a subset of SQL. For educational purposes only. (Scala)
++ [seax](seax): A SECD VM for evaluating programs in functional languages, Scheme interpreter, and assorted other fun stuff (work in progress) (Rust)
++ [DeeBee](deebee): A tiny relational database supporting a subset of SQL. For educational purposes only. (Scala)
 + [Decaf](decaf): An alleged compiler for a so-called programming language. (Scala)
 + [USL](https://github.com/hawkw/USL): The Useless Stack Language. A simple toy language with some interestingly weird semantics (think Lisp meets PostScript). (Scala)
 + [remote-collab](http://teamremote.github.io/remote-sublime/): A SublimeText 3 plugin for remote pair programming. (Python 3)
