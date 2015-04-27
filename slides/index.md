@@ -6,7 +6,7 @@ title: Slide Deck
 Here are the slides for a few presentations I've given in the past:
 
 + __Boids!__ ([pdf](boids.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/boids))
-    Slides to accompany a demonstration for Computer Science 383 at Allegheny College. Spring 2015.
+    Slides to accompany a demonstration for Computer Science 383 at Allegheny College. Collaboration with [Willem Yarbrough](https://github.com/yarbroughw). Spring 2015.
 + __Creating a Layer-Based Text Editor__ ([pdf](Mod3StudentLightningTalk-weismanm.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/creating-a-layer-based-text-editor))
     Computer Science 580 lightning talk. Spring 2015. See [this notebook entry](/notebook/ideas/2015/03/04/a-layer-based-text-editor/) for more. 
 + __Information Fusion for Environmental Health Assessment__ ([pdf](Mod3ModuleLightningTalk-weismanm.pdf) | [SpeakerDeck](https://speakerdeck.com/hawkw/information-fusion-for-environmental-health-assessment))
