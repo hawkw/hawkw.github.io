@@ -4,6 +4,13 @@ title:  "Alternative Memory Management in Lisp"
 categories: ideas, programming, languages, lisp
 ---
 
+#### Update (05/05/2015)
+
+This idea has since transformed into a senior thesis proposal! Those who are interested in reading a somewhat more formal description of this research can find the propsal [here](https://bytebucket.org/hawkw/cs580s2015-weismanm/raw/14927072b939e5804b8927b7ce750255c44a652d/Final/FinalProposal.pdf?token=7593adce137bdb2e2b59746ea84a656b7377dcfb).
+
+---
+
+
 A majority of my friends and colleagues are likely quite aware that I am [very fond](http://hawkweisman.me/seax/background/why-lisp.html) of the Lisp family of programming languages, as it is a subject which I probably talk about somewhat excessively. That Lisp's syntax is both elegantly simple and powerfully expressive is an achievement that I believe can be appreciated on both a practical level and an aesthetic one. Lisp makes it possible to express large and complex concepts both clearly and simply, and it encourages programmers to employ cognitive structures that support efficient, composable, and extensible programming. Frequent readers may also be aware that I am currently working on implementing a [compiler and virtual machine](http://hawkweisman.me/seax/README.html) for executing Lisp programs as part of an independant study this semester.
 
 While languages of the Lisp family are generally excellent choices for many programming projects, they are not particularly well-suited for low-level systems or high-performance programming. These tasks are the sort of thing for which one typically employs C, or occasionally its mutant offspring, C++. One major obstacle facing Lisps in this area is their use of garbage collection (GC) for memory management, an approach which was actually [first used in Lisp](http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)). 
