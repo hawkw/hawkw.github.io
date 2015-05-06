@@ -5,7 +5,7 @@ title: Hawk Weisman
 
 I'm a junior studying Applied Computing with a focus in Software Engineering at Allegheny College in Meadville, Pennsylvania. I love programming and making things, and I'm especially motivated by the desire to solve interesting problems and to learn new things.
 
-My favourite programming languages are Scala, Rust, and Python, and I also have a lot of experience with Java and some with C and Lisp. My primary interests are programming languages and their design and implementation, systems programming, and improving tools for programmers and software developers, although I'm always interested to learn more about just about any area of computer science.
+My favourite programming languages are Scala, Rust, and Python, and I also have a lot of experience with Java and some with C, Lisp, and Haskell. My primary interests are programming languages and their design and implementation, systems programming, and improving tools for programmers and software developers, although I'm always interested to learn more about just about any area of computer science.
 
 My friend Max Clive and I founded [MeteorCode Labs](https://meteorcodelabs.com) to develop and publish indie games. We've currently released an open-source game engine, [Pathway](https://github.com/MeteorCode/Pathway), and we're working on some more fun stuff.
 
@@ -25,6 +25,7 @@ Open-Source Projects
 Other Neat Stuff
 ----------------
 
++ [Boids](https://github.com/cs383-final/cs383-finalproject) implementation in Haskell
 + [L-Systems](http://hawkweisman.me/notebook/programming,computer/science,scala/2015/02/15/l-systems/) implementation in Scala and Processing
 + A [Python script](https://github.com/hawkw/breadplan) for calculating recipes for the bread from Chad Robertson's _Tartine Bread_
 + [Jekyll layouts](https://github.com/hawkw/bigyll) for Big presentations
