@@ -3,9 +3,9 @@ layout: main
 title: Hawk Weisman
 ---
 
-I'm a student studying Applied Computing with a focus in Software Engineering at Allegheny College in Meadville, Pennsylvania. I love programming and making things, and I'm especially motivated by the desire to solve interesting problems and to learn new things.
+I'm a student studying Applied Computing with a focus in Software Engineering at Allegheny College in Meadville, Pennsylvania. I'm primarily interested in the design and implementation of programming languages, systems programming and operating systems, and improving tools for programmers and software developers, although I'm always interested to learn more about just about any area of computer science.
 
-My favourite programming languages are Scala, Rust, and Python. I also have a lot of experience programming in Java, Haskell, C, and Lisp. My primary interests are programming languages and their design and implementation, systems programming, and improving tools for programmers and software developers, although I'm always interested to learn more about just about any area of computer science.
+My favourite programming languages are Scala, Rust, and Lisp, and I also have a lot of experience programming in Java and Python. I love learning new programming languages — I'm currently learning more about Haskell and C.
 
 My friend Max Clive and I founded [MeteorCode Labs](https://meteorcodelabs.com) to develop and publish indie games. We've currently released an open-source game engine, [Pathway](https://github.com/MeteorCode/Pathway), and we're working on some more fun stuff.
 
@@ -16,7 +16,7 @@ Open-Source Projects
 
 + [Alexandria](https://github.com/alexandrialibrary/Alexandria): An open-source library card catalogue application. (Scala)
 + [Pathway](https://github.com/MeteorCode/Pathway): An open-source event-based game engine for the JVM. (Scala, Java)
-+ [seax](seax): A SECD VM for evaluating programs in functional languages, Scheme interpreter, and assorted other fun stuff (work in progress) (Rust)
++ [seax](seax): A virtual machine-based runtime environment for functional programming languages. (Rust)
 + [DeeBee](https://github.com/hawkw/deebee): A tiny relational database supporting a subset of SQL. For educational purposes only. (Scala)
 + [Decaf](decaf): An alleged compiler for a so-called programming language. (Scala)
 + [USL](https://github.com/hawkw/USL): The Useless Stack Language. A simple toy language with some interestingly weird semantics (think Lisp meets PostScript). (Scala)
