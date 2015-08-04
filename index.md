@@ -7,7 +7,7 @@ I'm a student studying Applied Computing with a focus in Software Engineering at
 
 My favourite programming languages are Scala, Rust, and Lisp, and I also have a lot of experience programming in Java and Python. I love learning new programming languages — I'm currently learning more about Haskell and C.
 
-My friend Max Clive and I founded [MeteorCode Labs](https://meteorcodelabs.com) to develop and publish indie games. We've currently released an open-source game engine, [Pathway](https://github.com/MeteorCode/Pathway), and we're working on some more fun stuff.
+My friend [Max Clive](https://arcticlight.me) and I founded [MeteorCode Labs](https://meteorcodelabs.com) to develop and publish indie games. We've currently released an open-source game engine, [Pathway](https://github.com/MeteorCode/Pathway), and we're working on some more fun stuff.
 
 I'm currently looking for summer internships and part-time programming jobs, so if you're interested to hire someone with my skills, please don't hesitate to [let me know](hire).
 
