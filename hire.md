@@ -7,6 +7,8 @@ I love solving tricky problems and making interesting things, and I'm always int
 
 As I am currently still a college student, I'm primarily interested in internships or opportunities for remote contract work, but this may change in the future.
 
+If you're interested, my r&eacute;sum&eacute; is available [here](http://hawkweisman.me/resume.pdf) (in PDF format).
+
 Testimonials
 ------------
 
