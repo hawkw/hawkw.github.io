@@ -7,8 +7,10 @@ I love solving tricky problems and making interesting things, and I'm always int
 
 As I am currently still a college student, I'm primarily interested in internships or opportunities for remote contract work, but this may change in the future.
 
-What People Have Said About Me
------------------------------
+Testimonials
+------------
+
+Here's what some people have said about me:
 
 > "Hawk has demonstrated excellent skills in software development in a variety of course projects ranging from small to large, and in his outside of class work experiences. Hawk is a highly motivated, knowledgeable, committed and determined individual, who is interested in the details of his work."
 >
