@@ -1,29 +1,28 @@
-% LaTeX file for resume 
+% LaTeX file for resume
 % This file uses the resume document class (res.cls)
 
-\documentclass[margin]{res} 
+\documentclass[margin]{res}
 \usepackage{url}
-% the margin option causes section titles to appear to the left of body text 
+% the margin option causes section titles to appear to the left of body text
 \textwidth=5.2in % increase textwidth to get smaller right margin
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
+%\usepackage{newcent}   % uses new century schoolbook postscript font
 
-\begin{document} 
- 
+\begin{document}
+
 \name{Hawk Weisman\\[12pt]} % the \\[12pt] adds a blank line after name
- 
+
 \address{990 First St,\\ Meadville, PA, 16335  \\
         +1 (814) 853-1501}
-\address{\url{weismanm@allegheny.edu} \\ \url{http://hawkweisman.me}}
+\address{\url{hi@hawkweisman.me} \\ \url{http://hawkweisman.me}}
 
- 
-\begin{resume} 
- 
-%\section{Objective} 
-%Auditing/Analysis of Operations 
 
-\section{EDUCATION}{\sl Bachelor of Science} \\
-                Double Major in Applied Computing (Software Engineering) \& Environmental Studies \\
+\begin{resume}
+
+%\section{Objective}
+%Auditing/Analysis of Operations
+
+\section{EDUCATION}{\sl Bachelor of Science} in Applied Computing (Software Engineering)\\
                 % \sl will be bold italic in New Century Schoolbook (or
                 % any postscript font) and just slanted in
                 % Computer Modern (default) font
@@ -35,57 +34,57 @@
                 \begin{ncolumn}{2}
                 Data Structures and Algorithms  & Computer Organization \\
                 Principles of Software Engineering & Operating Systems\\
-                Principles of Data Management & Introduction to Compiler Design\\ 
+                Principles of Data Management & Introduction to Compiler Design\\
                 Programming Language Implementation & Robotics and Multi-Agent Systems\\
                 \end{ncolumn}
- 
+
 % Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
 \section{SKILLS}
    \begin{tabular}{l p{3in}}
-                \textit{Proficient with} & Scala, Java, Python \\
-                \textit{Capable with} & C, R, Rust, Lisp, SQL, HTML/CSS \\
-                \textit{Familiar with} & Haskell, Go, CoffeeScript, JavaScript, JQuery, Polymer \\
-                \textit{Web Frameworks}  & Scalatra, Bootstrap, Slick \\
+                \textit{Proficient with} & Scala, Rust, Java, Python \\
+                \textit{Capable with} & C, R, Lisp, SQL, HTML/CSS \\
+                \textit{Familiar with} & Haskell, Go, CoffeeScript, JavaScript \\
+                \textit{Web Frameworks}  & Scalatra, Bootstrap, Slick, Polymer, JQuery \\
                 \textit{Build and CI}  & Gradle, Ant, sbt, Cargo, Travis, Jenkins \\
-                \textit{Testing}  & JUnit, ScalaTest, Mockito, ScalaMock, JaCoCo, Scoverage \\
-                \textit{IDEs/Editors}  & SublimeText, Atom, IntelliJ IDEA, Eclipse \\
+                \textit{Testing}  & ScalaTest, ScalaCheck, JUnit, Mockito\\
+                \textit{IDEs/Editors}  & Atom, SublimeText, IntelliJ IDEA, Eclipse \\
                 \textit{Source Control} &Git, GitHub, GitLab
  \end{tabular}
 
 
-\section{WORK \\ EXPERIENCE} 
+\section{WORK \\ EXPERIENCE}
 
-        {\sl Web Application Developer} \hfill  February 2015 --- Ongoing \\
-                Carr Hall Garden, Allegheny College, Meadville, PA
-                 \begin{itemize}  \itemsep -2pt % reduce space between items
-                    \item Independently developed a web application for tracking inventory and sales data.
-                    \item Worked with the client to determine project requirements.
-                    \item Designed and developed web front-end and user interface, using HTML/CSS, JavaScript, JQuery, Bootstrap, and Jade.
-                    \item Designed and developed database-driven web back-end, using Scalatra, Slick, and H2DB. 
-                 \end{itemize}
+        % {\sl Web Application Developer} \hfill  February 2015 --- Ongoing \\
+        %         Carr Hall Garden, Allegheny College, Meadville, PA
+        %          \begin{itemize}  \itemsep -2pt % reduce space between items
+        %             \item Independently developed a web application for tracking inventory and sales data.
+        %             \item Worked with the client to determine project requirements.
+        %             \item Designed and developed web front-end and user interface, using HTML/CSS, JavaScript, JQuery, Bootstrap, and Jade.
+        %             \item Designed and developed database-driven web back-end, using Scalatra, Slick, and H2DB.
+        %          \end{itemize}
 
                 {\sl Lead Software Engineer} \hfill  Spring 2014 --- Ongoing \\
                 MeteorCode Laboratories, Meadville, PA
                  \begin{itemize}  \itemsep -2pt % reduce space between items
-                    \item Co-founded a small business to develop and publish independently-developed computer games. 
+                    \item Co-founded a small business to develop and publish independently-developed computer games.
                     \item Developed a game engine in Scala and Java, contributing a majority of source code to the project.
                     \item Set up and maintained a development environment using GitLab, Jenkins CI, and Gradle.
         \item Contributed to the design and development of a Web site, meteorcode.com, using HTML/CSS, SASS/SCSS, and Polymer.
                  \end{itemize}
-                
+
                 %{\sl Aquaponics Technician} \hfill Winter Break 2013 \\
                 %Environmental Science Department, Allegheny College, Meadville, PA
                 % \begin{itemize}  \itemsep -2pt % reduce space between items
                 %    \item Responsible for independently maintaining multiple decorative and production aquaponics systems.
                 %    \item Performed maintenance tasks such as cleaning filters, feeding fish, and maintaining water levels.
                 %\end{itemize}
- 
+
                 %{\sl Darkroom Technician} \hfill            2012-2013 \\
                 %Art Department, Allegheny College
                 % \begin{itemize}  \itemsep -2pt %reduce space between items
                 %    \item Responsible for preparing chemicals and maintaining a well-stocked darkroom, as well as ensuring workspace cleanliness.
                 %    \item Assisted and instructed art students in the use of darkroom materials and techniques.
-                % \end{itemize} 
+                % \end{itemize}
 
                 %{\sl Computer Art Studio Technician} \hfill        2012-2013 \\
                 %Art Department, Allegheny College
@@ -93,12 +92,20 @@
                 %   \item Instructed other students in the use of computer art tools, such as drawing tablets, digital video cameras, and large-format printers.
                 %   \item Instructed other students in the use of software such as Photoshop, Illustrator, and Final Cut.
                 %   \item Diagnosed and repaired technical difficulties with studio equipment.
-                %   \end{itemize} 
-                \pagebreak
+                %   \end{itemize}
 \section{SELECTED \\ PROJECTS}
 
+        {\sl Seax} \hfill Spring 2015 --- Ongoing \\
+        Personal Project \\
+        \url{http://hawkweisman.me/seax}
+        \begin{itemize} \itemsep -2pt
+            \item Designed and developed a runtime environment for functional programming languages.
+            \item Implemented a virtual machine, Scheme compiler, and other utilities in Rust.
+            \item Wrote over 3,500 lines of Rust code and over 3,000 lines of documentation.
+        \end{itemize}
+
         {\sl Decaf Compiler} \hfill Fall 2014 \\
-                CMPSC420: Introduction to Compiler Design, Allegheny College \\ 
+        CMPSC420: Introduction to Compiler Design, Allegheny College \\
         \url{https://hawkweisman.me/decaf}
         \begin{itemize} \itemsep -2pt % reduce space between items
         \item Worked on a team to develop a compiler for a small Java-like language.
@@ -106,9 +113,9 @@
         \item Wrote unit tests using ScalaTest
         \item Developed parsing, semantic analysis, and Javabyte code generation components
         \end{itemize}
-        
+
         {\sl DeeBee} \hfill Fall 2014 \\
-                CMPSC380: Principles of Data Management, Allegheny College \\ 
+        CMPSC380: Principles of Data Management, Allegheny College \\
         \url{https://github.com/hawkw/deebee}
         \begin{itemize} \itemsep -2pt % reduce space between items
         \item Independently developed a small SQL database for educational purposes
@@ -116,9 +123,9 @@
         \item Wrote over 1,700 lines of Scala code
         \item Wrote unit tests using ScalaTest
         \end{itemize}
-        
+
         {\sl Pathway Game Engine} \hfill Spring 2014 --- Ongoing \\
-                MeteorCode Laboratories \\ 
+                MeteorCode Laboratories \\
         \url{https://github.com/MeteorCode/Pathway}
         \begin{itemize} \itemsep -2pt % reduce space between items
         \item Developed an open-source event driven game engine for the JVM platform.
@@ -127,7 +134,7 @@
         \item Designed an extensible architecture for a software development framework.
         \item Wrote a comprehensive test fixture using tools such as JUnit, Mockito, and JaCoCo.
         \end{itemize}
-        
+
         {\sl Remote Collab SublimeText Plugin } \hfill Spring 2014 \\
         CMPSC440: Principles of Operating Systems, Allegheny College \\
         \url{https://github.com/TeamRemote/remote-sublime}
@@ -135,26 +142,17 @@
             \item Developed an open-source SublimeText plugin to facilitate remote pair programming.
             \item Contributed over 1,000 lines of Python source code.
         \end{itemize}
-        
-                {\sl Filesystem Traversal Study} \hfill Spring 2014 \\ 
-                CMPSC440: Principles of Operating Systems, Allegheny College \\
-                \url{https://github.com/hawkw/traverse}
-                 \begin{itemize} \itemsep -2pt % reduce space between items
-                    \item Independently organized a research project to collect and analyze filesystem data.
-                    \item Programmed data-collection tools in Python.
-                    \item Prepared an IPython notebook to analyze and visualize data.
-                    \item Encouraged other students to voluntarily contribute datasets.
-                \end{itemize}
 
-                {\sl Knightingale Twitter Analysis System} \hfill Fall 2013 \\
-                CMPSC290: Principles of Software Engineering, Allegheny College \\
-                \url{https://github.com/TeamKnightengale/Knightingale}
-                 \begin{itemize}  \itemsep -2pt % reduce space between items
-                    \item Collaborated with other students to create an open-source software system to analyze Twitter account archive data.
-                    \item Responsible for programming analytics and visualization, input/output, and unit testing.
-                    \item Contributed a majority of Java code to the project.
-                    \item Practiced Agile software development techniques.
-                \end{itemize}
+        {\sl Filesystem Traversal Study} \hfill Spring 2014 \\
+        CMPSC440: Principles of Operating Systems, Allegheny College \\
+        \url{https://github.com/hawkw/traverse}
+         \begin{itemize} \itemsep -2pt % reduce space between items
+            \item Independently organized a research project to collect and analyze filesystem data.
+            \item Programmed data-collection tools in Python.
+            \item Prepared an IPython notebook to analyze and visualize data.
+            \item Encouraged other students to voluntarily contribute datasets.
+        \end{itemize}
+
 
 \section{REFERENCES}
 {\sl Dr. Janyl Jumadinova} \hfill \\
@@ -166,15 +164,12 @@ Assistant Professor \\ Department of Computer Science \\ Allegheny College \\
 Associate Professor and Chair \\ Department of Computer Science \\ Allegheny College \\
 \url{gkapfham@allegheny.edu} \\
 +1 (814) 332-2880\\
-
-{\sl Kerstin Martin} \hfill \\
-Carr Hall Garden Manager \\ Allegheny College \\
-\url{kmartin@allegheny.edu} \\
-+1 (814) 332-2787\\
-
-
-\end{resume} 
-\end{document} 
+%
+% {\sl Kerstin Martin} \hfill \\
+% Carr Hall Garden Manager \\ Allegheny College \\
+% \url{kmartin@allegheny.edu} \\
+% +1 (814) 332-2787\\
 
 
-
+\end{resume}
+\end{document}
