@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Hawk Weisman
+title: Eliza Weisman
 ---
 
 I'm a student studying Applied Computing with a focus in Software Engineering at Allegheny College in Meadville, Pennsylvania. I'm primarily interested in the design and implementation of programming languages, systems programming and operating systems, and improving tools for programmers and software developers, although I'm always interested to learn more about just about any area of computer science.
