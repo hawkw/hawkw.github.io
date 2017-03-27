@@ -3,13 +3,13 @@ permalink:        pretty
 # relative_permalinks: true
 
 # Setup
-title:            Hawk Weisman
-url:              https://hawkweisman.me
+title:            Eliza Weisman
+url:              https://elizas.website
 paginate:         1
 baseurl:          /
 author:
-  name:           Hawk Weisman
-  url:            https://hawkweisman.me
+  name:           Eliza Weisman
+  url:            https://elizas.website
   email:          hawk@hawkweisman.me
 
 exclude: ["website.sublime-project", "website.sublime-workspace", "*.log", "*.fdb_latexmk", "*.synctex.gz", "*.aux"]
@@ -27,7 +27,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Hawk Weisman"
+      author: "Eliza Weisman"
 
 kramdown:
   input: GFM
