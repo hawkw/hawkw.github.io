@@ -3,14 +3,14 @@ permalink:        pretty
 # relative_permalinks: true
 
 # Setup
-title:            Hawk Weisman
-url:              https://hawkweisman.me
+title:            eliza's website
+url:              https://elizas.website
 paginate:         1
 baseurl:          /
 author:
   name:           Hawk Weisman
-  url:            https://hawkweisman.me
-  email:          hawk@hawkweisman.me
+url:              https://elizas.website
+  email:          eliza@elizas.website
 
 exclude: ["website.sublime-project", "website.sublime-workspace", "*.log", "*.fdb_latexmk", "*.synctex.gz", "*.aux"]
 
@@ -31,3 +31,34 @@ defaults:
 
 kramdown:
   input: GFM
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Navigation
+nav:
+  - name:           "code"
+    href:           "/code"
+    kind:           "dir"
+  - name:           "src"
+    href:           "https://github.com/hawkw"
+    kind:           "dir"
+  - name:           "art"
+    href:           "/portfolio"
+    kind:           "dir"
+  - name:           "notes"
+    href:           "/notes"
+    kind:           "dir"
+  - name:           "misc"
+    href:           "/misc"
+    kind:           "dir"
+  - name:           "mail"
+    href:           "mailto://eliza@elizas.website"
+    kind:           "exe"
+  - name:           "about.html"
+    href:           "/about"
+    kind:           "file"
+  - name:           "résumé.pdf"
+    href:           "/resume.pdf"
+    kind:           "file"

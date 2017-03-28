@@ -1,0 +1,46 @@
+@import "fonts.scss";
+
+$very-light-gray: #c5c8c6;
+$light-gray: #65737E;
+$gray: #2F3640;
+$dark-gray: #282a2e;
+$very-dark-gray: #1d1f21;
+
+$cyan: #8abeb7;
+$blue: #81a2be;
+$purple: #B48EAD;
+$green: #acc697;
+$red: #cc6666;
+$orange: #de935f;
+$light-orange: #EBCB8B;
+
+.term {
+    color: $light-gray;
+    font-family: $code-font-stack;
+}
+.term-wrapper {
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem 10rem;
+    // grid-gap: 2rem;
+    // padding-left: 1rem;
+}
+
+a.term-nav {
+    color: $light-gray;
+    // display: block;
+    font-family: $code-font-stack;
+    &.dir {
+        color: $blue;
+        &:after {
+            content: "/";
+            color: $light-gray;
+            border-bottom: none;
+
+        }
+    }
+    &.exe {
+        font-weight: bold;
+        color: $green;
+    }
+
+}
