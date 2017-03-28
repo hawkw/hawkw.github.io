@@ -8,8 +8,8 @@ url:              https://elizas.website
 paginate:         1
 baseurl:          /
 author:
-  name:           Hawk Weisman
-url:              https://elizas.website
+  name:           Eliza Weisman
+  url:            https://elizas.website
   email:          eliza@elizas.website
 
 exclude: ["website.sublime-project", "website.sublime-workspace", "*.log", "*.fdb_latexmk", "*.synctex.gz", "*.aux"]
@@ -20,14 +20,14 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: main"
+      layout: main
   -
     scope:
       path: "notebook"
       type: "posts"
     values:
       layout: "post"
-      author: "Hawk Weisman"
+      author: "Eliza Weisman"
 
 kramdown:
   input: GFM
@@ -41,9 +41,6 @@ nav:
   - name:           "code"
     href:           "/code"
     kind:           "dir"
-  - name:           "src"
-    href:           "https://github.com/hawkw"
-    kind:           "dir"
   - name:           "art"
     href:           "/portfolio"
     kind:           "dir"
@@ -56,7 +53,7 @@ nav:
   - name:           "mail"
     href:           "mailto://eliza@elizas.website"
     kind:           "exe"
-  - name:           "about.html"
+  - name:           "about.txt"
     href:           "/about"
     kind:           "file"
   - name:           "résumé.pdf"
