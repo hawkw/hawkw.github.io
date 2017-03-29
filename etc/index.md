@@ -1,5 +1,5 @@
 ---
 layout: term
-title: misc
-cmd: cd misc & ls -l
+title: etc
+cmd: cd etc & ls -l
 ---
