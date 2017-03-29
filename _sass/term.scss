@@ -15,30 +15,51 @@ $orange: #de935f;
 $light-orange: #EBCB8B;
 
 .term {
-    color: $light-gray;
+    color: $gray;
     font-family: $code-font-stack;
+
+    // grid for stuff like fake "ls" commands
+    &-grid {
+        display: grid;
+        grid-template-columns: 9rem 9rem 9rem 9rem;
+        // grid-gap: 2rem;
+        // padding-left: 1rem;
+    }
 }
 
-.term-wrapper {
-    display: grid;
-    grid-template-columns: 10rem 10rem 10rem 10rem;
-    // grid-gap: 2rem;
-    // padding-left: 1rem;
+.prompt {
+    &.host {
+        &:after {
+            color: $light-gray;
+            content: " :: ";
+        }
+    }
+    &.path {
+        &:after {
+            color: $light-gray;
+            content: " $ ";
+        }
+    }
 }
 
 a.term-nav {
-    color: $light-gray;
-    // display: block;
+    color: $gray;
     font-family: $code-font-stack;
+
+    // fake "directories" - printed with a slash after
     &.dir {
         color: $blue;
         &:after {
             content: "/";
-            color: $light-gray;
+            color: $gray;
             border-bottom: none;
-
+            &:hover {
+                border-bottom: none;
+            }
         }
     }
+
+    // fake "executables"
     &.exe {
         font-weight: bold;
         color: $green;
@@ -47,7 +68,7 @@ a.term-nav {
 }
 
 .blinking-cursor {
-  color: #2E3D48;
+  color: $gray;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -56,46 +77,26 @@ a.term-nav {
 }
 
 @keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+    from, to { color: transparent; }
+    50% {      color: $gray; }
 }
 
 @-moz-keyframes blink {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+  from, to { color: transparent; }
+  50% {      color: $gray; }
 }
 
 @-webkit-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+    from, to { color: transparent; }
+    50% {      color: $gray; }
 }
 
 @-ms-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+    from, to { color: transparent; }
+    50% {      color: $gray; }
 }
 
 @-o-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+    from, to { color: transparent; }
+    50% {      color: $gray; }
 }

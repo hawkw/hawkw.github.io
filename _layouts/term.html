@@ -2,17 +2,19 @@
 layout: common
 ---
 <header class="term">
-    elizas.website :: ~ $ ls
-  <nav class="term-wrapper">
-    {% for nav in site.nav %}
-    <span>
-        <a class="term-nav {{nav.kind}}"
-           href="{{ nav.href | prepend: site.github.url }}">
-           {{ nav.name }}</a>
-    </span>
-    {% endfor %}
-  </nav>
-  elizas.website :: ~ {{page.cmd}}
+    <!-- TODO: make these into <p>s? -->
+    <span class = "prompt host">elizas.website</span>
+    <span class = "prompt path">~</span> ls
+    <nav class="term-grid">
+        {% for nav in site.nav %}
+            <span>
+                <a class="term-nav {{nav.kind}}"
+                   href="{{ nav.href | prepend: site.github.url }}">{{ nav.name }}</a>
+            </span>
+            {% endfor %}
+    </nav>
+    <span class = "prompt host">elizas.website</span>
+    <span class = "prompt path">~{{page.pwd | prepend: /}}</span> {{page.cmd}}
 </header>
 <main>
   <!-- begin content -->
