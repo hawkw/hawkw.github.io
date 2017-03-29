@@ -1,5 +1,5 @@
 ---
-layout: term
+layout: dir
 title: etc
-cmd: cd etc & ls -l
+pwd: etc
 ---

@@ -9,7 +9,7 @@ eliza weisman &mdash; programmer, artist, et cetera
 
 ### Who?
 
-Eliza Weisman is a [programmer](/code), [artist](/art), student, and occasional maker and breaker of things. She currently lives in Pennsylvania.
+Eliza Weisman is a [programmer](/code), [artist](/portfolio), student, and occasional maker and breaker of things. She currently lives in Pennsylvania.
 
 ### Contact
 + e-mail: eliza (AT) elizas.website
