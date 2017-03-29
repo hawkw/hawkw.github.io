@@ -25,25 +25,11 @@ $light-orange: #EBCB8B;
         // grid-gap: 2rem;
         // padding-left: 1rem;
     }
+
+    a { color: $gray; }
 }
 
-.prompt {
-    &.host {
-        &:after {
-            color: $light-gray;
-            content: " :: ";
-        }
-    }
-    &.path {
-        &:after {
-            color: $light-gray;
-            content: " $ ";
-        }
-    }
-}
-
-a.term-nav {
-    color: $gray;
+a {
     font-family: $code-font-stack;
 
     // fake "directories" - printed with a slash after
@@ -59,12 +45,32 @@ a.term-nav {
         }
     }
 
-    // fake "executables"
-    &.exe {
-        font-weight: bold;
+    // fake "files"
+    &.file {
         color: $green;
     }
 
+}
+
+// ul .term {
+//     list-style-type: none;
+//     padding: 4rem;
+//     margin: none;
+// }
+
+.prompt {
+    &.host {
+        &:after {
+            color: $light-gray;
+            content: " :: ";
+        }
+    }
+    &.path {
+        &:after {
+            color: $light-gray;
+            content: " $ ";
+        }
+    }
 }
 
 .blinking-cursor {
