@@ -5,3 +5,4 @@ cmd: cat about.txt
 ---
 
 eliza weisman - programmer, artist, &c
+======================================
