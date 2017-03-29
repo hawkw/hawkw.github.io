@@ -57,7 +57,7 @@ nav:
   #   href:           "mailto://eliza@elizas.website"
   #   kind:           "exe"
   - name:           "about.txt"
-    href:           "/
+    href:           "/"
     kind:           "file"
   - name:           "résumé.pdf"
     href:           "/resume.pdf"

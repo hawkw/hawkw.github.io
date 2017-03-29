@@ -1,7 +1,12 @@
 ---
+<<<<<<< HEAD
 layout: term
 title: eliza's website
 cmd: cat about.txt
+=======
+layout: main
+title: Eliza Weisman
+>>>>>>> 45bddd1b3e9be47138c1b29f0c7f1dcd464d9824
 ---
 
 eliza weisman &mdash; programmer, artist, et cetera
