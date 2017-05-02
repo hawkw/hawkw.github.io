@@ -32,6 +32,9 @@ defaults:
     scope:
       path: "etc"
       type: "pages"
+    values:
+      layout: "post"
+      author: "Eliza Weisman"
 
 kramdown:
   input: GFM

@@ -9,7 +9,7 @@ layout: common
         {% for nav in site.nav %}
             <span>
                 <a class="term-nav {{nav.kind}}"
-                   href="{{ nav.href | prepend: site.github.url }}">{{ nav.name }}</a>
+                   href="{{ nav.href }}">{{ nav.name }}</a>
             </span>
             {% endfor %}
     </nav>
@@ -25,7 +25,7 @@ layout: common
       {% for item in page.path.pages %}
           <span>
               <a class="term-nav file"
-                 href="{{ item.href | prepend: site.github.url }}">{{ item.title }}</a>
+                 href="{{ item.href }}">{{ item.title }}</a>
           </span>
           {% endfor %}
   </nav>
