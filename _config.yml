@@ -46,7 +46,7 @@ sass:
 # Navigation
 nav:
   - name:           "code"
-    href:           "/code"
+    href:           "https://github.com/hawkw"
     kind:           "dir"
   - name:           "art"
     href:           "/portfolio"
@@ -58,7 +58,7 @@ nav:
     href:           "/etc"
     kind:           "dir"
   - name:           "keys"
-    href:           "http://keybase.io/hawk"
+    href:           "https://keybase.io/hawk"
     kind:           "dir"
   # - name:           "mail"
   #   href:           "mailto://eliza@elizas.website"
