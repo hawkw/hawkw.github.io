@@ -12,7 +12,7 @@ eliza weisman &mdash; programmer, artist, et cetera
 I'm a [programmer](/code) and occasional [artist](/portfolio), currently living in Northwest Arkansas. I'm interested in functional programming, systems software, and programming languages. Professionally, I write open-source infrastructure for cloud native applications at [buoyant.io](https://buoyant.io).
 
 ### Contact
-+ e-mail: eliza (AT) elizas.website
++ e-mail: _eliza (AT) buoyant (DOT) io_ or _eliza (AT) elizas (DOT) website_
 + address & telephone number available by request
 + <a class = "dir" href = "https://twitter.com/mycoliza">personal twitter</a>
 
