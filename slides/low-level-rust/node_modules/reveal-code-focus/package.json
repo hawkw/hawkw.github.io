@@ -1,0 +1,60 @@
+{
+  "_from": "reveal-code-focus",
+  "_id": "reveal-code-focus@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-gXuSTHwiQc/VotcHMPDMqvm94FY=",
+  "_location": "/reveal-code-focus",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "reveal-code-focus",
+    "name": "reveal-code-focus",
+    "escapedName": "reveal-code-focus",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/reveal-code-focus/-/reveal-code-focus-1.0.0.tgz",
+  "_shasum": "817b924c7c2241cfd5a2d70730f0ccaaf9bde056",
+  "_spec": "reveal-code-focus",
+  "_where": "/Users/eliza/Code/5mof-reveal",
+  "author": {
+    "name": "Benjamin Tan",
+    "url": "https://demoneaux.github.io/"
+  },
+  "bugs": {
+    "url": "https://github.com/demoneaux/reveal-code-focus/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A Reveal.js plugin that allows focusing on specific lines of code blocks.",
+  "devDependencies": {
+    "@alrra/travis-scripts": "^2.0.0",
+    "reveal.js": "^3.2.0"
+  },
+  "files": [
+    "reveal-code-focus.js"
+  ],
+  "homepage": "https://demoneaux.github.io/reveal-code-focus/",
+  "keywords": [
+    "Reveal.js",
+    "code",
+    "focus"
+  ],
+  "license": "MIT",
+  "main": "reveal-code-focus.js",
+  "name": "reveal-code-focus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demoneaux/reveal-code-focus.git"
+  },
+  "scripts": {
+    "test": "true"
+  },
+  "version": "1.0.0"
+}
