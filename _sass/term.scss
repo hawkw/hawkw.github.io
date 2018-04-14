@@ -2,7 +2,7 @@
 
 $very-light-gray: #c5c8c6;
 $light-gray: #65737E;
-$gray: #2F3640;
+$gray: black;
 $dark-gray: #282a2e;
 $very-dark-gray: #1d1f21;
 
@@ -15,7 +15,7 @@ $orange: #de935f;
 $light-orange: #EBCB8B;
 
 .term {
-    color: $gray;
+    color: black;
     font-family: $code-font-stack;
 
     // grid for stuff like fake "ls" commands
@@ -74,7 +74,7 @@ a {
 }
 
 .blinking-cursor {
-  color: $gray;
+  color: black;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -84,25 +84,25 @@ a {
 
 @keyframes "blink" {
     from, to { color: transparent; }
-    50% {      color: $gray; }
+    50% {      color: black; }
 }
 
 @-moz-keyframes blink {
   from, to { color: transparent; }
-  50% {      color: $gray; }
+  50% {      color: black; }
 }
 
 @-webkit-keyframes "blink" {
     from, to { color: transparent; }
-    50% {      color: $gray; }
+    50% {      color: black; }
 }
 
 @-ms-keyframes "blink" {
     from, to { color: transparent; }
-    50% {      color: $gray; }
+    50% {      color: black; }
 }
 
 @-o-keyframes "blink" {
     from, to { color: transparent; }
-    50% {      color: $gray; }
+    50% {      color: black; }
 }
