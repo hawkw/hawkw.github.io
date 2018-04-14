@@ -14,21 +14,24 @@ layout: common
             {% endfor %}
     </nav>
     <span class = "prompt host">elizas.website</span>
-    <span class = "prompt path">~</span> cd {{page.title}}
+    <span class = "prompt path">~</span> cd {{page.pwd}}
     <br />
     <span class = "prompt host">elizas.website</span>
     <span class = "prompt path">~{{page.pwd | prepend: "/"}}</span> ls
 </header>
 <main>
   <!-- begin content -->
-  <nav class="term-grid">
+  <!-- <nav class="term-grid">
       {% for item in page.path.pages %}
           <span>
               <a class="term-nav file"
                  href="{{ item.href }}">{{ item.title }}</a>
           </span>
           {% endfor %}
-  </nav>
+  </nav> -->
+    <!-- begin content -->
+    {{ content }}
+    <!-- end content -->
   <!-- end content -->
 </main>
 <footer class="term">

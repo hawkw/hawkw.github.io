@@ -1,7 +1,8 @@
 ---
-layout: term
+layout: dir
 title: Notebook
-cmd: cd notes & ls -l
+cmd: ls -l
+pwd: notes
 ---
 
 {% for post in site.posts %}
