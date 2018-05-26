@@ -25,6 +25,12 @@ $light-orange: #EBCB8B;
         // grid-gap: 2rem;
         // padding-left: 1rem;
     }
+        // grid for stuff like fake "ls" commands
+    &-grid-single {
+        display: grid;
+        // grid-gap: 2rem;
+        // padding-left: 1rem;
+    }
 
     a { color: $gray; }
 }

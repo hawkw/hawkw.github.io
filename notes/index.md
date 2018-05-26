@@ -1,10 +1,17 @@
 ---
 layout: dir
-title: Notebook
-cmd: ls -l
+title: elizas.website/notes
+cmd: "ls -ot"
 pwd: notes
 ---
 
-{% for post in site.posts %}
-+ {{ post.date | date_to_string }} [ {{ post.title }} ]({{ post.url }})
+<nav class="term">
+    total {{ site.posts.size }}
+</nav>
+{% for item in site.posts %}
+<nav class="term">
+    -rw-r--r--&emsp;1&emsp;&emsp;{{ item.author }}
+    {{ item.date | date: "%b" }}&nbsp;{{item.date | date: "%_e%t%Y" }}&emsp;&emsp;
+    <a class="term-nav file" href="{{ item.url }}">{{ item.title }}</a>
+</nav>
 {% endfor %}
