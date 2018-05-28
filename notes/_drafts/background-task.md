@@ -5,13 +5,13 @@ categories: rust,programming
 author: eliza
 ---
 
-As part of recent work on [Conduit], I recently had the pleasure of getting to make several contributions to the excellent [Trust-DNS] library, maintained by Benjamin Frye ([@bluejekyll]). During a conversation with Ben on one of my pull requests, it came to light that several of the asynchronous programming patterns that my colleagues and I at [Buoyant] have found very useful in our Rust projects are not all exactly common knowledge. Given that, I wanted to take a moment or two to write about some of these patterns and share them with the Rust community at large.
+As part of recent work on [Conduit], I recently had the pleasure of getting to make several contributions to the excellent [Trust-DNS] library, maintained by Benjamin Frye ([@bluejekyll]). During a conversation with Ben on one of my pull requests, it came to light that several of the asynchronous programming patterns that my colleagues and I at [Buoyant] have found very useful in our Rust projects are not exactly common knowledge. Given that, I wanted to take a moment or two to write about some of these patterns and share them with the Rust community at large.
 
 # Background Tasks
 
 Often, when writing network applications, it is desirable for some state to be reused for certain actions, rather than set up repeatedly every time an action is carried out. For example, in an application that makes multiple HTTP requests to the same servers, we might want to store the underlying TCP connections used to make those requests in a _connection pool_, rather than creating a new connection for every request; or we might want to take some action based on state that is updated by certain events, such as a watch on a long-polling API.
 
-One way to achieve this kind of pattern using Rust's [`tokio`] and [`futures`] libraries for asynchronous programming is to create what I've taken to referring to as _background tasks_. These background tasks are `Future`s which, once spawned on an `Executor`, rather than completing with some value, continue to run on that `Executor` for a long period of time, waking up to perform some work to complete other `Future`s. The [`futures::sync::mpsc`] and [`futures::sync::oneshot`] modules in [`futures`] provide some primitives which make it remarkably easy to write these kinds of futures.
+One way to achieve this kind of pattern using Rust's [`tokio`] and [`futures`] libraries for asynchronous programming is to create what I've taken to referring to as _background tasks_. These background tasks are `Future`s which, once spawned on an `Executor`, continue to run on that `Executor` for a long period of time. Rather than running once and completing with some value, the background task instead 'wakes up' to perform some work to complete other `Future`s. The [`futures::sync::mpsc`] and [`futures::sync::oneshot`] modules in [`futures`] provide some primitives which make it remarkably easy to write these kinds of futures.
 
 ## A Contrived Example
 
@@ -85,7 +85,7 @@ If this were production code, we might want better error handling here, but I've
 ### The Backround Future
 
 Now, we can implement `Future` for the `SumBackground` struct. The `Future` implementation for a background task is typically fairly simple:
-poll the receive side of the request channel and respond to each incoiming request. We continue polling as long as there are more requests. If polling the request channel returns `Async::NotReady`, that means there are currently no more requests coming in, so we yield until we are polled again. If the request stream has ended (i.e., polling the channel returns `Async::Ready(None)`), this indicates that all the request handles have been dropped, in which case the background task can finish.
+poll the receive side of the request channel and respond to each incoming request. We continue polling as long as there are more requests. If polling the request channel returns `Async::NotReady`, that means there are currently no more requests coming in, so we yield until we are polled again. If the request stream has ended (i.e., polling the channel returns `Async::Ready(None)`), this indicates that all the request handles have been dropped, in which case the background task can finish.
 
 ```rust
 use futures::{Async, Future, Poll, Stream};
