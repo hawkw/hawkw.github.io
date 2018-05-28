@@ -35,25 +35,37 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h1 { text-transform: uppercase; }
-h1:before { content: "# "; }
-h2:before { content: "## "; }
-
-h3:before { content: "### "; }
-h4:before { content: "#### "; }
-h3, h4, h5, h6 {
-  font-size: 100%;
+h1, h2, h3 { text-transform: uppercase; }
+h1 {
+  font-size: 160%;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+  &:before { content: "# "; }
 }
+h2 {
+  font-size: 140%;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  &:before { content: "## "; }
+}
+h3 {
+  // font-size: 125%;
+
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  &:before { content: "### "; }
+}
+
+h4:before { content: "#### "; }
+
 h1, h2 {
   font: {
     weight: 600;
-    size: 16px;
   }
   & .title {
     letter-spacing: 0.1px;
     text-align: center;
     outline: none;
-    font-size: 4rem;
     border: none;
   }
   & .halftitle {
@@ -69,6 +81,7 @@ h1, h2 {
       font-size: 26px;
   }
 }
+
 
 div.picheader, div.textheader {
   width: 100%;
