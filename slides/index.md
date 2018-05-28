@@ -1,6 +1,7 @@
 ---
 layout: dir
-title: Slide Deck
+title: elizas.website/slides
+cmd: ls
 pwd: slides
 ---
 
