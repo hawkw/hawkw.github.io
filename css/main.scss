@@ -37,7 +37,6 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 { text-transform: uppercase; }
 
 h1 {
-  // font-size: 140%;
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
 }
@@ -102,7 +101,7 @@ div.halftitle {
   clear: both;
   // margin: 1em 0;
   padding: 0;
-  margin-left: 2rem;
+  margin-left: 2ch;
   text-align: left;
   line-height : 1.5em;
 }
@@ -156,7 +155,7 @@ p.sidenote {
 
 .site {
   // font-size: 115%;
-  width: 80ch;
+  width: 580px;
   margin: 2em auto;
 }
 
@@ -478,14 +477,33 @@ tbody tr:nth-child(odd) th {
   color: #303030;
 }
 .page-title,
-.post-title {
+.post-title,
+.subtitle {
   margin-top: 0;
+}
+
+.post-title,
+.subtitle {
+  &:before {
+    content: none;
+  }
+  margin-bottom: 0;
+}
+
+.post-title {
+  font-size: 140%;
+}
+
+.subtitle {
+  color: $ultralight-grey;
+  font-weight: 400;
 }
 
 /* Meta data line below post title */
 .post-date {
   display: block;
-  margin-top: -1.7rem;
+  paddin-top: 0;
+  margin-top: 0;
   margin-bottom: 1rem;
   float: left;
   color: $ultralight-grey;
