@@ -7,7 +7,7 @@
 /* Common vars */
 
 $text-body-grey: #515151;
-$text-light-grey: #666666;
+$text-light-grey: hsl(0, 0%, 40%);
 $text-link-grey: #479;
 
 $ultralight-grey: #aaa;
@@ -16,15 +16,14 @@ $text-header-black:  #333;
 body {
   background-color: #FFF;
   font: 16px $code-font-stack;
-  font-size: small;
+  // font-size: small;
   color: $gray;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $code-font-stack;
-
+  font: 16px $code-font-stack;
   color: $gray;
   line-height: 1;
   margin-top: 1rem;
@@ -36,31 +35,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3 { text-transform: uppercase; }
+
 h1 {
-  font-size: 160%;
-  margin-top: 1.8rem;
-  margin-bottom: 1.8rem;
-  &:before { content: "# "; }
-}
-h2 {
-  font-size: 140%;
+  // font-size: 140%;
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
-  &:before { content: "## "; }
+}
+h2 {
+  // font-size: 160%;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
 }
 h3 {
-  // font-size: 125%;
-
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
-  &:before { content: "### "; }
+  font-weight: 400;
 }
 
+h1:before { content: "# "; }
+h2:before { content: "## "; }
+h3:before { content: "### "; }
 h4:before { content: "#### "; }
 
 h1, h2 {
   font: {
     weight: 600;
+    // size: 16px;
   }
   & .title {
     letter-spacing: 0.1px;
@@ -78,7 +78,7 @@ h1, h2 {
 
   & .blog-title {
       text-align: left;
-      font-size: 26px;
+      // font-size: 26px;
   }
 }
 
@@ -88,7 +88,7 @@ div.picheader, div.textheader {
   height: auto;
   display: inline-block;
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.2rem;
 }
 
 div.halftitle {
@@ -102,9 +102,9 @@ div.halftitle {
   clear: both;
   // margin: 1em 0;
   padding: 0;
-  // margin-left: 2rem;
+  margin-left: 2rem;
   text-align: left;
-  // line-height: 1;
+  line-height : 1.5em;
 }
 
 a {
@@ -131,6 +131,12 @@ div.content {
   clear: both;
 }
 
+p.sidenote {
+  ::before {
+    content: "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::";
+  }
+}
+
 
 /*
  * Messages
@@ -149,8 +155,8 @@ div.content {
 /*** site ***/
 
 .site {
-  font-size: 115%;
-  width: 580px;
+  // font-size: 115%;
+  width: 80ch;
   margin: 2em auto;
 }
 
