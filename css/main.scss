@@ -13,17 +13,20 @@ $text-link-grey: #479;
 $ultralight-grey: #aaa;
 $text-header-black:  #333;
 
+* {
+  text-rendering: geometricPrecision,
+}
+
 body {
   background-color: #FFF;
-  font: 16px $code-font-stack;
-  // font-size: small;
+  font: 1rem $code-font-stack;
   color: $gray;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font: 16px $code-font-stack;
+  font: 1rem $code-font-stack;
   color: $gray;
   line-height: 1;
   margin-top: 1rem;
@@ -37,8 +40,8 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 { text-transform: uppercase; }
 
 h1 {
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 h2 {
   // font-size: 160%;
@@ -46,8 +49,8 @@ h2 {
   margin-bottom: 1.8rem;
 }
 h3 {
-  margin-top: 1.4rem;
-  margin-bottom: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 400;
 }
 
@@ -155,7 +158,7 @@ p.sidenote {
 
 .site {
   // font-size: 115%;
-  width: 580px;
+  width: 80ch;
   margin: 2em auto;
 }
 
