@@ -1,5 +1,5 @@
 # Permalinks
-permalink:        pretty
+permalink: "/:title.html"
 # relative_permalinks: true
 
 # Setup
@@ -36,8 +36,14 @@ defaults:
       layout: "post"
       author: "Eliza Weisman"
 
+markdown: kramdown
+highlighter: rouge
 kramdown:
   input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..4
 
 sass:
     sass_dir: _sass
