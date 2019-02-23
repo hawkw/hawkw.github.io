@@ -10,7 +10,14 @@ implementing
 [`tokio-trace`](https://github.com/tokio-rs/tokio/tree/master/tokio-trace), a
 scoped, structured, and async-aware logging and diagnostics framework for Rust.
 
-## Why do we need another logging library?
+# Contents
+{:.no_toc}
+
+1. Table of contents
+{:toc}
+
+
+# Why do we need another logging library?
 
 Rust already has a robust logging ecosystem based around the
 [`log`](https://github.com/rust-lang-nursery/log) crate's logging facade ---
@@ -30,8 +37,9 @@ In asynchronous systems like Tokio, however, interpreting traditional log
 messages can often be quite challenging. Since individual tasks are multiplexed
 on the same thread, associated events and log lines are intermixed, making it difficult to trace the logic flow.
 
-As an example, let's consider this example from the `log`
-crate's documentation:
+## A worked example
+
+As an example, let's consider this example from the `log` crate's documentation:
 
 ```rust
 pub fn shave_the_yak(yak: &mut Yak) {
@@ -171,3 +179,86 @@ number of concurrently-executing `ShaveYak` futures, it can become increasingly
 difficult to isolate the sequence of events that led to the failure. Several of
 the log lines in the above example could have been output by any number of
 `ShaveYak` futures.
+
+## A real world example
+
+TODO: put sccache stuff here (or should that be its own blog post?)
+
+# How do we fix this?
+
+In order to properly understand and debug asynchronous software, we need to
+record _contextual_ and _causal_ information.
+
+## Contextuality
+
+In synchronous systems, we can rely on the sequential order of log messages to
+infer the contexts of the events they represent. For example, in a synchronous
+system, if I see a group of log messages like
+
+```
+TRACE server: accepted connection from 106.42.126.8:56975
+ WARN server::http: invalid request headers
+TRACE server: closing connection
+```
+
+I can infer that the request from the client with the IP address 106.42.126.8 was
+the one that failed, and that the connection from that client was then closed by
+the server. The _context_ is implied by previous messages: because the
+synchronous server must serve each request before accepting the next connection,
+we can determine that any log records occurring after an "accepted
+connection..." message and before a "closing connection" message refer to that
+connection.
+
+In asynchronous systems, this method of interpreting logs quicky falls apart.
+The task server in the above example may continue accepting new connections
+while previously-accepted ones are being processed by other tasks, and multiple
+of requests might be being processed concurrently. We don't know that the
+request with invalid headers was recieved from 106.42.126.8; the invalid headers
+might have been sent on another connection that was being processed while we
+waited to recieve more data from that client. To instrument async code
+correctly, we need to do more than simply record the data associated with an
+event; we must track data associated with the context in which that event
+occurred.
+
+## Causality
+
+TODO: writeme
+
+# How does tokio-trace work?
+
+`tokio-trace` models instrumentation with two core primitives: _spans_ and
+_events_. A _span_ represents a period of time in which a program was executing
+in a particular context or performing a particular task, while an _event_
+represents a singular instant in time when event occurred.
+
+## Spans
+
+Spans are `tokio-trace`'s primary tool for modeling context and causation. When
+a thread in the program starts executing in a given context, it _enters_ the
+span that represents that context; when it siwtches to a different context, it
+_exits_ that span. A span begins when it is entered for the first time, and is
+considered over when it has been exited for the last time. Note that entering
+and exiting are **not** the same as beginning and ending: since tasks in asynchronous
+systems may yield and wake up repeatedly before completing, spans can be entered
+and exited any number of time before they end.
+
+When a thread has entered a span, any events that occur on that thread are said
+to occur _inside_ that span; this is how contextuality is modeled. Similarly,
+spans may be _nested_: when a thread enters a span inside of another span, it
+is in **both** spans, with the newly-entered span considered the _child_ and the
+outer span the _parent_.
+
+## Events
+
+TODO: writeme
+
+## Structured data
+
+TODO: writeme
+
+# Thanks
+
+Thanks to:
+ - Carl Lerche (@carllerche)
+ - David Barsky (@davidbarsky)
+ - Ashley Mannix (@KodrAus)
