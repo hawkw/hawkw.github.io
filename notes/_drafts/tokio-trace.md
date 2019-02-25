@@ -9,15 +9,17 @@ For the last few months, I've had the pleasure of getting to work on
 implementing
 [`tokio-trace`](https://github.com/tokio-rs/tokio/tree/master/tokio-trace), a
 scoped, structured, and async-aware logging and diagnostics framework for Rust.
+In this post, I'll discuss the background and goals behind `tokio-trace`, and
+introduce the core principles of its design. Future posts will provide greater
+detail on the library's implementation and usage.
 
-# Contents
+## Contents
 {:.no_toc}
 
 1. Table of contents
 {:toc}
 
-
-# Why do we need another logging library?
+## Why do we need another logging library?
 
 Rust already has a robust logging ecosystem based around the
 [`log`](https://github.com/rust-lang-nursery/log) crate's logging facade ---
@@ -35,9 +37,10 @@ sequentially.
 
 In asynchronous systems like Tokio, however, interpreting traditional log
 messages can often be quite challenging. Since individual tasks are multiplexed
-on the same thread, associated events and log lines are intermixed, making it difficult to trace the logic flow.
+on the same thread, associated events and log lines are intermixed, making it
+difficult to trace the logic flow.
 
-## A worked example
+### A worked example
 
 As an example, let's consider this example from the `log` crate's documentation:
 
@@ -180,16 +183,16 @@ difficult to isolate the sequence of events that led to the failure. Several of
 the log lines in the above example could have been output by any number of
 `ShaveYak` futures.
 
-## A real world example
+### A real world example
 
 TODO: put sccache stuff here (or should that be its own blog post?)
 
-# How do we fix this?
+## How do we fix this?
 
 In order to properly understand and debug asynchronous software, we need to
 record _contextual_ and _causal_ information.
 
-## Contextuality
+### Contextuality
 
 In synchronous systems, we can rely on the sequential order of log messages to
 infer the contexts of the events they represent. For example, in a synchronous
@@ -220,18 +223,18 @@ correctly, we need to do more than simply record the data associated with an
 event; we must track data associated with the context in which that event
 occurred.
 
-## Causality
+### Causality
 
 TODO: writeme
 
-# How does tokio-trace work?
+## How does tokio-trace work?
 
 `tokio-trace` models instrumentation with two core primitives: _spans_ and
 _events_. A _span_ represents a period of time in which a program was executing
 in a particular context or performing a particular task, while an _event_
-represents a singular instant in time when event occurred.
+represents a singular instant in time when an event occurred.
 
-## Spans
+### Spans
 
 Spans are `tokio-trace`'s primary tool for modeling context and causation. When
 a thread in the program starts executing in a given context, it _enters_ the
@@ -248,17 +251,65 @@ spans may be _nested_: when a thread enters a span inside of another span, it
 is in **both** spans, with the newly-entered span considered the _child_ and the
 outer span the _parent_.
 
-## Events
+### Events
 
-TODO: writeme
+Events represent something that occurs at a single instant in time --- they are
+similar to log messages in traditional logging systems. However, an event exists
+in the context of a trace. An event occurs within the context of a span, which
+allows multiple sets of events to be correlated.
 
-## Structured data
+### Subscribers
 
-TODO: writeme
+In `tokio-trace`, the component of the system that collects and records trace
+data is referred to as a _subscriber_. The role of a subscriber is comparable to
+that of a logger in traditional logging: when instrumentation generates trace
+events, the subscriber recieves and processses them. They are also responsible
+for _filtering_ --- determining which spans and events should be recorded.
 
-# Thanks
+Also like loggers in other systems, `tokio-trace` subscribers are a pluggable
+component. Subscribers implementing a variety of different behaviors may be
+provided by third-party libraries or written by the user. The subscriber API is
+designed to be as flexible as possible, so that subscribers can provide a wide
+variety of functionality. For example, subscribers might:
+
+- Log trace events to standard out or a file as they occur
+- Implement a form of profiling by recording the length of time spent in
+  different spans
+- Emit traces to an aggregator such as OpenCensus or Zipkin
+- Implement a metrics system by counting the occurance of certain events or the
+  values of certain fields
+
+We'll discuss the details of the subscriber API and how to implement one in an
+upcoming blog post.
+
+### Structured data
+
+Finally, `tokio-trace` is a _structured logging_ system. Rather than simply
+recording textual messages, `tokio-trace` allows users to annotate spans and
+events with typed key-value data called _fields_. This system allows subscribers
+to record typed values with behaviors more complex than simply writing messages
+to stdout. For example, a metrics system might be implemented that uses integer
+fields to record counters. This also allows serialization of fields in a
+machine-readable format.
+
+## Design requirements
+
+### Stability
+
+TODO: write me
+
+### Performance
+
+TODO: write me
+
+### Extensibility & composability
+
+TODO: write me
+
+## Thanks
 
 Thanks to:
+
  - Carl Lerche (@carllerche)
  - David Barsky (@davidbarsky)
  - Ashley Mannix (@KodrAus)
