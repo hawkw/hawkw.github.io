@@ -182,10 +182,10 @@ number of concurrently-executing `ShaveYak` futures, it can become increasingly
 difficult to isolate the sequence of events that led to the failure. Several of
 the log lines in the above example could have been output by any number of
 `ShaveYak` futures.
-
+<!--
 ### A real world example
 
-TODO: put sccache stuff here (or should that be its own blog post?)
+TODO: put sccache stuff here (or should that be its own blog post?) -->
 
 ## How do we fix this?
 
@@ -226,6 +226,50 @@ occurred.
 ### Causality
 
 TODO: writeme
+
+## Design requirements
+
+The design of `tokio-trace` is driven by a specific set of requirements. While
+we will look deeper into the design choices of the implementation in subsequent
+posts, it's worthwhile to take some time now to highlight the requirements and
+goals that drive these choices.
+
+### "First, do no harm"
+
+A major goal is that core libraries such as `tokio`, `hyper`, and `h2` should
+eventually be instrumented with `tokio-trace`. This goal dovetails directly into
+most of the project's design requirements.
+
+Since these libraries are so widely used, it is very important that adding
+`tokio-trace` not make them any _worse_. Introducing instrumentation into a core
+library should not break existing user code, incur significant performance
+overhead, or cause panics that previously would not have occurred.
+
+Additionally, this means that `tokio-trace`'s core libraries must be as
+_unopinionated_ and _flexible_ as possible. Users of these libraries likely have
+a diverse set of needs and preferences regarding how trace data is filtered,
+collected, and reported. If `tokio-trace` were to provide a complete, end-to-end
+tracing solution that implemented a particular set of behaviors, and this became
+the only way to consume instrumentation in widely used core libraries like
+`tokio`, someone would undoubtably be upset about this. Rather, `tokio-trace`
+must provide a framework on top of which users can build the tracing behaviour
+that their particular use-case requires. Crates built on top of `tokio-trace`
+can provide opinionated, batteries-included implementations. This is similar to
+how the `log` crate provides a _logging facade_ that defines core primitives for
+logging, but allows users to choose from a diverse range of logger
+implementations.
+
+### Stability
+
+TODO: write me
+
+### Performance
+
+TODO: write me
+
+### Extensibility & composability
+
+TODO: write me
 
 ## How does tokio-trace work?
 
@@ -291,20 +335,6 @@ to record typed values with behaviors more complex than simply writing messages
 to stdout. For example, a metrics system might be implemented that uses integer
 fields to record counters. This also allows serialization of fields in a
 machine-readable format.
-
-## Design requirements
-
-### Stability
-
-TODO: write me
-
-### Performance
-
-TODO: write me
-
-### Extensibility & composability
-
-TODO: write me
 
 ## Thanks
 
