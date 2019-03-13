@@ -32,9 +32,15 @@ defaults:
     scope:
       path: "etc"
       type: "pages"
+  -
+    scope:
+      path: "slides"
+      type: "pages"
     values:
       layout: "post"
       author: "Eliza Weisman"
+
+plugins: ["jekyll-paginate"]
 
 markdown: kramdown
 highlighter: rouge
@@ -62,6 +68,9 @@ nav:
     kind:           "dir"
   - name:           "etc"
     href:           "/etc"
+    kind:           "dir"
+  - name:           "slides"
+    href:           "/slides"
     kind:           "dir"
   - name:           "keys"
     href:           "https://keybase.io/hawk"

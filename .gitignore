@@ -87,7 +87,7 @@ Temporary Items
 
 ### Jekyll ###
 _site/
-**/_drafts/**
+# **/_drafts/**
 
 
 ### Sass ###

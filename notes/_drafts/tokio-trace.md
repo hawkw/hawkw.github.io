@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "tokio-trace"
-categories: rust,programming
+categories: rust,programming,tokio-trace
 author: eliza
 ---
 
@@ -227,6 +227,17 @@ occurred.
 
 TODO: writeme
 
+## Prior Art
+
+### Distributed Tracing
+
+`tokio-trace`'s design is inspired by _distributed tracing_ systems such as
+OpenTracing, OpenCensus, and Zipkin. These systems provide observability into
+distributed systems by associating global identifiers with contexts in a
+distributed system, and propagating those identifiers between nodes as the
+context travels between them. For example, each incoming HTTP request to a web
+application backend might be assigned an identifier, and
+
 ## Design requirements
 
 The design of `tokio-trace` is driven by a specific set of requirements. While
@@ -259,30 +270,77 @@ how the `log` crate provides a _logging facade_ that defines core primitives for
 logging, but allows users to choose from a diverse range of logger
 implementations.
 
-### Stability
+<!-- ### Stability
 
-TODO: write me
+We can model `tokio-trace` as having two distinct API surfaces: the
+_instrumentation_ API -->
+
+### Extensibility, compatibility, & composability
+
 
 ### Performance
 
-TODO: write me
+Any kind of runtime diagnostics --- be it logging, metrics, distributed tracing,
+in-process tracing, or "`printf` debugging" --- incurs some runtime cost. In
+order to emit diagnostic information, the program must perform some additional
+work which would otherwise not have occurred. However, different ways of
+collecting and processing diagnostic data can have widely differing performance costs.
 
-### Extensibility & composability
+For example, if we are logging diagnostic events to standard output, and we wish
+for each log line to record some data inherited from the context in which the
+event occurred, then we must by necessity allocate memory in which to store this
+contextual data. On the other hand, if we are emitting these events to an
+out-of-process aggregator, then we may be able to record the context data a
+single time, and reference it by an ID when other events occur in that context.
+The external aggregator can hydrate contextual data from IDs when displaying the
+events, so we need not persist that data once it has been recorded. However,
+sending events over the network to the aggregator will likely take longer than
+writing to standard out, so we may wish to buffer several events prior to
+transmitting them. On the third hand, if we wish to do some form of time-based
+profiling, we will need to collect timestamps every time we enter or exit a
+context, necessitating a syscall, which other use-cases may not requre.
 
-TODO: write me
+As different use-cases will incur different performance costs, the primary
+performance goal of the core `tokio-trace` libraries is to ensure that
+**users only pay for what they use**. This has two separate but interlinked
+meanings:
+
+1. Since the behaviour of user-provided `Subscriber` implementations may vary
+   widely, **`tokio-trace` itself should not require all `Subscriber`s to pay
+   for functionality that not all implementations will require**. As we discussed
+   in the example above, not all methods of recording traces will require
+   storing contextual data on the heap, so `tokio-trace` itself does not do so.
+   Instead, `Subscriber` implementations are given the primitives they need to
+   implement this themselves if they require it. Similarly, not all
+   use-cases require timestamping trace events, so `tokio-trace` itself does not
+   annotate events with timestamps. Again, `Subscriber`s may opt in to this
+   behaviour if they choose to.
+2. **Disabled instrumentation should be free**. `tokio-trace` allows
+   `Subscriber`s to opt out of recording instrumented events, similarly to how
+   the `log` crate allows filtering log records. If no `Subscriber` has opted in
+   to a particular instrumentation point (or if there are no `Subscriber`s
+   active at all), the cost of skipping that instrumentation point should be
+   minimal. This means that users are free to add large amounts of
+   instrumentation at high levels of verbosity, since the performance costs of
+   this instrumentation is minimal when it is not being collected. Additionally,
+   it means that if a library adopts `tokio-trace`, the performance cost of
+   instrumentation in that library is not inflicted on any users which are not
+   themselves using `tokio-trace`.
 
 ## How does tokio-trace work?
 
 `tokio-trace` models instrumentation with two core primitives: _spans_ and
 _events_. A _span_ represents a period of time in which a program was executing
 in a particular context or performing a particular task, while an _event_
-represents a singular instant in time when an event occurred.
+represents a singular instant in time when an event occurred. The `Subscriber`
+interface allows users and third-party libraries to specify the manner in whicbh
+spans and events should be recorded.
 
 ### Spans
 
 Spans are `tokio-trace`'s primary tool for modeling context and causation. When
 a thread in the program starts executing in a given context, it _enters_ the
-span that represents that context; when it siwtches to a different context, it
+span that represents that context; when it switches to a different context, it
 _exits_ that span. A span begins when it is entered for the first time, and is
 considered over when it has been exited for the last time. Note that entering
 and exiting are **not** the same as beginning and ending: since tasks in asynchronous
@@ -301,6 +359,16 @@ Events represent something that occurs at a single instant in time --- they are
 similar to log messages in traditional logging systems. However, an event exists
 in the context of a trace. An event occurs within the context of a span, which
 allows multiple sets of events to be correlated.
+
+### Structured data
+
+ `tokio-trace` is a _structured_ diagnostics system. Rather than simply
+recording textual messages, `tokio-trace` allows users to annotate spans and
+events with typed key-value data called _fields_. This system allows recording
+typed values with behaviors more complex than simply writing messages to be
+interpreted by a user. For example, a metrics system might be implemented that
+uses integer fields to record counters. This also allows serialization of fields
+in a machine-readable format.
 
 ### Subscribers
 
@@ -325,16 +393,6 @@ variety of functionality. For example, subscribers might:
 
 We'll discuss the details of the subscriber API and how to implement one in an
 upcoming blog post.
-
-### Structured data
-
-Finally, `tokio-trace` is a _structured logging_ system. Rather than simply
-recording textual messages, `tokio-trace` allows users to annotate spans and
-events with typed key-value data called _fields_. This system allows subscribers
-to record typed values with behaviors more complex than simply writing messages
-to stdout. For example, a metrics system might be implemented that uses integer
-fields to record counters. This also allows serialization of fields in a
-machine-readable format.
 
 ## Thanks
 

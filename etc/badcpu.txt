@@ -1,0 +1,61 @@
+
+            Binary Arithmetic Device-16 (BAD16) Specification
+            -------------------------------------------------
+
+    1. Technical Summary
+
+* 16-bit words
+* Four general purpose registers
+
+
+    2. Registers
+
+All general-purpose registers (R0-R3) are addresable as one 16-bit word (Rn),
+or as two 8-bit words (RHn for the high half, and RLn for the low half).
+Index registers are addressable as one 16-bit word only.
+
+General Purpose
+    * R0 (16-bit), RH0/RL0 (8-bit)
+    * R1 (16-bit), RH1/RL1 (8-bit)
+    * R2 (16-bit), RH2/RL2 (8-bit)
+    * R3 (16-bit), RH3/RL3 (8-bit)
+
+Index Registers (16-bit)
+    * SP: Stack pointer
+    * DP: Data pointer
+    * IR: Interrupt address register
+    * PC: Program counter
+
+Flags (8-bit)
+    * PSR: Processor Status Register
+    * FSR: Floating-point Status Register
+
+    3. Addressing Modes
+
+The notation [VALUE] refers to the memory location at address [VALUE].
+
+The following addressing modes are supported:
+
+    4. Opcodes
+
+Opcodes are one to three words in length, and are uniquely identified by the
+first word.
++----------------------------------------------------------------------------+
+| Cycles | Value     | Description
++--------+-----------+-------------------------------------------------------+
+| 0      | 0x00-0x07 | 16-bit register (R0 - R3, SP, DP, IR, PC)
+| 0      | 0x08-0x0c | 8-bit register low (RL0-RL3)
+| 0      | 0x0d-0x10 | 8-bit register high (RH0-RH3)
+| 0      | 0x11-0x19 | Register indirect: [16-bit register]
+| 1      | 0x20      | Frame-local with offset: [SP + PC++]
+| 1      | 0x21      | Frame-local with immediate offset: [SP + u16(PC++) ]
+| 1      | 0x22      | Global with offset: [DP + value(PC++)]
+| 1      | 0x23      | Global with immediate offset: [DP + u16(PC++) ]
+
+    5. Memory Management
+
+The BADCPU-16 address bus is 24 bits wide, allowing an address space of up to 16
+megabytes. When paging is not enabled, the 8 most significant bits of the
+address bus are always set to 0, restricting the address space to 64 kilobytes.
+
+When paging is enabled, physical addresses are formed by concatenating

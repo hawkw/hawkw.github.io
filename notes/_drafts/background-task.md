@@ -5,9 +5,9 @@ categories: rust,programming
 author: eliza
 ---
 
-As part of recent work on [Conduit], I recently had the pleasure of getting to make several contributions to the excellent [Trust-DNS] library, maintained by Benjamin Frye ([@bluejekyll]). During a conversation with Ben on one of my pull requests, it came to light that several of the asynchronous programming patterns that my colleagues and I at [Buoyant] have found very useful in our Rust projects are not exactly common knowledge. Given that, I wanted to take a moment or two to write about some of these patterns and share them with the Rust community at large.
+As part of recent work on [Conduit], I recently had the pleasure of getting to make several contributions to the excellent [Trust-DNS] library, maintained by Benjamin Fry ([@bluejekyll]). During a conversation with Ben on one of my pull requests, it came to light that several of the asynchronous programming patterns that my colleagues and I at [Buoyant] have found very useful in our Rust projects are not exactly common knowledge. Given that, I wanted to take a moment or two to write about some of these patterns and share them with the Rust community at large. In this post, we'll discuss a pattern for implementing background work using the channel types provided by Rust's [`futures`] library.
 
-# Background Tasks
+# Why Background Tasks?
 
 Often, when writing network applications, it is desirable for some state to be reused for certain actions, rather than set up repeatedly every time an action is carried out. For example, in an application that makes multiple HTTP requests to the same servers, we might want to store the underlying TCP connections used to make those requests in a _connection pool_, rather than creating a new connection for every request; or we might want to take some action based on state that is updated by certain events, such as a watch on a long-polling API.
 
@@ -82,7 +82,7 @@ impl SumHandle {
 
 If this were production code, we might want better error handling here, but I've used `expect` and `panic!` to keep the example simple.
 
-### The Backround Future
+### The Background Future
 
 Now, we can implement `Future` for the `SumBackground` struct. The `Future` implementation for a background task is typically fairly simple:
 poll the receive side of the request channel and respond to each incoming request. We continue polling as long as there are more requests. If polling the request channel returns `Async::NotReady`, that means there are currently no more requests coming in, so we yield until we are polled again. If the request stream has ended (i.e., polling the channel returns `Async::Ready(None)`), this indicates that all the request handles have been dropped, in which case the background task can finish.
@@ -194,8 +194,11 @@ Note that because we used a multiple-producer, single-consumer channel for sendi
 
 For anyone interested in examples of more complex uses, I've put this example code, modified with more logging to show what's going on behind the scenes, [in a GitHub repo](https://github.com/hawkw/background-task-example) as well. This repo also contains runnable examples of more complex uses.
 
+#### Side Note: On Performance
 
-## In Real Life
+<p class = "sidenote">If you're concerned about optimizing performance, you may wonder </p>
+
+## In Real Life: `trust-dns-resolver`
 
 That example was all well and good, but adding two numbers isn't exactly the kind of work we might want to execute in the background (it's almost certainly faster to just do it synchronously wherever the result is needed). Where might we actually expect to use this pattern in a real project, and what does that look like?
 
@@ -203,13 +206,138 @@ As an example, let's take a look at some code I wrote for a recent pull request,
 
 Trust-DNS' `ResolverFuture` provides methods to make various types of lookup requests to DNS servers asynchronously, returning `Future`s whose `Item`s are the appropriate DNS record. It is a `Future` itself, as before requests could be made, it is necessary to construct state, such as a [`NameServerPool`] which tracks statistics associated with multiple DNS name servers and load balances requests across them. In order for the name server pool to be used the most effectively, we would want to ensure that all the lookups an application that uses the resolver go through the same pool. However, we might also wish to be able to make DNS lookups from different places in our code, including from futures running on different `Executor`s or across threads. The previous implementation of the resolver as a single future made it difficult to satisfy both of these requirements, as Ben describes in [this issue]. In [Conduit], we make DNS queries using Trust-DNS's resolver, but we [had not been able to use the resolver efficiently](https://github.com/runconduit/conduit/issues/859) for these reasons.
 
-As I mentioned earlier, managing a pooled resource is an excellent use case for the background task pattern, so when I saw that issue on Trust-DNS' GitHub issue tracker, I immediately thought of the background task pattern.
+As I mentioned earlier, managing a pooled resource is an excellent use case for a background task so when I saw that issue on Trust-DNS' GitHub issue tracker, I immediately thought of this pattern. I split the `ResolverFuture` into two types, an `AsyncResolver` and a background task `background::Task` (moved to its own module), which does most of the work that used to be done by `ResolverFuture`.
+
+`ResolverFuture` used to be defined like this:
+```rust
+pub struct ResolverFuture {
+    config: ResolverConfig,
+    options: ResolverOpts,
+    pub(crate) client_cache: CachingClient<LookupEither<BasicResolverHandle, StandardConnection>>,
+    hosts: Option<Arc<Hosts>>,
+}
+```
+After my PR, it looks like this:
+
+```rust
+// the publically-exported handle:
+#[derive(Clone)]
+pub struct AsyncResolver {
+    request_tx: mpsc::UnboundedSender<Request>,
+}
+
+// and, in the `background.rs` module:
+struct Task {
+    config: ResolverConfig,
+    options: ResolverOpts,
+    client_cache: ClientCache,
+    hosts: Option<Arc<Hosts>>,
+    request_rx: mpsc::UnboundedReceiver<Request>,
+}
+```
+
+The methods defined on `ResolverFuture` were mostly moved to `background::Task`:
+
+```rust
+impl ResolverFuture {
+    // ...
+
+    fn push_name(name: Name, names: &mut Vec<Name>) {
+        // ...
+    }
+
+    fn build_names(&self, name: Name) -> Vec<Name> {
+        // ...
+    }
+
+    /// Generic lookup for any RecordType
+    pub fn lookup<N: IntoName>(&self, name: N, record_type: RecordType) -> LookupFuture {
+        let name = match name.into_name() {
+            Ok(name) => name,
+            Err(err) => {
+                return LookupFuture::error(self.client_cache.clone(), err);
+            }
+        };
+
+        self.inner_lookup(name, record_type, DnsRequestOptions::default())
+    }
+
+    pub(crate) fn inner_lookup(
+        &self,
+        name: Name,
+        record_type: RecordType,
+        options: DnsRequestOptions,
+    ) -> LookupFuture {
+        let names = self.build_names(name);
+        LookupFuture::lookup(names, record_type, options, self.client_cache.clone())
+    }
+
+    /// Performs a dual-stack DNS lookup for the IP for the given hostname.
+    ///
+    /// See the configuration and options parameters for controlling the way in which A(Ipv4) and AAAA(Ipv6) lookups will be performed. For the least expensive query a fully-qualified-domain-name, FQDN, which ends in a final `.`, e.g. `www.example.com.`, will only issue one query. Anything else will always incur the cost of querying the `ResolverConfig::domain` and `ResolverConfig::search`.
+    ///
+    /// # Arguments
+    /// * `host` - string hostname, if this is an invalid hostname, an error will be returned.
+    pub fn lookup_ip<N: IntoName + TryParseIp>(&self, host: N) -> LookupIpFuture {
+        let mut finally_ip_addr = None;
+
+        // if host is a ip address, return directly.
+        if let Some(ip_addr) = host.try_parse_ip() {
+            // if ndots are greater than 4, then we can't assume the name is an IpAddr
+            //   this accepts IPv6 as well, b/c IPv6 can take the form: 2001:db8::198.51.100.35
+            //   but `:` is not a valid DNS character, so techinically this will fail parsing.
+            //   TODO: should we always do search before returning this?
+            if self.options.ndots > 4 {
+                finally_ip_addr = Some(ip_addr);
+            } else {
+                return LookupIpFuture::ok(
+                    self.client_cache.clone(),
+                    Lookup::new_with_max_ttl(Arc::new(vec![ip_addr])),
+                );
+            }
+        }
+
+        let name = match (host.into_name(), finally_ip_addr.as_ref()) {
+            (Ok(name), _) => name,
+            (Err(_), Some(ip_addr)) => {
+                // it was a valid IP, return that...
+                return LookupIpFuture::ok(
+                    self.client_cache.clone(),
+                    Lookup::new_with_max_ttl(Arc::new(vec![ip_addr.clone()])),
+                );
+            }
+            (Err(err), None) => {
+                return LookupIpFuture::error(self.client_cache.clone(), err);
+            }
+        };
+
+        let names = self.build_names(name);
+        let hosts = if let Some(ref hosts) = self.hosts {
+            Some(Arc::clone(hosts))
+        } else {
+            None
+        };
+
+        LookupIpFuture::lookup(
+            names,
+            self.options.ip_strategy,
+            self.client_cache.clone(),
+            DnsRequestOptions::default(),
+            hosts,
+            finally_ip_addr,
+        )
+    }
+}
+```
+
 
 ## The Big Picture
 
 For readers who have more experience programming with Rust's futures than I do, this might be fairly obvious, but to me, this is the big realization behind this pattern. We usually think of a `Future` as 'a type  epresenting the eventual return value of an asynchronous computation', and often, this is how they are used. In many other languages with a similar construct, this is often all a `Future` is. But, due to [the polling-driven design of Rust's `Future`s](https://aturon.github.io/blog/2016/09/07/futures-design/), our `Future`s are more general: in essence, I like to think of them as 'a primitive for modelling cooperative multitasking'.
 
-Finally, we should take a moment to note that I did not invent any of this. The concept of background work in general is, of course, not a new one at all; it certainly predates the Rust language and probably predates _me_ as well. Furthermore, I didn't originate this particular pattern for implementing background work using Rust's channels and futures, either. I'm not sure who did, but I'd hazard a guess that credit is probably due to [Aaron Turon], [Alex Crichton], [Carl Lerche], or one of the other pioneers of Rust async programming --- if anyone has a theory regarding where this specific way of implementing background work first appeared, I'd be interested to hear it. The primary role I've played in the story of this particular pattern is writing it down, and I haven't done _that_ alone, either. I'd like to thank Ben Frye ([@bluejekyll]) for the conversations that made me realize it might be valuable to write about this; and my partner Tristan, Camilla (@lobotomyp0p), and everyone else who proofread the post before it went up.
+Finally, we should take a moment to note that I did not invent any of this. The concept of background work in general is, of course, not a new one at all; it certainly predates the Rust language and probably predates _me_ as well. Furthermore, I didn't originate this particular pattern for implementing background work using Rust's channels and futures, either. I'm not sure who did, but I'd hazard a guess that credit is probably due to [Aaron Turon], [Alex Crichton], [Carl Lerche], or one of the other pioneers of Rust async programming --- if anyone has a theory regarding where this specific way of implementing background work first appeared, I'd be interested to hear it.
+
+The primary role I've played in the story of this particular pattern is writing it down, and I haven't done _that_ alone, either. I'd like to thank Ben Fry ([@bluejekyll]) for the conversations that made me realize it might be valuable to write about this; and my partner Tristan, Camilla (@lobotomyp0p), and everyone else who proofread the post before it went up.
 
 
 [Conduit]: https://runconduit.io
