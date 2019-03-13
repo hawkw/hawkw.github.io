@@ -384,7 +384,7 @@ provided by third-party libraries or written by the user. The subscriber API is
 designed to be as flexible as possible, so that subscribers can provide a wide
 variety of functionality. For example, subscribers might:
 
-- Log trace events to standard out or a file as they occur
+- Log trace events to standard out or a file as they occu
 - Implement a form of profiling by recording the length of time spent in
   different spans
 - Emit traces to an aggregator such as OpenCensus or Zipkin
