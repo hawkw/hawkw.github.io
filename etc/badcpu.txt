@@ -6,6 +6,7 @@
 
 * 16-bit words
 * Four general purpose registers
+* Based on a really weird dream I had this one time.
 
 
     2. Registers
