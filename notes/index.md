@@ -6,7 +6,7 @@ pwd: notes
 ---
 
 <nav class="term">
-    total {{ site.posts.size + 1 }}
+    total {{ site.notes.size + 1 }}
 </nav>
 <table class="term">
     <nav class="term">
