@@ -18,6 +18,31 @@ $light-orange: #EBCB8B;
     color: black;
     font-family: $code-font-stack;
 
+    table {
+        white-space: nowrap;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background: #FFFFFF;
+    }
+
+    td {
+        padding: 0;
+        padding-right: 1ch;
+
+        &.size {
+            padding-left: 2ch;
+            text-align: right;
+        }
+    }
+
+    tr {
+        white-space: nowrap;
+        border: none;
+        background: #FFFFFF;
+    }
+
+
     // grid for stuff like fake "ls" commands
     &-grid {
         display: grid;
@@ -25,14 +50,17 @@ $light-orange: #EBCB8B;
         // grid-gap: 2rem;
         // padding-left: 1rem;
     }
-        // grid for stuff like fake "ls" commands
+
+    // grid for stuff like fake "ls" commands
     &-grid-single {
         display: grid;
         // grid-gap: 2rem;
         // padding-left: 1rem;
     }
 
-    a { color: $gray; }
+    a {
+        color: $gray;
+    }
 }
 
 a {
@@ -41,10 +69,12 @@ a {
     // fake "directories" - printed with a slash after
     &.dir {
         color: $blue;
+
         &:after {
             content: "/";
             color: $gray;
             border-bottom: none;
+
             &:hover {
                 border-bottom: none;
             }
@@ -71,6 +101,7 @@ a {
             content: " :: ";
         }
     }
+
     &.path {
         &:after {
             color: $light-gray;
@@ -80,35 +111,70 @@ a {
 }
 
 .blinking-cursor {
-  color: black;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
+    color: black;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
 }
 
 @keyframes "blink" {
-    from, to { color: transparent; }
-    50% {      color: black; }
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
 }
 
 @-moz-keyframes blink {
-  from, to { color: transparent; }
-  50% {      color: black; }
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
 }
 
 @-webkit-keyframes "blink" {
-    from, to { color: transparent; }
-    50% {      color: black; }
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
 }
 
 @-ms-keyframes "blink" {
-    from, to { color: transparent; }
-    50% {      color: black; }
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
 }
 
 @-o-keyframes "blink" {
-    from, to { color: transparent; }
-    50% {      color: black; }
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
 }

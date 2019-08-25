@@ -23,11 +23,11 @@ defaults:
       layout: main
   -
     scope:
-      path: "notebook"
+      path: "blog"
       type: "posts"
     values:
       layout: "post"
-      author: "Eliza Weisman"
+      author: "eliza"
   -
     scope:
       path: "etc"
