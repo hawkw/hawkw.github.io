@@ -23,7 +23,7 @@ defaults:
       layout: main
   -
     scope:
-      path: "blog"
+      path: "notes"
       type: "posts"
     values:
       layout: "post"

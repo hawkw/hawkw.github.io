@@ -6,7 +6,7 @@ pwd: notes
 ---
 
 <nav class="term">
-    total {{ site.notes.size + 1 }}
+    total {{ site.posts.size | plus: 1 }}
 </nav>
 <table class="term">
     <nav class="term">
@@ -16,7 +16,7 @@ pwd: notes
             <td>eliza</td>
             <td>staff</td>
             <td class = "term size">64</td>
-            <td>Aug&nbsp;14&nbsp;2019</td>
+            <td>{{ site.time | date: "%b" }}&nbsp;{{ site.time | date: "%_e%t%Y" }}</td>
             <td><a class="term-nav file" href="">.</a></td>
         </tr>
     </nav>
@@ -27,7 +27,7 @@ pwd: notes
             <td>eliza</td>
             <td>staff</td>
             <td class = "term size">64</td>
-            <td>Aug&nbsp;14&nbsp;2019</td>
+            <td>{{ site.time | date: "%b" }}&nbsp;{{ site.time | date: "%_e%t%Y" }}</td>
             <td><a class="term-nav file" href="/index.html">..</a></td>
         </tr>
     </nav>
