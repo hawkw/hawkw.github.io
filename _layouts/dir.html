@@ -3,25 +3,24 @@ layout: common
 ---
 <header class="term">
     <!-- TODO: make these into <p>s? -->
-    <span class = "prompt host">elizas.website</span>
-    <span class = "prompt path">~</span> ls
+    <span class="prompt host">elizas.website</span>
+    <span class="prompt path">~</span> ls
     <nav class="term-grid">
         {% for nav in site.nav %}
-            <span>
-                <a class="term-nav {{nav.kind}}"
-                   href="{{ nav.href }}">{{ nav.name }}</a>
-            </span>
-            {% endfor %}
+        <span>
+            <a class="term-nav {{nav.kind}}" href="{{ nav.href }}">{{ nav.name }}</a>
+        </span>
+        {% endfor %}
     </nav>
-    <span class = "prompt host">elizas.website</span>
-    <span class = "prompt path">~</span> cd {{page.pwd}}
+    <span class="prompt host">elizas.website</span>
+    <span class="prompt path">~</span> cd {{page.pwd}}
     <br />
-    <span class = "prompt host">elizas.website</span>
-    <span class = "prompt path">~{{page.pwd | prepend: "/"}}</span> ls
+    <span class="prompt host">elizas.website</span>
+    <span class="prompt path">~{{page.pwd | prepend: "/"}}</span> ls
 </header>
 <main>
-  <!-- begin content -->
-  <!-- <nav class="term-grid">
+    <!-- begin content -->
+    <!-- <nav class="term-grid">
       {% for item in page.path.pages %}
           <span>
               <a class="term-nav file"
@@ -32,10 +31,10 @@ layout: common
     <!-- begin content -->
     {{ content }}
     <!-- end content -->
-  <!-- end content -->
+    <!-- end content -->
 </main>
 <footer class="term">
-    <span class = "prompt host">elizas.website</span>
-    <span class = "prompt path">~{{page.pwd | prepend: "/"}}</span>
-    <span class = "blinking-cursor">_</span>
+    <span class="prompt host">elizas.website</span>
+    <span class="prompt path">~{{page.pwd | prepend: "/"}}</span>
+    <span class="blinking-cursor">_</span>
 </footer>

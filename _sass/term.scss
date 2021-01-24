@@ -21,6 +21,7 @@ $light-orange: #EBCB8B;
     table {
         white-space: nowrap;
         border: none;
+        table-layout: fixed;
         padding: 0;
         margin: 0;
         background: #FFFFFF;
@@ -29,15 +30,22 @@ $light-orange: #EBCB8B;
     td {
         padding: 0;
         padding-right: 1ch;
-
+        max-width: 80ch;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         &.size {
             padding-left: 2ch;
+            text-align: right;
+        }
+
+        &.num {
+            padding-left: 1ch;
             text-align: right;
         }
     }
 
     tr {
-        white-space: nowrap;
         border: none;
         background: #FFFFFF;
     }
@@ -86,6 +94,14 @@ a {
         color: $green;
     }
 
+    // fake "symlinks"
+    &.symlink {
+        color: $purple;
+        &:after {
+            content: " -> "attr(href);
+            color: black;
+        }
+    }
 }
 
 // ul .term {
