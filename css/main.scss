@@ -283,10 +283,9 @@ a.extra:hover {
 /*** lists ***/
 
 ul {
-  list-style: none;
-  // margin-left: 0;
-  margin-left: 2rem;
-  padding:  0;
+  list-style-type: "*";
+  margin-left: 1.5rem;
+  padding: 0;
 }
 //
 // li {
