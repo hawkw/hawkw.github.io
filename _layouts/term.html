@@ -3,26 +3,29 @@ layout: common
 ---
 <header class="term">
     <!-- TODO: make these into <p>s? -->
-    <span class = "prompt host">elizas.website</span>
-    <span class = "prompt path">~</span> ls
+    <span class="prompt host">elizas.website</span>
+    <span class="prompt path">~</span> ls
     <nav class="term-grid">
         {% for nav in site.nav %}
-            <span>
-                <a class="term-nav {{nav.kind}}"
-                   href="{{ nav.href }}">{{ nav.name }}</a>
-            </span>
-            {% endfor %}
+        <span>
+            <a class="term-nav {{nav.kind}}" href="{{ nav.href }}">{{ nav.name }}</a>
+        </span>
+        {% endfor %}
     </nav>
-    <span class = "prompt host">elizas.website</span>
-    <span class = "prompt path">~{{page.pwd | prepend: '/' }}</span> {{page.cmd}}
+    <br />
+    <br />
+    <span class="prompt host">elizas.website</span>
+    <span class="prompt path">~{{page.pwd | prepend: '/' }}</span> {{page.cmd}}
 </header>
 <main>
-  <!-- begin content -->
-  {{ content }}
-  <!-- end content -->
+    <!-- begin content -->
+    {{ content }}
+    <!-- end content -->
 </main>
+<br />
+<br />
 <footer class="term">
-    <span class = "prompt host">elizas.website</span>
-    <span class = "prompt path">~{{page.pwd | prepend: '/' }}</span>
-    <span class = "blinking-cursor">_</span>
+    <span class="prompt host">elizas.website</span>
+    <span class="prompt path">~{{page.pwd | prepend: '/' }}</span>
+    <span class="blinking-cursor">_</span>
 </footer>
