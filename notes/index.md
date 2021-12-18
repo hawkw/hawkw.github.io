@@ -44,6 +44,28 @@ pwd: notes
     </tr>
     </nav>
     {% endfor %}
+        <nav class="term">
+        <tr>
+        <td>-rw-r--r--</td>
+        <td class = "term num">1</td>
+        <td>eliza</td>
+        <td>users</td>
+        <td class = "term size">8782</td>
+        <td>Dec&nbsp;17&nbsp;2021</td>
+        <td><a class="term-nav symlink" href="https://tokio.rs/blog/2021-12-announcing-tokio-console">Announcing Tokio Console 0.1</a></td>
+    </tr>
+    </nav>
+    <nav class="term">
+        <tr>
+        <td>-rw-r--r--</td>
+        <td class = "term num">1</td>
+        <td>eliza</td>
+        <td>users</td>
+        <td class = "term size">11609</td>
+        <td>Oct&nbsp;26&nbsp;2021</td>
+        <td><a class="term-nav symlink" href="https://linkerd.io/2021/10/26/how-linkerd-retries-http-requests-with-bodies/">How Linkerd retries HTTP requests with bodies</a></td>
+    </tr>
+    </nav>
     <nav class="term">
     <tr>
         <td>-rw-r--r--</td>
