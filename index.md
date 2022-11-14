@@ -80,6 +80,9 @@ The main projects I'm currently working on are:
 + code on <a class = "dir" href="https://github.com/hawkw">github</a>
 + keys on <a class = "dir" href="https://keybase.io/hawk">keybase</a>
 + my personal <a class = "dir" href = "https://twitter.com/mycoliza">twitter</a>
++ Continuity of Posting plan:
+  <a class = "dir" rel="me" href="https://xantronix.social/@eliza">mastodon</a>
+  and <a class = "dir" href="https://cohost.org/eliza">cohost</a>
 
 ### Contact
 
