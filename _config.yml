@@ -12,7 +12,14 @@ author:
   url:            https://elizas.website
   email:          eliza@elizas.website
 
-exclude: ["website.sublime-project", "website.sublime-workspace", "*.log", "*.fdb_latexmk", "*.synctex.gz", "*.aux"]
+exclude:
+  - "website.sublime-project"
+  - "website.sublime-workspace"
+  - "*.log"
+  - "*.fdb_latexmk"
+  - "*.synctex.gz"
+  - "*.aux"
+  - "*.nix"
 
 defaults:
   -
