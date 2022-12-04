@@ -39,64 +39,22 @@ pwd: notes
         <td>{{ item.author }}</td>
         <td>users</td>
         <td class = "term size">{{ item.content | size }}</td>
-        <td>{{ item.date | date: "%b" }}&nbsp;{{item.date | date: "%_e%t%Y" }}</td>
+        <td>{{ item.date | date: "%b" }}&nbsp;{{ item.date | date: "%_e%t%Y" }}</td>
         <td><a class="term-nav file" href="{{ item.url }}">{{ item.title }}</a></td>
     </tr>
     </nav>
     {% endfor %}
-        <nav class="term">
-        <tr>
-        <td>-rw-r--r--</td>
-        <td class = "term num">1</td>
-        <td>eliza</td>
-        <td>users</td>
-        <td class = "term size">8782</td>
-        <td>Dec&nbsp;17&nbsp;2021</td>
-        <td><a class="term-nav symlink" href="https://tokio.rs/blog/2021-12-announcing-tokio-console">Announcing Tokio Console 0.1</a></td>
-    </tr>
-    </nav>
-    <nav class="term">
-        <tr>
-        <td>-rw-r--r--</td>
-        <td class = "term num">1</td>
-        <td>eliza</td>
-        <td>users</td>
-        <td class = "term size">11609</td>
-        <td>Oct&nbsp;26&nbsp;2021</td>
-        <td><a class="term-nav symlink" href="https://linkerd.io/2021/10/26/how-linkerd-retries-http-requests-with-bodies/">How Linkerd retries HTTP requests with bodies</a></td>
-    </tr>
-    </nav>
+    {% for post in site.data.external-posts %}
     <nav class="term">
     <tr>
-        <td>-rw-r--r--</td>
+        <td>lrwxrwxrwx</td>
         <td class = "term num">1</td>
         <td>eliza</td>
         <td>users</td>
-        <td class = "term size">20649</td>
-        <td>Jul&nbsp;24&nbsp;2020</td>
-        <td><a class="term-nav symlink" href="https://linkerd.io/2020/07/23/under-the-hood-of-linkerds-state-of-the-art-rust-proxy-linkerd2-proxy/">Under the Hood of Linkerd's State-of-the-Art Rust Proxy</a></td>
+        <td class = "term size">{{ post.size }}</td>
+        <td>{{ post.date | date: "%b" }}&nbsp;{{ post.date | date: "%_e%t%Y" }}</td>
+        <td><a class="term-nav symlink" href="{{ post.href }}">{{ post.title }}</a></td>
     </tr>
     </nav>
-    <nav class="term">
-    <tr>
-        <td>-rw-r--r--</td>
-        <td class = "term num">1</td>
-        <td>eliza</td>
-        <td>users</td>
-        <td class = "term size">18171</td>
-        <td>Dec&nbsp;18&nbsp;2019</td>
-        <td><a class="term-nav symlink" href="https://tokio.rs/blog/2019-12-compat/">Announcing Tokio-Compat</a></td>
-    </tr>
-    </nav>
-    <nav class="term">
-    <tr>
-        <td>-rw-r--r--</td>
-        <td class = "term num">1</td>
-        <td>eliza</td>
-        <td>users</td>
-        <td class = "term size">26778</td>
-        <td>Aug&nbsp;14&nbsp;2019</td>
-        <td><a class="term-nav symlink" href="https://tokio.rs/blog/2019-08-tracing/">Diagnostics with Tracing</a></td>
-    </tr>
-    </nav>
+    {% endfor %}
 </table>

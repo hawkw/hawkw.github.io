@@ -1,0 +1,21 @@
+# list of external blog posts to generate "symlinks" to
+- title: "Announcing Tokio Console 0.1"
+  href: "https://tokio.rs/blog/2021-12-announcing-tokio-console"
+  date: 2021-12-17
+  size: 8782
+- title: "How Linkerd Retries HTTP Requests With Bodies"
+  href: "https://linkerd.io/2021/10/26/how-linkerd-retries-http-requests-with-bodies/"
+  date: 2021-10-26
+  size: 11609
+- title: "Under the Hood of Linkerd's State-of-the-Art Rust Proxy"
+  href: "https://linkerd.io/2020/07/23/under-the-hood-of-linkerds-state-of-the-art-rust-proxy-linkerd2-proxy/"
+  size: 20649
+  date: 2020-07-23
+- title: "Announcing Tokio-Compat"
+  href: "https://tokio.rs/blog/2019-12-compat/"
+  size: 18171
+  date: 2019-12-18
+- title: "Diagnostics with Tracing"
+  href: "https://tokio.rs/blog/2019-08-tracing/"
+  size: 26778
+  date: 2019-08-14
