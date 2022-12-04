@@ -32,10 +32,14 @@ defaults:
     scope:
       path: "etc"
       type: "pages"
+    values:
+      layout: main
   -
     scope:
       path: "slides"
       type: "pages"
+    values:
+      layout: main
 
 plugins: ["jekyll-paginate"]
 
