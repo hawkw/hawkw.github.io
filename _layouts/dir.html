@@ -1,5 +1,5 @@
 ---
-layout: common
+layout: term-footer
 ---
 <header class="term">
     <!-- TODO: make these into <p>s? -->
@@ -21,22 +21,6 @@ layout: common
 </header>
 <main>
     <!-- begin content -->
-    <!-- <nav class="term-grid">
-      {% for item in page.path.pages %}
-          <span>
-              <a class="term-nav file"
-                 href="{{ item.href }}">{{ item.title }}</a>
-          </span>
-          {% endfor %}
-  </nav> -->
-    <!-- begin content -->
     {{ content }}
     <!-- end content -->
-    <!-- end content -->
 </main>
-<footer class="term">
-    <br />
-    <span class="prompt host">elizas.website</span>
-    <span class="prompt path">~{{page.pwd | prepend: "/"}}</span>
-    <span class="blinking-cursor">_</span>
-</footer>
