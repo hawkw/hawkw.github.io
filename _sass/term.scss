@@ -6,13 +6,13 @@ $gray: black;
 $dark-gray: #282a2e;
 $very-dark-gray: #1d1f21;
 
-$cyan: #8abeb7;
-$blue: #81a2be;
-$purple: #B48EAD;
-$green: #acc697;
-$red: #cc6666;
-$orange: #de935f;
-$light-orange: #EBCB8B;
+$cyan: cyan;
+$blue: blue;
+$purple: purple;
+$green: green;
+$red: red;
+$orange: orange;
+$light-orange: yellow;
 
 .term {
     color: black;
@@ -34,6 +34,7 @@ $light-orange: #EBCB8B;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
         &.size {
             padding-left: 2ch;
             text-align: right;
@@ -68,6 +69,9 @@ $light-orange: #EBCB8B;
 
     a {
         color: $gray;
+        &:hover {
+            border-bottom: 2px solid;
+        }
     }
 }
 
@@ -87,6 +91,7 @@ a {
                 border-bottom: none;
             }
         }
+
     }
 
     // fake "files"
@@ -97,8 +102,9 @@ a {
     // fake "symlinks"
     &.symlink {
         color: $purple;
+
         &:after {
-            content: " -> "attr(href);
+            content: " -> " attr(href);
             color: black;
         }
     }
