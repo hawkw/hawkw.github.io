@@ -8,14 +8,26 @@ cmd: cat about.txt
 
 ## Who?
 
-I'm a [programmer](/code) and occasional [artist](/portfolio), based in Oakland,
-California. I'm interested in systems programming, networking, and programming languages.
-I'm currently working on open source infrastructure for cloud-native applications at
-[buoyant.io](https://buoyant.io).
+I'm a [programmer](/code) and occasional [artist](/portfolio), based in
+California. I like writing the kind of software a lot of people don't think
+about that often these days: low-level systems software and infrastructure.
+
+I'm currently working on open source networking infrastructure for cloud-native
+applications at [buoyant.io](https://buoyant.io).
 
 ## What?
 
-The main projects I'm currently working on are:
+The main projects I'm currently working on include:
+
++ **[mnemOS]**: A hobby operating system for small computers
+  ([website][mnemOS]|[github][mnemOS-gh])
+
+  I've been spending a lot of my free time on [mnemOS], a joint project with my
+  friend [James Munns] and a few other folks we've managed to rope into hacking
+  on it with us. MnemOS is a hobby-grade, experimental operating system for
+  [small computers] (and [bigger ones, too]). It's turned into a really fun
+  playground for experimenting with OS design, borrowing some ideas from
+  microkernel operating systems as well as the Erlang runtime.
 
 + **[tracing][tracing-gh]**: Application-level tracing for Rust
   ([crates.io][tracing-crates]|[github][tracing-gh])
@@ -62,6 +74,13 @@ The main projects I'm currently working on are:
   WebAssembly modules...or at least, it *will*, some day. Right now it mostly
   just prints "hello world" and crashes a lot.
 
+
+[mnemOS]: https://mnemos.dev
+[mnemOS-gh]: https://github.com/tosc-rs/mnemos
+[small computers]:
+    https://github.com/tosc-rs/mnemos/tree/main/platforms/allwinner-d1
+[bigger ones, too]: https://github.com/tosc-rs/mnemos/tree/main/platforms/x86_64
+[James Munns]: https://jamesmunns.com/
 [linkerd.io]: https://linkerd.io
 [linkerd-gh]: https://github.com/linkerd/linkerd2
 [proxy-gh]: https://github.com/linkerd/linkerd2-proxy
@@ -73,16 +92,15 @@ The main projects I'm currently working on are:
 [console-gh]: https://github.com/tokio-rs/console
 [myco-gh]: https://github.com/hawkw/mycelium
 
-
 ## WHERE?
 ### Elsewhere
 
 + code on <a class = "dir" href="https://github.com/hawkw">github</a>
 + keys on <a class = "dir" href="https://keybase.io/hawk">keybase</a>
-+ my personal <a class = "dir" href = "https://twitter.com/mycoliza">twitter</a>
++ posts on <a class = "dir" href = "https://twitter.com/mycoliza">twitter</a>
 + Continuity of Posting plan:
-  <a class = "dir" rel="me" href="https://xantronix.social/@eliza">mastodon</a>
-  and <a class = "dir" href="https://cohost.org/eliza">cohost</a>
+  <a class = "dir" href="https://bsky.app/profile/elizas.website">bluesky</a>
+  and <a class = "dir" rel="me" href="https://xantronix.social/@eliza">mastodon</a>
 
 ### Contact
 
