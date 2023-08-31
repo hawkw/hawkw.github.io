@@ -77,10 +77,9 @@ The main projects I'm currently working on include:
 
 [mnemOS]: https://mnemos.dev
 [mnemOS-gh]: https://github.com/tosc-rs/mnemos
-[small computers]:
-    https://github.com/tosc-rs/mnemos/tree/main/platforms/allwinner-d1
-[bigger ones, too]: https://github.com/tosc-rs/mnemos/tree/main/platforms/x86_64
 [James Munns]: https://jamesmunns.com/
+[small computers]: https://github.com/tosc-rs/mnemos/tree/main/platforms/allwinner-d1
+[bigger ones, too]: https://github.com/tosc-rs/mnemos/tree/main/platforms/x86_64
 [linkerd.io]: https://linkerd.io
 [linkerd-gh]: https://github.com/linkerd/linkerd2
 [proxy-gh]: https://github.com/linkerd/linkerd2-proxy
