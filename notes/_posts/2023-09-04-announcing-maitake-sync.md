@@ -51,15 +51,15 @@ I was bored, [`mycelium-bitfield`]. So, it's kind of like "Eliza's greatest
 hits".
 
 The synchronization primitives in [`maitake-sync`] are tested using [`loom`], a
-model checker for concurrent Rust programs. []`loom`] allows writing tests for
+model checker for concurrent Rust programs. [`loom`] allows writing tests for
 concurrent data structures which exhaustively simulate all the potential
 interleavings of operations permitted by the C++11 memory model. `loom` was
 [written by Carl Lerche as part of his work on the Tokio runtime][loom-blog],
 and it's proved invaluable. I love writing lock-free data structures, but I
 don't really trust myself, or anyone else, to write them correctly...without
 help from the model checker. [`maitake-sync`]'s synchronization primitives will
-also participate in downstream code's [`loom`] models when built with [`--cfg
-loom`].
+also participate in downstream code's [`loom`] models when built with
+[`--cfg loom`].
 
 Most of this code has existed for some time, as it was previously part of the
 main [`maitake` crate][Maitake]. However, that crate has not yet been published
