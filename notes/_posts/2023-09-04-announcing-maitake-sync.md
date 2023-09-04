@@ -29,13 +29,10 @@ Among other things, [`maitake-sync`] includes:
 
 - The obligatory async [`Mutex`] and [`RwLock`], both of which are fairly queued
   (waking tasks in first-in, first-out order),
-
 - An asynchronous [`Semaphore`], based loosely on
   [the implementation I contributed to Tokio][tokio-sem] many moons ago,
-
 - [`WaitCell`] and [`WaitQueue`] types, for when you need to just wake one task,
   or a bunch of tasks, respectively.
-
 - A [`WaitMap`] type, contributed by [James Munns], where waiting tasks are
   associated with keys, and can be woken by their key.
 
@@ -96,5 +93,6 @@ library of asynchronous synchronization primitives, you may find something from
 [`mycelium-bitfield`]: https://crates.io/crates/mycelium-bitfield
 [`cordyceps`]: https://crates.io/crates/cordyceps
 [`loom`]: https://crates.io/crates/loom
+[loom-blog]: https://tokio.rs/blog/2019-10-scheduler#fearless-unsafe-concurrency-with-loom
 [`--cfg loom`]: https://docs.rs/loom/latest/loom/#running-loom-tests
 [crates.io]: https://crates.io
