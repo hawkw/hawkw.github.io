@@ -29,10 +29,13 @@ Among other things, [`maitake-sync`] includes:
 
 - The obligatory async [`Mutex`] and [`RwLock`], both of which are fairly queued
   (waking tasks in first-in, first-out order),
-- An asynchronous [`Semaphore`], based loosely on [the implementation I
-  contributed to Tokio][tokio-sem] many moons ago,
+
+- An asynchronous [`Semaphore`], based loosely on
+  [the implementation I contributed to Tokio][tokio-sem] many moons ago,
+
 - [`WaitCell`] and [`WaitQueue`] types, for when you need to just wake one task,
   or a bunch of tasks, respectively.
+
 - A [`WaitMap`] type, contributed by [James Munns], where waiting tasks are
   associated with keys, and can be woken by their key.
 
@@ -83,15 +86,12 @@ library of asynchronous synchronization primitives, you may find something from
 [`maitake-sync`]: https://crates.io/crates/maitake-sync
 [`Mutex`]: https://docs.rs/maitake-sync/latest/maitake_sync/struct.Mutex.html
 [`RwLock`]: https://docs.rs/maitake-sync/latest/maitake_sync/struct.RwLock.html
-[`Semaphore`]:
-    https://docs.rs/maitake-sync/latest/maitake_sync/struct.Semaphore.html
+[`Semaphore`]: https://docs.rs/maitake-sync/latest/maitake_sync/struct.Semaphore.html
 [tokio-sem]: https://github.com/tokio-rs/tokio/pull/2325
 [`WaitCell`]: https://docs.rs/maitake-sync/latest/maitake_sync/struct.WaitCell.html
 [`WaitQueue`]: https://docs.rs/maitake-sync/latest/maitake_sync/struct.WaitQueue.html
-[`WaitMap`]:
-    https://docs.rs/maitake-sync/latest/maitake_sync/struct.WaitMap.html
-[intrusive]:
-    https://www.boost.org/doc/libs/1_45_0/doc/html/intrusive/intrusive_vs_nontrusive.html
+[`WaitMap`]: https://docs.rs/maitake-sync/latest/maitake_sync/struct.WaitMap.html
+[intrusive]: https://www.boost.org/doc/libs/1_45_0/doc/html/intrusive/intrusive_vs_nontrusive.html
 [cordylist]: https://docs.rs/cordyceps/latest/cordyceps/struct.List.html
 [`mycelium-bitfield`]: https://crates.io/crates/mycelium-bitfield
 [`cordyceps`]: https://crates.io/crates/cordyceps
