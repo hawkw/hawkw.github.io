@@ -1,12 +1,12 @@
 ---
 layout: term
 title: eliza's website
-cmd: cat about.txt
+cmd: cat about.md
 ---
 
 # eliza weisman
 
-## Who?
+## who?
 
 I'm a [programmer](/code) and occasional [artist](/portfolio), based in
 California. I like writing the kind of software a lot of people don't think
@@ -15,12 +15,12 @@ about that often these days: low-level systems software and infrastructure.
 I'm currently working on open source networking infrastructure for cloud-native
 applications at [buoyant.io](https://buoyant.io).
 
-## What?
+## what?
 
 The main projects I'm currently working on include:
 
-+ **[mnemOS]**: A hobby operating system for small computers
-  ([website][mnemOS]|[github][mnemOS-gh])
++ **[mnemOS]: A hobby operating system for small computers
+  ([website][mnemOS]|[github][mnemOS-gh])**
 
   I've been spending a lot of my free time on [mnemOS], a joint project with my
   friend [James Munns] and a few other folks we've managed to rope into hacking
@@ -29,8 +29,8 @@ The main projects I'm currently working on include:
   playground for experimenting with OS design, borrowing some ideas from
   microkernel operating systems as well as the Erlang runtime.
 
-+ **[tracing][tracing-gh]**: Application-level tracing for Rust
-  ([crates.io][tracing-crates]|[github][tracing-gh])
++ **[tracing][tracing-gh]: Application-level tracing for Rust
+  ([crates.io][tracing-crates]|[github][tracing-gh])**
 
   I'm the author and primary maintainer of [`tracing`][tracing-gh], a
   collection of libraries for adding structured, contextual, and
@@ -42,16 +42,16 @@ The main projects I'm currently working on include:
 
   `tracing` is part of the [Tokio project][tokio].
 
-+ **[tokio]**: Rust's async runtime
-  ([website][tokio]|[crates.io][tokio-crates]|[github][tokio-gh])
++ **[tokio]: Rust's async runtime
+  ([website][tokio]|[crates.io][tokio-crates]|[github][tokio-gh])**
 
   I'm a member of the core maintainer team for [Tokio][tokio], the pre-eminent
   asynchronous runtime for the Rust programming language. Tokio provides core
   primitives for asynchronous, event-driven applications, like async IO,
   timers, a task scheduler, and  synchronization primitives.
 
-+ **[linkerd][linkerd.io]**: Service mesh for Kubernetes
-  ([website][linkerd.io]|[github][linkerd-gh])
++ **[linkerd][linkerd.io]: Service mesh for Kubernetes
+  ([website][linkerd.io]|[github][linkerd-gh])**
 
   I'm one of the core maintainers of Linkerd 2's [high performance
   proxy][proxy-gh]. Linkerd is a service mesh for Kubernetes: an infrastructure
@@ -59,7 +59,8 @@ The main projects I'm currently working on include:
   that provide security, observability, and reliability for communication
   between services, and a control plane for managing them.
 
-+ **[tokio-console][console-gh]**: A debugger for async Rust ([github][console-gh])
++ **[tokio-console][console-gh]: A debugger for async Rust
+  ([github][console-gh])**
 
   I'm the primary maintainer of the the [Tokio Console project][console-gh]. The
   Tokio Console provides a suite of debugging tools for asynchronous Rust
@@ -67,7 +68,7 @@ The main projects I'm currently working on include:
 
   `tokio-console` is part of the [Tokio project][tokio].
 
-+ **[mycelium][myco-gh]**: A very silly operating system ([github][myco-gh])
++ **[mycelium][myco-gh]: A very silly operating system ([github][myco-gh])**
 
   In my Copious Free Time, I'm working on writing a hobby operating system,
   called `mycelium`. It runs on x86_64, and executes user programs as
@@ -91,8 +92,11 @@ The main projects I'm currently working on include:
 [console-gh]: https://github.com/tokio-rs/console
 [myco-gh]: https://github.com/hawkw/mycelium
 
-## WHERE?
-### Elsewhere
+## where?
+
+Some other places I can be found include:
+
+### elsewhere
 
 + code on <a class = "dir" href="https://github.com/hawkw">github</a>
 + keys on <a class = "dir" href="https://keybase.io/hawk">keybase</a>
@@ -101,7 +105,7 @@ The main projects I'm currently working on include:
   <a class = "dir" href="https://bsky.app/profile/elizas.website">bluesky</a>
   and <a class = "dir" rel="me" href="https://xantronix.social/@eliza">mastodon</a>
 
-### Contact
+### contact
 
 + e-mail:<!--  _eliza (AT) buoyant (DOT) io_ or --> _eliza (AT) elizas (DOT) website_
 + address & telephone number available by request

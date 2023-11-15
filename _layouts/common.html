@@ -30,7 +30,7 @@
 </script>
   </head>
   <body>
-    <div class="site">
+    <div class="site md">
 
       <!-- <div class="top-menu">
         <a class="extra" href="/">main</a>
@@ -42,13 +42,14 @@
         <a class="extra" href="https://keybase.io/hawk">public key</a>
       </div> -->
 
-      <div class = "content">
-        <main>
       <!-- begin subtemplate -->
-      {{ content }}
+      {% include anchor_headings.html
+        html=content
+        anchorBody=""
+        beforeHeading=true
+        anchorClass="anchor"
+      %}
       <!-- end subtemplate -->
-      </main>
-      </div>
 
       <!-- <div class="footer">
         <div class="contact-left">
@@ -68,7 +69,6 @@
           <a href="#" class="extra">&mdash;&nbsp;&nbsp;top&nbsp;&nbsp;&mdash;</a>
         </p>
         -->
-      </div>
 
     </div>
   </body>

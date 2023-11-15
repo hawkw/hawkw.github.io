@@ -1,22 +1,8 @@
 @import "fonts.scss";
 
-$very-light-gray: #c5c8c6;
-$light-gray: #65737E;
-$gray: black;
-$dark-gray: #282a2e;
-$very-dark-gray: #1d1f21;
-
-$cyan: cyan;
-$blue: blue;
-$purple: purple;
-$green: green;
-$red: red;
-$orange: orange;
-$light-orange: yellow;
-
 .term {
     color: black;
-    font-family: $code-font-stack;
+    font-family: $font-family-code;
 
     table {
         white-space: nowrap;
@@ -24,7 +10,7 @@ $light-orange: yellow;
         table-layout: fixed;
         padding: 0;
         margin: 0;
-        background: #FFFFFF;
+        background: $background;
     }
 
     td {
@@ -48,7 +34,7 @@ $light-orange: yellow;
 
     tr {
         border: none;
-        background: #FFFFFF;
+        background: $background;
     }
 
 
@@ -69,14 +55,15 @@ $light-orange: yellow;
 
     a {
         color: $gray;
-        &:hover {
-            border-bottom: 2px solid;
-        }
     }
 }
 
+footer.term {
+    margin-top: $lh;
+}
+
 a {
-    font-family: $code-font-stack;
+    font-family: $font-family-code;
 
     // fake "directories" - printed with a slash after
     &.dir {
@@ -87,8 +74,15 @@ a {
             color: $gray;
             border-bottom: none;
 
-            &:hover {
+        }
+
+        &:hover {
+            background-color: $blue;
+            color: $background;
+
+            &::after {
                 border-bottom: none;
+                color: $background;
             }
         }
 
@@ -97,6 +91,10 @@ a {
     // fake "files"
     &.file {
         color: $green;
+        &:hover {
+            background-color: $green;
+            color: $background;
+        }
     }
 
     // fake "symlinks"
@@ -106,6 +104,15 @@ a {
         &:after {
             content: " -> " attr(href);
             color: black;
+        }
+
+        &:hover {
+            background-color: $purple;
+            color: $background;
+
+            &::after {
+                color: $background;
+            }
         }
     }
 }

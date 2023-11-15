@@ -1,0 +1,33 @@
+/**
+ * vars
+ */
+$very-light-gray: #c5c8c6;
+$light-gray: #65737E;
+$gray: black;
+$dark-gray: #282a2e;
+$very-dark-gray: #1d1f21;
+$background: white;
+$link-color: #479;
+
+$text-body-gray: #515151;
+$text-light-gray: hsl(0, 0%, 40%);
+
+$ultralight-gray: #aaa;
+$text-header-black: #333;
+
+$cyan: cyan;
+$blue: blue;
+$purple: purple;
+$green: green;
+$red: red;
+$orange: orange;
+$light-orange: yellow;
+
+$font-size-base: 14pt;
+$font-family-code: "Iosevka", Menlo, Monaco, monospace, serif;
+$font-family: $font-family-code;
+
+$lh: 1.5rem; // vertical rhythm
+
+$max-width: 60rem;
+$breakpoint-wide: $max-width + 6rem;

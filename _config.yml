@@ -7,7 +7,7 @@ title:            eliza's website
 url:              https://elizas.website
 paginate:         1
 baseurl:          /
-author:
+author: &default-author
   name:           Eliza Weisman
   url:            https://elizas.website
   email:          eliza@elizas.website
@@ -38,6 +38,7 @@ defaults:
     values:
       layout: "post"
       author: "eliza"
+      author: *default_author
   -
     scope:
       path: "etc"

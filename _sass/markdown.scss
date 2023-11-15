@@ -1,0 +1,232 @@
+/**
+ * code by https://github.com/mrcoles/markdown-css
+ * with some modifications
+ */
+@import "vars.scss";
+
+.md {
+    word-wrap: break-word;
+}
+
+.md,
+.md h1,
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6,
+.md code,
+.md blockquote,
+.md em,
+.md strong,
+.md code {
+    font-size: $font-size-base;
+    line-height: $lh;
+    font-style: normal;
+    font-family: $font-family-code;
+}
+
+.md h1,
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6,
+.md code,
+.md blockquote,
+.md ol,
+.md ul,
+.md dl,
+.md li,
+.md p,
+.md section,
+.md header,
+.md footer {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+
+.md h1,
+.md p,
+.md ul,
+.md dl,
+.md ol,
+.md blockquote {
+    margin-top: $lh;
+    margin-bottom: $lh;
+}
+
+.md h1 {
+    position: relative;
+    display: inline-block;
+    display: table-cell;
+    padding: $lh 0 (2 * $lh);
+    margin: 0;
+    overflow: hidden;
+}
+
+.md h1:after {
+    content: "====================================================================================================";
+    position: absolute;
+    bottom: 0.8 * $lh;
+    left: 0;
+}
+
+.md h1+* {
+    margin-top: 0;
+}
+
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6 {
+    position: relative;
+    margin-bottom: $lh;
+
+    > a {
+
+        &:before {
+            display: inline;
+            @media screen and (min-width: $breakpoint-wide) {
+                display: block;
+                position: absolute;
+                transform: translateX(-100%);
+                padding-right: 0.6rem;
+            }
+
+            color: $very-light-gray;
+        }
+        &:hover::before {
+            border-bottom: 2px solid;
+        }
+    }
+}
+
+.md h1,
+.md h2 {
+    line-height: $lh;
+}
+
+.md h2 > a:before {
+    content: "##";
+}
+
+.md h3 > a:before {
+    content: "###";
+}
+
+.md h4 > a:before  {
+    content: "####";
+}
+
+.md h5 > a:before  {
+    content: "#####";
+}
+
+.md h6 > a:before  {
+    content: "######";
+}
+
+.md li {
+    position: relative;
+    display: block;
+    padding-left: 2ch;
+}
+
+.md li:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.md ul>li:before {
+    content: "*";
+}
+
+.md ol {
+    counter-reset: ol;
+}
+
+.md ol>li:before {
+    content: counter(ol) ".";
+    counter-increment: ol;
+}
+
+.md blockquote {
+    position: relative;
+    padding-left: 2ch;
+    overflow: hidden;
+}
+
+.md blockquote:after {
+    content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";
+    white-space: pre;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: $lh;
+}
+
+.md em:before,
+.md em:after {
+    content: "*";
+    display: inline;
+}
+
+.md pre code:before,
+.md pre code:after {
+    content: '';
+}
+
+.md code {
+    color: $light-gray;
+    font-weight: bold;
+}
+
+.md a code {
+    color: $link-color;
+}
+
+.md a:hover code {
+    color: white;
+}
+
+.md code:before,
+.md code:after {
+    content: "`";
+    display: inline;
+}
+
+.md hr {
+    position: relative;
+    height: $lh;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    border: 0;
+    margin-bottom: $lh;
+}
+
+.md hr:after {
+    content: "- - -";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    line-height: $lh;
+    width: 100%;
+    word-wrap: break-word;
+    color: $very-light-gray;
+}
+
+@-moz-document url-prefix() {
+    .md h1 {
+        display: block;
+    }
+}
+
+.md-ones ol>li:after {
+    content: "1.";
+}
