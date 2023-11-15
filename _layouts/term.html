@@ -3,7 +3,7 @@ layout: term-footer
 ---
 <header class="term">
     <!-- TODO: make these into <p>s? -->
-    <span class="prompt host">elizas.website</span>
+    <span class="prompt host"><a href = "/">elizas.website</a></span>
     <span class="prompt path">~</span> ls
     <nav class="term-grid">
         {% for nav in site.nav %}
@@ -13,7 +13,7 @@ layout: term-footer
         {% endfor %}
     </nav>
     <br />
-    <span class="prompt host">elizas.website</span>
+    <span class="prompt host"><a href = "/">elizas.website</a></span>
     <span class="prompt path">~{{page.pwd | prepend: '/' }}</span> {{page.cmd}}
 </header>
 <main class="content">
