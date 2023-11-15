@@ -93,3 +93,6 @@ _site/
 ### Sass ###
 .sass-cache
 *.css.map
+
+### nix + direnv ###
+.direnv
