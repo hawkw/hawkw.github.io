@@ -222,29 +222,6 @@ abbr[title] {
   border-bottom: 1px dotted #e5e5e5;
 }
 
-/* Code */
-code,
-pre {
-  font-family: $font-family-code;
-}
-
-code {
-  padding: .25em .5em;
-  font-size: 85%;
-  color: #bf616a;
-  background-color: #f9f9f9;
-  background-clip: padding-box;
-}
-
-a code {
-  color: #479;
-
-  // text-decoration: none;
-  &:hover {
-    border-bottom: 2px solid;
-  }
-}
-
 pre {
   display: block;
   margin-top: 0;

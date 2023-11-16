@@ -188,10 +188,6 @@
     color: $link-color;
 }
 
-.md a:hover code {
-    color: white;
-}
-
 .md code:before,
 .md code:after {
     content: "`";
