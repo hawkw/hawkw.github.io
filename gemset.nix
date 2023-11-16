@@ -956,10 +956,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1rah7pvqayp40pxgnxh1qjnnf5rn8g5aif9blwfz22d8h29va9d4";
+      sha256 = "1sf6bxvf6x8gihv6j63iakixmdddgls58cpxpg32chckb2l18qcj";
       type = "gem";
     };
-    version = "0.0.9";
+    version = "0.0.9.1";
   };
   unicode-display_width = {
     groups = ["default" "jekyll_plugins"];

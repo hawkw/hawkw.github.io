@@ -68,6 +68,10 @@
         # nix run -> serves the website locally
         default = simple_script "serve_blog" [ ] ''
           echo "Bundler env: ${env}"
+          export LC_ALL="C.UTF-8"
+          export LANG="en_US.UTF-8"
+          export LANGUAGE="en_US.UTF-8"
+
           ${env}/bin/bundler exec -- jekyll serve --trace
         '';
 

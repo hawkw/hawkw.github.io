@@ -12,6 +12,8 @@ author: &default-author
   url:            https://elizas.website
   email:          eliza@elizas.website
 
+encoding: utf-8
+
 exclude:
   - "website.sublime-project"
   - "website.sublime-workspace"
