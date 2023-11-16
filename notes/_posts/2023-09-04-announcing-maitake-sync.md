@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Announcing maitake-sync
+title: Announcing Maitake-Sync
 categories: rust,async
 author: Eliza Weisman
 ---
