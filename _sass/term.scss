@@ -54,7 +54,7 @@
     }
 
     a {
-        color: $gray;
+        color: $body-text-color;
     }
 }
 
@@ -71,7 +71,7 @@ a {
 
         &:after {
             content: "/";
-            color: $gray;
+            color: $body-text-color;
             border-bottom: none;
 
         }

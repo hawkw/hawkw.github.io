@@ -15,7 +15,7 @@
 body {
   background-color: $background;
   font: $font-size-base $font-family-code;
-  color: $gray;
+  color: $body-text-color;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -336,13 +336,6 @@ img {
   margin-bottom: 4em;
 }
 
-/* Blog post or page title */
-.page-title,
-.post-title,
-.post-title a {
-  color: #303030;
-}
-
 .page-title,
 .post-title,
 .subtitle {
@@ -356,10 +349,6 @@ img {
   }
 
   margin-bottom: 0;
-}
-
-.post-title {
-  font-size: 140%;
 }
 
 .subtitle {
