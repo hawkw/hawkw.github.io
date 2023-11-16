@@ -9,7 +9,6 @@ layout: common
       </h1>
       {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{%endif %}
       <span class = "post-date">
-          {% if page.author %}By {{ page.author }} on {% endif %}
           {{ page.date | date_to_string }}
       </span>
     </header>
@@ -28,7 +27,7 @@ layout: common
 </div>
 <footer class="post">
   <p>
-    <a href="{{ site.url }}">Back to index</a>.
+    {% if page.author %}By {{ page.author }} &mdash {% endif %}<a href="{{ site.url }}">Back to index</a>.
   </p>
 </footer>
 </div>
