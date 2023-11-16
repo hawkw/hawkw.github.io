@@ -3,16 +3,16 @@ layout: common
 ---
 <div class="above-post">
   <!-- <header> -->
-    <div class="textheader">
+    <header class="textheader">
       <h1 class="post-title">
         {{ page.title }}
       </h1>
-      {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{%
-      endif %}
+      {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{%endif %}
       <span class = "post-date">
+          {% if page.author %}By {{ page.author }} on {% endif %}
           {{ page.date | date_to_string }}
       </span>
-    </div>
+    </header>
   <!-- </header> -->
 
   <!-- <a class="extra back" href="javascript:history.back()">
@@ -24,18 +24,11 @@ layout: common
   <!-- begin content -->
   {{ content }}
   <!-- end content -->
-  </main>
+</main>
 </div>
-<div class="below-post">
-{% if page.tags.size != 0 %}
-  <a class="meta">tagged:{% for tag in page.tags %} {{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}</a>
-{% endif %}
-<!-- disable the Big Ugly Author Block
-{% if page.author %}
-  {% if page.authorlink %}
-    <p class="author">&mdash;<a class="extra" href="{{ page.authorlink }}">{{ page.author}}</a></p>
-  {% else %}
-    <p class="author">&mdash;{{ page.author}}</p>
-  {% endif %}
-{% endif %} -->
+<footer class="post">
+  <p>
+    <a href="{{ site.url }}">Back to index</a>.
+  </p>
+</footer>
 </div>

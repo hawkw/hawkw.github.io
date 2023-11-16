@@ -1,0 +1,11 @@
+<span class="prompt host"><a href = "{{ site.url }}">elizas.website</a></span>
+<span class="prompt path">~</span> ls
+<nav class="term-grid">
+    {% for nav in site.nav %}
+    <span>
+        <a class="term-nav {{nav.kind}}" href="{{ nav.href }}">{{ nav.name }}</a>
+    </span>
+    {% endfor %}
+</nav>
+<br />
+<span class="prompt host"><a href = "{{ site.url }}">elizas.website</a></span>

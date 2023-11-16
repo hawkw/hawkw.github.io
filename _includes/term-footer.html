@@ -1,11 +1,5 @@
----
-layout: common
----
-
-{{ content }}
-
 <footer class="term">
-    <span class="prompt host"><a href = "/">elizas.website</a></span>
+    <span class="prompt host"><a href = "{{ site.url }}">elizas.website</a></span>
     <span class="prompt path">~{{page.pwd | prepend: '/' }}</span>
     <span class="blinking-cursor">_</span>
 </footer>
