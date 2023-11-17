@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
-  Main template for http://hawkw.github.io
-  Based on the Jekyll default template.
--->
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,57 +14,23 @@
 
     <!-- Google Analytics -->
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-58926260-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+      ga('create', 'UA-58926260-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </head>
-  <body>
-    <div class="site md">
-
-      <!-- <div class="top-menu">
-        <a class="extra" href="/">main</a>
-        <a class="extra" href="/notebook/">notebook</a>
-        <a class="extra" href="/slides/">slide deck</a>
-        <a class="extra" href="/resume.pdf">r&eacute;sum&eacute;</a>
-        <a class="extra" href="/hire">hire me</a>
-        <a class="extra" href="https://github.com/hawkw/">github</a>
-        <a class="extra" href="https://keybase.io/hawk">public key</a>
-      </div> -->
-
-      <!-- begin subtemplate -->
-      {% include anchor_headings.html
-        html=content
-        anchorBody=""
-        beforeHeading=true
-        anchorClass="anchor"
-      %}
-      <!-- end subtemplate -->
-
-      <!-- <div class="footer">
-        <div class="contact-left">
-          <p>
-            Hawk Weisman<br />
-            Meadville, PA
-          </p>
-        </div>
-        <div class="contact-right">
-          <p>
-            hi <small>AT</small> hawkweisman.me<br />
-            <a class="extra" href="https://github.com/hawkw">github.com/hawkw</a>
-          </p>
-        </div> -->
-        <!--
-        <p class="navigation">
-          <a href="#" class="extra">&mdash;&nbsp;&nbsp;top&nbsp;&nbsp;&mdash;</a>
-        </p>
-        -->
-
-    </div>
+  <body class="site md">
+    <!-- begin subtemplate -->
+    {% include anchor_headings.html
+      html=content
+      anchorBody=""
+      beforeHeading=true
+      anchorClass="anchor"
+    %}
+    <!-- end subtemplate -->
   </body>
 </html>
