@@ -62,7 +62,8 @@
     display: table-cell;
     padding: $lh 0 (2 * $lh);
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; 
+    text-transform: uppercase;
 }
 
 .md h1:after {
@@ -74,6 +75,10 @@
 
 .md h1+* {
     margin-top: 0;
+}
+
+.md h2 {
+    text-transform: uppercase;
 }
 
 .md h2,

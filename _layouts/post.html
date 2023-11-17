@@ -1,25 +1,32 @@
 ---
 layout: common
 ---
-<header class="post">
-  <h1 class="post-title">
-    {{ page.title }}
-  </h1>
-  {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{%endif %}
-  <span class = "post-date">
-      {{ page.date | date_to_string }}
-  </span>
-</header>
 
-<main class="content post">
-  <!-- begin content -->
-  {{ content }}
-  <!-- end content -->
-</main>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post">
+    <h1 class="post-title"itemprop="name headline">
+      {{ page.title }}
+    </h1>
+    {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{%endif %}
+    <span class = "post-date">
+        {{ page.date | date_to_string | upcase }}
+    </span>
+  </header>
 
-<hr />
-<footer class="post">
-  <p>
-    {% if page.author %}By {{ page.author }} &mdash; {% endif %}<a href="{{ site.url }}">Back to index</a>.
-  </p>
-</footer>
+  <main class="content post" itemprop="articleBody">
+    <!-- begin content -->
+    {{ content }}
+    <!-- end content -->
+  </main>
+
+  <hr />
+  <footer class="post">
+    <p>
+     <a href="{{ site.url }}/colophon">
+        &copy; {{ site.time| date: "%Y" }}
+        {% if page.author %}{{ page.author }}{% else %}Eliza Weisman{% endif %}</a>
+     / <a href = "{{ site.url }}/notes">More posts</a>
+     / <a href="{{ site.url }}">Return to index</a>.
+    </p>
+  </footer>
+</article>
