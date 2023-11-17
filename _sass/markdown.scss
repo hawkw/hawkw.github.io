@@ -159,6 +159,7 @@
     position: relative;
     padding-left: 2ch;
     overflow: hidden;
+    color: $light-gray;
 }
 
 .md blockquote:after {
@@ -168,7 +169,7 @@
     top: 0;
     left: 0;
     line-height: $lh;
-    color: $light-gray;
+    color: $very-light-gray;
 }
 
 .md em:before,
