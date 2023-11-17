@@ -18,6 +18,7 @@ Typeset in the beautiful [Berkeley Mono] by [Berkeley Graphics].
 
 [BY-NC 4.0]: https://creativecommons.org/licenses/by-nc/4.0/
 [`markdown-css`]: https://github.com/mrcoles/markdown-css
+[on GitHub]: https://github.com/hawkw/hawkw.github.io
 [Peter Coles]: https://github.com/mrcoles
 [`jekyll-theme-scribbles`]: https://killercup.github.io/jekyll-theme-scribbles/
 [Pascal Hertleif]: https://pascalhertleif.de/

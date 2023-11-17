@@ -6,6 +6,10 @@ cmd: cat about.md
 
 # eliza weisman
 
+Welcome to Eliza's website &mdash; on the Internet!
+
+## About Me
+
 I'm a [programmer](#code), a computer enthusiast, an occasional
 [artist](/portfolio), and a ["neural oscillator of uncertain
 significance"][oscillator], operating out of California's San Francisco
