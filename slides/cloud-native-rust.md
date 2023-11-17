@@ -1,15 +1,16 @@
 ---
 layout: post
-title: Five Years of Cloud-Native Rust
+title: "Five Years of Cloud-Native Rust: A Reading List"
+author: Eliza Weisman
 ---
-
-# Five Years of Cloud-Native Rust: A Reading List
 
 This is a reading list for my talk, ["Five Years of Cloud Native Rust"](https://kccncna2023.sched.com/event/1R2qn/five-years-of-cloud-native-rust-eliza-weisman-buoyant-inc), at KubeCon + CloudNativeCon North America 2023.
 
 This list includes all the sources referenced in the talk itself, as well as other complimentary resources.
 
-> “It doesn’t cease to amaze me that when something finally compiles in Rust, there’s a high chance the program will simply work as intended.”
+> “It doesn’t cease to amaze me that when something finally compiles in Rust,
+> there’s a high chance the program will simply work as intended.”
+>
 >  — Alejandro Pedraza ([@alpeb](https://github.com/alpeb)), Linkerd maintainer
 
 ## Why Rust?
