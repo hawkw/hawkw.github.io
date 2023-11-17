@@ -14,7 +14,7 @@
 
 body {
   background-color: $background;
-  font: $font-size-base $font-family-code;
+  font: $font-family-code;
   color: $body-text-color;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -28,8 +28,6 @@ h3 {
 
 h1,
 h2 {
-  // text-transform: uppercase;
-
   & .title {
     letter-spacing: 0.1px;
     text-align: center;
@@ -39,7 +37,6 @@ h2 {
 
   & .halftitle {
     display: inline-block;
-    float: right;
     width: auto;
     height: auto;
     text-align: right;
@@ -47,7 +44,6 @@ h2 {
 
   & .blog-title {
     text-align: left;
-    // font-size: 26px;
   }
 }
 
@@ -70,7 +66,6 @@ div.halftitle {
 
 .content p {
   clear: both;
-  // margin: 1em 0;
   padding: 0;
   text-align: left;
 }
@@ -91,10 +86,17 @@ a {
 }
 
 .content a {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid $link-color;
+    // &:visited {
+    //   color: $purple;
+    //   border-bottom: 1px solid $purple;
+    //   &:hover {
+    //     background-color: $purple;
+    //     color: $background;
+    //   }
+    // }
 }
 
-//a:visited { color: #696969; }
 
 img.titleimage {
   float: left;
@@ -172,23 +174,6 @@ div.below-post {
   text-align: right;
 }
 
-.below-post .meta {
-  color: #aaa;
-  padding-top: 2em;
-  float: left;
-  text-align: left;
-}
-
-.below-post .author {
-  // padding-above: -800px;
-  font-size: 120%;
-  width: auto;
-  height: auto;
-  float: right;
-  text-align: right;
-  color: #000;
-}
-
 
 dt {
   font-weight: bold;
@@ -199,15 +184,6 @@ dd {
 }
 
 /* Misc */
-hr {
-  position: relative;
-  margin: 1.5rem 0;
-
-  border: 0 {
-    top: 1px solid #eee;
-    bottom: 1px solid #fff;
-  }
-}
 
 abbr {
   font-size: 85%;
@@ -286,34 +262,9 @@ img {
   border-radius: 5px;
 }
 
-/* Tables */
-// table {
-//   margin-bottom: 1rem;
-//   width: 100%;
-//   border: 1px solid #e5e5e5;
-//   border-collapse: collapse;
-// }
-// td,
-// th {
-//   padding: .25rem .5rem;
-//   border: 1px solid #e5e5e5;
-// }
-// tbody tr:nth-child(odd) td,
-// tbody tr:nth-child(odd) th {
-//   background-color: #f9f9f9;
-// }
-/*
- * Posts and pages
- *
- * Each post is wrapped in `.post` and is used on default and post layouts. Each
- * page is wrapped in `.page` and is only used on the page layout.
- *
- *  Based on Poole (https://github.com/poole/poole/blob/master/public/css/poole.css)
- */
-
 .page,
 .post {
-  margin-bottom: 4em;
+  padding-bottom: 2rem;
 }
 
 .page-title,
@@ -334,6 +285,10 @@ img {
 .subtitle {
   color: $ultralight-gray;
   font-weight: 400;
+}
+
+header.post {
+  padding-bottom: 2rem;
 }
 
 /* Meta data line below post title */
@@ -374,63 +329,4 @@ img {
 
 .related-posts li a:hover small {
   color: inherit;
-}
-
-
-/*
- * Pagination
- *
- * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
- * there are no more previous or next posts to show.
- *
- * Based on Poole (https://github.com/poole/poole/blob/master/public/css/poole.css)
- */
-
-.pagination {
-  overflow: hidden;
-  /* clearfix */
-  margin-left: -1rem;
-  margin-right: -1rem;
-  font-family: $font-family-code;
-  color: #ccc;
-  text-align: center;
-}
-
-/* Pagination items can be `span`s or `a`s */
-.pagination-item {
-  display: block;
-  padding: 1rem;
-  border: 1px solid #eee;
-}
-
-.pagination-item:first-child {
-  margin-bottom: -1px;
-}
-
-/* Only provide a hover state for linked pagination items */
-a.pagination-item:hover {
-  background-color: #f5f5f5;
-}
-
-@media (min-width: 30em) {
-  .pagination {
-    margin: 3rem 0;
-  }
-
-  .pagination-item {
-    float: left;
-    width: 50%;
-  }
-
-  .pagination-item:first-child {
-    margin-bottom: 0;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
-
-  .pagination-item:last-child {
-    margin-left: -1px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
 }

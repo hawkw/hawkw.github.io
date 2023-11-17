@@ -98,7 +98,8 @@
             color: $very-light-gray;
         }
         &:hover::before {
-            border-bottom: 2px solid;
+            color: $background;
+            background-color: $link-color;
         }
     }
 }
@@ -106,6 +107,7 @@
 .md h1,
 .md h2 {
     line-height: $lh;
+    font-weight: bold;
 }
 
 .md h2 > a:before {
@@ -116,15 +118,15 @@
     content: "###";
 }
 
-.md h4 > a:before  {
+.md h4 > a:before {
     content: "####";
 }
 
-.md h5 > a:before  {
+.md h5 > a:before {
     content: "#####";
 }
 
-.md h6 > a:before  {
+.md h6 > a:before {
     content: "######";
 }
 
@@ -141,7 +143,7 @@
 }
 
 .md ul>li:before {
-    content: "*";
+    content: "-";
     color: $light-gray;
 }
 
@@ -172,10 +174,18 @@
     color: $very-light-gray;
 }
 
-.md em:before,
-.md em:after {
-    content: "*";
-    display: inline;
+.md em {
+    font-style: italic;
+
+    &:before,
+    &:after {
+        content: "*";
+        display: inline;
+    }
+}
+
+.md strong {
+    font-weight: bold;
 }
 
 .md pre code:before,
@@ -185,7 +195,7 @@
 
 .md code {
     color: $light-gray;
-    font-weight: bold;
+    // font-weight: bold;
 }
 
 .md a code {
