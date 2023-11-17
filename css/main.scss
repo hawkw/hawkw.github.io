@@ -135,9 +135,8 @@ p.sidenote {
 /*** site ***/
 
 .site {
-  // font-size: 115%;
-  width: 80ch;
-  margin: 2em auto;
+  max-width: 80ch;
+  margin: 2ch auto;
 }
 
 div.above-post,
