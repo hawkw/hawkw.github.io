@@ -1,11 +1,9 @@
 # Permalinks
 permalink: "/:title.html"
-# relative_permalinks: true
 
 # Setup
 title:            eliza's website
 url:              https://elizas.website
-paginate:         1
 baseurl:          /
 author: &default-author
   name:           Eliza Weisman
@@ -54,7 +52,7 @@ defaults:
     values:
       layout: main
 
-plugins: ["jekyll-paginate"]
+# plugins: ["jekyll-paginate"]
 
 markdown: kramdown
 highlighter: rouge
