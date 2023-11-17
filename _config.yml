@@ -92,7 +92,7 @@ nav:
   # - name:           "mail"
   #   href:           "mailto://eliza@elizas.website"
   #   kind:           "exe"
-  - name:           "about.txt"
+  - name:           "about.md"
     href:           "/"
     kind:           "file"
   - name:           "résumé.pdf"
