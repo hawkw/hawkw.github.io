@@ -67,8 +67,8 @@ a {
 
     // fake "directories" - printed with a slash after
     &.dir {
-        color: $blue;
-        border-bottom: none !important;
+        color: $link-color;
+        border-bottom: none;
 
         &:after {
             content: "/";
@@ -78,7 +78,7 @@ a {
         }
 
         &:hover {
-            background-color: $blue;
+            background-color: $link-color;
             color: $background;
 
             &::after {
@@ -91,9 +91,9 @@ a {
 
     // fake "files"
     &.file {
-        color: $green;
+        color: $red;
         &:hover {
-            background-color: $green;
+            background-color: $red;
             color: $background;
         }
     }
@@ -104,7 +104,7 @@ a {
 
         &:after {
             content: " -> " attr(href);
-            color: black;
+            color: $light-gray;
         }
 
         &:hover {
