@@ -2,12 +2,15 @@
 layout: common
 ---
 <header class="term">
-    {% include term-nav.html %}
-    <span class="prompt path">~{{page.pwd | prepend: '/' }}</span> {{page.cmd}}
+  {% include term-nav.html %}
+  <span class="prompt host"><a href = "{{ site.url }}">elizas.website</a></span>
+  <span class="prompt path">
+    ~{% if page.pwd %}{{page.pwd | prepend: '/'}}{% endif %}
+  </span> {{page.cmd}}
 </header>
 <main class="content">
-    <!-- begin content -->
-    {{ content }}
-    <!-- end content -->
+  <!-- begin content -->
+  {{ content }}
+  <!-- end content -->
 </main>
 {% include term-footer.html %}
