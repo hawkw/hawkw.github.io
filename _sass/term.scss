@@ -68,6 +68,7 @@ a {
     // fake "directories" - printed with a slash after
     &.dir {
         color: $blue;
+        border-bottom: none !important;
 
         &:after {
             content: "/";
