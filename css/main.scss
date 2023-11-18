@@ -120,82 +120,12 @@ p.sidenote {
 }
 
 
-/*
- * Messages
- *
- * Show alert messages to users. You may add it to single elements like a `<p>`,
- * or to a parent if there are multiple elements to show.
- */
-
-.message {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  color: #717171;
-  background-color: #f9f9f9;
-}
-
 /*** site ***/
 
 .site {
   max-width: $max-width + 2ch;
   margin: 2ch auto;
   padding: 1ch;
-}
-
-div.above-post,
-div.below-post {
-  display: inline-block;
-  height: auto;
-  width: 100%;
-}
-
-div.above-post {
-  margin-bottom: .7em;
-}
-
-div.below-post {
-  margin-top: .7em;
-}
-
-.above-post .back,
-.below-post .back {
-  float: left;
-}
-
-.above-post .meta,
-.below-post .meta {
-  color: #000;
-  padding: 2px;
-  width: 75%;
-}
-
-.above-post .meta {
-  padding-top: .4em;
-  float: right;
-  text-align: right;
-}
-
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin-bottom: .5rem;
-}
-
-/* Misc */
-
-abbr {
-  font-size: 85%;
-  font-weight: bold;
-  color: #555;
-  text-transform: uppercase;
-}
-
-abbr[title] {
-  cursor: help;
-  border-bottom: 1px dotted #e5e5e5;
 }
 
 pre {
@@ -302,32 +232,3 @@ header.post {
   color: $light-gray;
 }
 
-/* Related posts */
-.related {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  border-top: 1px solid #eee;
-}
-
-.related-posts {
-  padding-left: 0;
-  list-style: none;
-}
-
-.related-posts h3 {
-  margin-top: 0;
-}
-
-.related-posts li small {
-  font-size: 75%;
-  color: #999;
-}
-
-.related-posts li a:hover {
-  color: #268bd2;
-  text-decoration: none;
-}
-
-.related-posts li a:hover small {
-  color: inherit;
-}
