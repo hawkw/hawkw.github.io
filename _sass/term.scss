@@ -32,6 +32,14 @@
         }
     }
 
+    .ls-la {
+        color: $light-gray;
+
+        &.author, &.date {
+            color: $body-text-color;
+        }
+    }
+
     tr {
         border: none;
         background: $background;
