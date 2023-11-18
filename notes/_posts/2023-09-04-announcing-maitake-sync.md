@@ -2,7 +2,7 @@
 layout: post
 title: Announcing Maitake-Sync
 categories: rust,async
-author: Eliza Weisman
+author: eliza
 ---
 
 It is with a heavy heart that I must inform you that I have written even more
