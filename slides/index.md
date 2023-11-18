@@ -23,10 +23,10 @@ pwd: slides
     <nav class="term">
         <tr>
             <td class = "term ls-la">drwxr-xr-x</td>
-            <td class = "term num">32</td>
+            <td class = "term ls-la num">32</td>
             <td class = "term ls-la author">eliza</td>
             <td class = "term ls-la">users</td>
-            <td class = "term size">64</td>
+            <td class = "term ls-la size">64</td>
             <td class = "term ls-la date">{{ site.time | date: "%b" }}&nbsp;{{ site.time | date: "%_e%t%Y" }}</td>
             <td class = "term ls-la"><a class="term-nav file" href="/index.html">..</a></td>
         </tr>
