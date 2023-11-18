@@ -92,10 +92,9 @@
     >a {
 
         &:before {
-            display: inline;
+            display: block;
 
             @media screen and (min-width: $breakpoint-wide) {
-                display: block;
                 position: absolute;
                 transform: translateX(-100%);
                 padding-right: 0.6rem;

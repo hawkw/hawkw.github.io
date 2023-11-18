@@ -17,9 +17,11 @@
         padding: 0;
         padding-right: 1ch;
         max-width: $max-width;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        vertical-align: text-top;
+        
+        &.date {
+            white-space: nowrap;
+        }
 
         &.size {
             // padding-left: 1ch;
@@ -29,6 +31,14 @@
         &.num {
             // padding-left: 1ch;
             text-align: right;
+        }
+    }
+
+    @media only screen and (min-width: $breakpoint-wide) {
+        td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
 
@@ -63,6 +73,19 @@
 
     a {
         color: $body-text-color;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-wide) {
+
+    /* stuff that should just disappear on small screens */
+    .mobile-hidden {
+      visibility: collapse;
+      display: none;
+    }
+    /* stuff that should be blanked but keep layout */
+    .mobile-blank {
+        visibility: hidden;
     }
 }
 
@@ -110,10 +133,12 @@ a {
     &.symlink {
         color: $purple;
 
-        &:after {
-            content: " -> " attr(href);
-            color: $light-gray;
-            overflow: hidden;
+        @media only screen and (min-width: $breakpoint-wide) {
+            &:after {
+                content: " -> " attr(href);
+                color: $light-gray;
+                overflow: hidden;
+            }
         }
 
         &:hover {
