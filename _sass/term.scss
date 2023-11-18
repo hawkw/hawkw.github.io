@@ -16,7 +16,7 @@
     td {
         padding: 0;
         padding-right: 1ch;
-        max-width: 80ch;
+        max-width: $max-width;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -49,7 +49,7 @@
     // grid for stuff like fake "ls" commands
     &-grid {
         display: grid;
-        grid-template-columns: 9rem 9rem 9rem 9rem;
+        grid-template-columns: repeat(auto-fill, 9em);
         // grid-gap: 2rem;
         // padding-left: 1rem;
     }

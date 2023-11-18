@@ -62,7 +62,7 @@
     display: table-cell;
     padding: $lh 0 (2 * $lh);
     margin: 0;
-    overflow: hidden; 
+    overflow: hidden;
     text-transform: uppercase;
 }
 
@@ -89,10 +89,11 @@
     position: relative;
     margin-bottom: $lh;
 
-    > a {
+    >a {
 
         &:before {
             display: inline;
+
             @media screen and (min-width: $breakpoint-wide) {
                 display: block;
                 position: absolute;
@@ -102,6 +103,7 @@
 
             color: $very-light-gray;
         }
+
         &:hover::before {
             color: $background;
             background-color: $link-color;
@@ -115,23 +117,23 @@
     font-weight: bold;
 }
 
-.md h2 > a:before {
+.md h2>a:before {
     content: "##";
 }
 
-.md h3 > a:before {
+.md h3>a:before {
     content: "###";
 }
 
-.md h4 > a:before {
+.md h4>a:before {
     content: "####";
 }
 
-.md h5 > a:before {
+.md h5>a:before {
     content: "#####";
 }
 
-.md h6 > a:before {
+.md h6>a:before {
     content: "######";
 }
 

@@ -30,5 +30,5 @@ $font-family: $font-family-code;
 
 $lh: 1.5rem; // vertical rhythm
 
-$max-width: 60rem;
-$breakpoint-wide: $max-width + 6rem;
+$max-width: 80ch;
+$breakpoint-wide: $max-width + 4ch;

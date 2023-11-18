@@ -137,8 +137,9 @@ p.sidenote {
 /*** site ***/
 
 .site {
-  max-width: 80ch;
+  max-width: $max-width + 2ch;
   margin: 2ch auto;
+  padding: 1ch;
 }
 
 div.above-post,
