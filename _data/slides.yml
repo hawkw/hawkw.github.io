@@ -1,0 +1,22 @@
+# list of slides to generate links to
+- title: "service-mesh-controllers-in-rust"
+  date: 2022-10-25
+  symlink: https://www.youtube.com/watch?v=ONkWwoJoF3I
+  pdf: "servicemeshcon-10-2022.pdf"
+  size: 3084212
+- title: multi-cluster-failover-with-linkerd
+  date: 2022-07-07
+  symlink: "https://www.youtube.com/watch?v=bJni88lEvXM"
+  pdf: "service-mesh-academy-7-2022.pdf"
+  size: 2363560
+- title: tracing-rustconf
+  date: 2019-08-23
+  symlink: https://www.youtube.com/watch?v=JjItsfqFId
+  pdf: rustconf-8-2019.pdf
+  size: 5129656
+- title: "announcing-tokio-trace"
+  date: 2019-03-13
+  pdf: sf-rust-3-2019.pdf
+  symlink: https://www.youtube.com/watch?v=JjItsfqFIdo
+  size: 3463826
+
