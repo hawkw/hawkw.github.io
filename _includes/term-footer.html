@@ -1,9 +1,6 @@
 <footer class="term">
-    <span class="prompt host"><a href = "{{ site.url }}">elizas.website</a></span>
-    <span class="prompt path">~
-        {% if page.pwd != "" %}
-            {{page.pwd | prepend: '/'}}
-        {% endif%}
-    </span>
+    <span class="prompt host">elizas.website</span>
+    <span class="prompt path">
+        <a href = "/">~</a>{% if page.pwd %}<a href = "/{{page.pwd}}" class="dir">{{page.pwd}}</a>{% endif %}</span>
     <span class="blinking-cursor">_</span>
 </footer>

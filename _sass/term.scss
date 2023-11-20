@@ -117,7 +117,6 @@ a {
                 color: $background;
             }
         }
-
     }
 
     // fake "files"
@@ -170,6 +169,31 @@ a {
         &:after {
             color: $light-gray;
             content: " $ ";
+        }
+        a {
+            color: $link-color;
+            border-bottom: none;
+
+            &.dir:before {
+                content: "/";
+                color: $body-text-color;
+                border-bottom: none;
+            }
+            &.dir:after {
+                content: none;
+
+            }
+
+            &:hover {
+                background-color: $link-color;
+                color: $background;
+
+                &.dir::before {
+                    border-bottom: none;
+                    color: $body-text-color;
+                    background-color: $background;
+                }
+            }
         }
     }
 }
