@@ -6,7 +6,7 @@ cmd: cat about.md
 
 # eliza weisman
 
-Welcome to Eliza's website &mdash; on the Internet!
+Welcome to Eliza's HyperText page on the World Wide Web!
 
 ## About Me
 
