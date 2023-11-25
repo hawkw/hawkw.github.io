@@ -155,13 +155,13 @@
 
 .md ol {
     counter-reset: ol;
+    &>li:before {
+        content: counter(ol) ".";
+        counter-increment: ol;
+        color: $light-gray;
+    }
 }
 
-.md ol>li:before {
-    content: counter(ol) ".";
-    counter-increment: ol;
-    color: $light-gray;
-}
 
 .md blockquote {
     position: relative;
@@ -232,7 +232,22 @@
 .md hr:after {
     content: "* * *";
     text-align: center;
-    position: absolute;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    line-height: $lh;
+    width: 100%;
+    word-wrap: break-word;
+    color: $very-light-gray;
+}
+
+.md footer:before {
+    content: "* * *";
+    text-align: center;
+    display: inline-block;
+    position: relative;
     top: 0;
     left: 0;
     font-size: 1rem;
@@ -250,4 +265,74 @@
 
 .md-ones ol>li:after {
     content: "1.";
+}
+
+/*
+ * markdown-ier footnotes
+ */
+
+ // footnote links in body text
+.md a.footnote {
+    &:before {
+        content: "[^";
+        color: $red;
+    }
+    &:after {
+        content: "]";
+        color: $red
+    }
+    color: $red;
+    border-bottom: none;
+
+    &:hover {
+        background-color: $red;
+        color: $background;
+
+        &::before, &::after {
+            background-color: $red;
+            color: $background;
+        }
+    }
+}
+
+.md a.reversefootnote {
+    color: $red;
+    border-bottom: $red;
+    
+    &:hover {
+        background-color: $red;
+        color: $background;
+
+        &::before, &::after {
+            background-color: $red;
+            color: $background;
+        }
+    }
+}
+
+.md div.footnotes {
+    &::before {
+        content: "* * *";
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 1rem;
+        line-height: $lh;
+        width: 100%;
+        word-wrap: break-word;
+        color: $very-light-gray;
+    }
+
+    ol {
+        &>li {
+            &:before {
+                content: "[^" counter(ol) "]:";
+                counter-increment: ol;
+                color: $light-gray;
+            }
+            padding-left: 6ch;
+        }
+    }
 }
