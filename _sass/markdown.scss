@@ -243,19 +243,19 @@
     color: $very-light-gray;
 }
 
-.md footer:before {
-    content: "* * *";
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    top: 0;
-    left: 0;
-    font-size: 1rem;
-    line-height: $lh;
-    width: 100%;
-    word-wrap: break-word;
-    color: $very-light-gray;
-}
+// .md footer:before {
+//     content: "* * *";
+//     text-align: center;
+//     display: inline-block;
+//     position: relative;
+//     top: 0;
+//     left: 0;
+//     font-size: 1rem;
+//     line-height: $lh;
+//     width: 100%;
+//     word-wrap: break-word;
+//     color: $very-light-gray;
+// }
 
 @-moz-document url-prefix() {
     .md h1 {
@@ -298,7 +298,7 @@
 .md a.reversefootnote {
     color: $red;
     border-bottom: $red;
-    
+
     &:hover {
         background-color: $red;
         color: $background;

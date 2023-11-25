@@ -6,14 +6,18 @@ cmd: cat about.md
 
 # eliza weisman
 
-Welcome to Eliza's HyperText page on the World Wide Web!
+Welcome to Eliza's HyperText page &mdash; on the World Wide Web!
+
+On this World Wide Web site, you can find [things I've written](notes), [talks
+I've presented](slides), [software I've worked on](#code), and [HyperLinks to
+places you can find me on other parts of the Web](#elsewhere).
 
 ## About Me
 
 I'm a [programmer](#code), a computer enthusiast, an occasional
 [artist](/portfolio), and a ["neural oscillator of uncertain
-significance"][oscillator], operating out of California's San Francisco
-Exclusion Zone. I like writing the kind of software a lot of people don't think
+significance"][oscillator], operating out of the San Francisco Exclusion Zone. I
+like writing the kind of software a lot of people don't think
 about too often these days: low-level systems software, operating systems, and
 infrastructure.
 
