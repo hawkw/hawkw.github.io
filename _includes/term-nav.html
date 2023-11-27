@@ -1,5 +1,5 @@
-<span class="prompt host">elizas.website</span>
-<span class="prompt path"><a href = "/">~</a></span> ls
+<!-- term-nav -->
+{% include term-prompt.html cmd='ls' %}
 <nav class="term-grid">
     {% for nav in site.nav %}
     <span>
@@ -8,3 +8,4 @@
     {% endfor %}
 </nav>
 <br />
+<!--/ term-nav -->

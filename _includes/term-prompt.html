@@ -1,0 +1,16 @@
+
+{% comment %}
+    Optional Parameters:
+    * pwd (string) - The current working directory
+    * cmd (string) - The command that was executed
+{% endcomment %}
+<span class="prompt host"><a href = "/">elizas.website</a></span>
+<span class="prompt path">
+        <a href = "/">~</a>{% if include.pwd %}<a href = "/{{include.pwd}}" class="dir">{{include.pwd}}</a>{% endif %}
+</span>
+{% if include.cmd %}
+    {% assign cmd = include.cmd | split: ' ' | first %}
+    {% assign cmd_fmt = cmd | prepend: '<span class="prompt cmd">' | append: '</span>' %}
+    {% assign body = include.cmd | remove_first: cmd %}
+    {{cmd_fmt}}{{body}}
+{% endif %}

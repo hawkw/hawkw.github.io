@@ -3,13 +3,11 @@ layout: common
 ---
 <header class="term">
     {% include term-nav.html %}
-    <span class="prompt host">elizas.website</span>
-    <span class="prompt path"><a href = "/">~</a></span> cd {{page.pwd}}
+    {% assign cd_cmd = page.pwd | prepend: 'cd ' %}
+    {% include term-prompt.html cmd=cd_cmd %}
     <br />
-    <span class="prompt host">elizas.website</span>
-    <span class="prompt path"><a href = "/">~</a>{% if page.pwd %}<a href =
-    "/{{page.pwd}}" class = "dir">{{page.pwd}}</a>{% endif %}</span>
-    {{ page.cmd }}
+    <br />
+    {% include term-prompt.html pwd=page.pwd cmd=page.cmd %}
 </header>
 <main>
     <!-- begin content -->

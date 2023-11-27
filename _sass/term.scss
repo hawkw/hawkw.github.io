@@ -18,7 +18,7 @@
         padding-right: 1ch;
         max-width: $max-width;
         vertical-align: text-top;
-        
+
         &.date {
             white-space: nowrap;
         }
@@ -195,6 +195,10 @@ a {
                 }
             }
         }
+    }
+
+    &.cmd {
+        font-weight: bold;
     }
 }
 

@@ -1,6 +1,6 @@
+<!-- term-footer -->
 <footer class="term">
-    <span class="prompt host">elizas.website</span>
-    <span class="prompt path">
-        <a href = "/">~</a>{% if page.pwd %}<a href = "/{{page.pwd}}" class="dir">{{page.pwd}}</a>{% endif %}</span>
+    {% include term-prompt.html pwd=page.pwd %}
     <span class="blinking-cursor">_</span>
 </footer>
+<!--/ term-footer -->
