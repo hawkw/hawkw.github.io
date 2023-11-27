@@ -15,12 +15,13 @@ $safety-yellow: #EED202;
 // fire engine red
 $fire-red: #CE2029;
 
-// ansi term colors
+// ansi VGA term colors
 $cyan: cyan;
 $blue: blue;
-$purple: purple;
+// VGA magenta
+$purple: #AA00AA;
 $green: green;
-$red: red;
+$red: #ff0000;
 $orange: orange;
 $light-orange: yellow;
 
@@ -35,6 +36,15 @@ $link-color: $intl-orange;
 $dir-color: $intl-orange;
 $file-color: $red;
 $symlink-color: $purple;
+
+.color-intl-orange {
+    color: $intl-orange;
+}
+.color-eng-orange {
+    color: $eng-orange;
+}
+.color-vga-magenta { color: $purple; }
+.color-vga-red { color: $red; }
 
 /***********************************
  *  2. fonts

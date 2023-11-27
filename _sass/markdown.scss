@@ -92,8 +92,6 @@
     >a {
 
         &:before {
-            display: block;
-
             @media screen and (min-width: $breakpoint-wide) {
                 position: absolute;
                 transform: translateX(-100%);
@@ -101,11 +99,13 @@
             }
 
             color: $gray;
+            border-bottom: none;
         }
 
         &:hover::before {
             color: $background;
             background-color: $link-color;
+            border-bottom: none;
         }
     }
 }
@@ -272,39 +272,40 @@
  */
 
  // footnote links in body text
+$footnote-color: $file-color;
 .md a.footnote {
     &:before {
         content: "[^";
-        color: $eng-orange;
+        color: $footnote-color;
     }
     &:after {
         content: "]";
-        color: $eng-orange
+        color: $footnote-color;
     }
-    color: $eng-orange;
+    color: $footnote-color;
     border-bottom: none;
 
     &:hover {
-        background-color: $eng-orange;
+        background-color: $footnote-color;
         color: $background;
 
         &::before, &::after {
-            background-color: $eng-orange;
+            background-color: $footnote-color;
             color: $background;
         }
     }
 }
 
 .md a.reversefootnote {
-    color: $eng-orange;
-    border-bottom: $eng-orange;
+    color: $footnote-color;
+    border-bottom: $footnote-color;
 
     &:hover {
-        background-color: $eng-orange;
+        background-color: $footnote-color;
         color: $background;
 
         &::before, &::after {
-            background-color: $eng-orange;
+            background-color: $footnote-color;
             color: $background;
         }
     }
