@@ -1,7 +1,21 @@
-/**
- * vars
- */
+/*
+    vars
+*/
 
+/***********************************
+ *  1. colors
+ ***********************************/
+
+// international aerospace orange
+$intl-orange: #FF4F00;
+// international engineering orange
+$eng-orange: #BA160C;
+// safety yellow
+$safety-yellow: #EED202;
+// fire engine red
+$fire-red: #CE2029;
+
+// ansi term colors
 $cyan: cyan;
 $blue: blue;
 $purple: purple;
@@ -10,25 +24,30 @@ $red: red;
 $orange: orange;
 $light-orange: yellow;
 
-$very-light-gray: #c5c8c6;
-$light-gray: hsl(0, 0%, 40%);
+// body colors
 $body-text-color: black;
-$dark-gray: #282a2e;
-$very-dark-gray: #1d1f21;
 $background: white;
-$link-color: #FF4F00;
+$gray: hsl(0, 0%, 40%);
+$light-gray: hsl(0, 0%, 75%);
 
-$text-body-gray: #515151;
-$text-light-gray: hsl(0, 0%, 40%);
+// link type colors
+$link-color: $intl-orange;
+$dir-color: $intl-orange;
+$file-color: $red;
+$symlink-color: $purple;
 
-$ultralight-gray: hsl(0, 0%, 50%);
-$text-header-black: #333;
+/***********************************
+ *  2. fonts
+ ***********************************/
 
 $font-size-base: 12pt;
 $font-family-code: "Berkeley Mono", monospace, serif;
 $font-family: $font-family-code;
 
-$lh: 1.5rem; // vertical rhythm
+/***********************************
+ *  3. dimensions
+ ***********************************/
 
+$lh: 1.5rem; // vertical rhythm
 $max-width: 80ch;
 $breakpoint-wide: $max-width + 12ch;

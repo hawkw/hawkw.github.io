@@ -100,7 +100,7 @@
                 padding-right: 0.6rem;
             }
 
-            color: $very-light-gray;
+            color: $gray;
         }
 
         &:hover::before {
@@ -158,7 +158,7 @@
     &>li:before {
         content: counter(ol) ".";
         counter-increment: ol;
-        color: $light-gray;
+        color: $gray;
     }
 }
 
@@ -167,7 +167,7 @@
     position: relative;
     padding-left: 2ch;
     overflow: hidden;
-    color: $light-gray;
+    color: $gray;
 }
 
 .md blockquote:after {
@@ -177,7 +177,7 @@
     top: 0;
     left: 0;
     line-height: $lh;
-    color: $very-light-gray;
+    color: $light-gray;
 }
 
 .md em {
@@ -200,7 +200,7 @@
 }
 
 .md code {
-    color: $light-gray;
+    color: $gray;
     // font-weight: bold;
 }
 
@@ -240,7 +240,7 @@
     line-height: $lh;
     width: 100%;
     word-wrap: break-word;
-    color: $very-light-gray;
+    color: $light-gray;
 }
 
 // .md footer:before {
@@ -254,7 +254,7 @@
 //     line-height: $lh;
 //     width: 100%;
 //     word-wrap: break-word;
-//     color: $very-light-gray;
+//     color: $light-gray;
 // }
 
 @-moz-document url-prefix() {
@@ -275,36 +275,36 @@
 .md a.footnote {
     &:before {
         content: "[^";
-        color: $red;
+        color: $eng-orange;
     }
     &:after {
         content: "]";
-        color: $red
+        color: $eng-orange
     }
-    color: $red;
+    color: $eng-orange;
     border-bottom: none;
 
     &:hover {
-        background-color: $red;
+        background-color: $eng-orange;
         color: $background;
 
         &::before, &::after {
-            background-color: $red;
+            background-color: $eng-orange;
             color: $background;
         }
     }
 }
 
 .md a.reversefootnote {
-    color: $red;
-    border-bottom: $red;
+    color: $eng-orange;
+    border-bottom: $eng-orange;
 
     &:hover {
-        background-color: $red;
+        background-color: $eng-orange;
         color: $background;
 
         &::before, &::after {
-            background-color: $red;
+            background-color: $eng-orange;
             color: $background;
         }
     }
@@ -322,7 +322,7 @@
         line-height: $lh;
         width: 100%;
         word-wrap: break-word;
-        color: $very-light-gray;
+        color: $light-gray;
     }
 
     ol {
@@ -330,7 +330,7 @@
             &:before {
                 content: "[^" counter(ol) "]:";
                 counter-increment: ol;
-                color: $light-gray;
+                color: $gray;
             }
             padding-left: 6ch;
         }

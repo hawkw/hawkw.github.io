@@ -43,7 +43,7 @@
     }
 
     .ls-la {
-        color: $light-gray;
+        color: $gray;
 
         &.author, &.date {
             color: $body-text-color;
@@ -98,7 +98,7 @@ a {
 
     // fake "directories" - printed with a slash after
     &.dir {
-        color: $link-color;
+        color: $dir-color;
         border-bottom: none;
 
         &:after {
@@ -109,7 +109,7 @@ a {
         }
 
         &:hover {
-            background-color: $link-color;
+            background-color: $dir-color;
             color: $background;
 
             &::after {
@@ -121,16 +121,16 @@ a {
 
     // fake "files"
     &.file {
-        color: $red;
+        color: $file-color;
         &:hover {
-            background-color: $red;
+            background-color: $file-color;
             color: $background;
         }
     }
 
     // fake "symlinks"
     &.symlink {
-        color: $purple;
+        color: $symlink-color;
 
         @media only screen and (min-width: $breakpoint-wide) {
             &:after {
@@ -141,7 +141,7 @@ a {
         }
 
         &:hover {
-            background-color: $purple;
+            background-color: $symlink-color;
             color: $background;
 
             &::after {
@@ -160,18 +160,18 @@ a {
 .prompt {
     &.host {
         &:after {
-            color: $light-gray;
+            color: $gray;
             content: " :: ";
         }
     }
 
     &.path {
         &:after {
-            color: $light-gray;
+            color: $gray;
             content: " $ ";
         }
         a {
-            color: $link-color;
+            color: $dir-color;
             border-bottom: none;
 
             &.dir:before {
@@ -185,7 +185,7 @@ a {
             }
 
             &:hover {
-                background-color: $link-color;
+                background-color: $dir-color;
                 color: $background;
 
                 &.dir::before {
