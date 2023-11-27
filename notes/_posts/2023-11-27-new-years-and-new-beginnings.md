@@ -134,9 +134,9 @@ engineers, and how to avoid making their mistakes.
 [values]: https://oxide.computer/principles
 
 [^application]: Which you can learn more about on
-    [this podcast episode](https://oxide.computer/podcasts/oxide-and-friends/1590191)
+    [this podcast episode](https://oxide.computer/podcasts/oxide-and-friends/1590191).
 
-[^java-school]: It was a mediocre Computer Science department...
+[^java-school]: It was, sadly, a Java School...
 
 [^hobby-os]: See [Mycelium](https://mycelium.elizas.website) and, more recently,
     [mnemOS](https://mnemos.dev).
