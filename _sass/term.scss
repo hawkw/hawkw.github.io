@@ -135,7 +135,7 @@ a {
         @media only screen and (min-width: $breakpoint-wide) {
             &:after {
                 content: " -> " attr(href);
-                color: $light-gray;
+                color: $gray;
                 overflow: hidden;
             }
         }
