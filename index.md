@@ -21,9 +21,12 @@ like writing the kind of software a lot of people don't think
 about too often these days: low-level systems software, operating systems, and
 infrastructure.
 
-I'm currently working on open source networking infrastructure for cloud-native
+Professionally, I'm [writing software](/new-years-and-new-beginnings) for [the cloud computer] at [Oxide Computer Company].
+Previously, I worked on open source networking infrastructure for cloud-native
 applications at [buoyant.io](https://buoyant.io).
 
+[the cloud computer]: https://oxide.computer/blog/the-cloud-computer
+[Oxide Computer Company]: https://oxide.computer/
 * * *
 
 ## Code

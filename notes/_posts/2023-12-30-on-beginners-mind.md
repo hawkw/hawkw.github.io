@@ -127,7 +127,7 @@ new thing, with very different
 assumptions](https://onevariable.com/blog/mnemos-moment-1/)...which is a freedom
 afforded by being a pure hobby project. We _have_ ended up being influenced by a
 lot of ideas from throughout the history of computing, like
-[Erlang](https://en.wikipedia.org/wiki/Erlang_(programming_language),
+[Erlang](https://en.wikipedia.org/wiki/Erlang_(programming_language)),
 [microkernels](https://en.wikipedia.org/wiki/Microkernel),
 [Forth](https://onevariable.com/blog/mnemos-moment-2/), et cetera. but a lot of
 these ideas aren't really part of the *current* crop of modern operating
