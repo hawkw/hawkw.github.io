@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "On New Years and New Beginnings"
+author: Eliza Weisman
 ---
 
 > “Five-year goal: Build the biggest computer in the world. One year goal:

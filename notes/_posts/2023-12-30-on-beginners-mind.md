@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "On Beginner's Mind in Software Engineering"
+author: Eliza Weisman
 ---
 
 On a whim, I picked up a copy of the book [_The Creative Act: A Way of
