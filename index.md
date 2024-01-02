@@ -25,6 +25,8 @@ Professionally, I'm [writing software](/new-years-and-new-beginnings) for [the c
 Previously, I worked on open source networking infrastructure for cloud-native
 applications at [buoyant.io](https://buoyant.io).
 
+Outside of work, I like running, being outside, cooking, and writing [weirder, less useful software](#code).
+
 [the cloud computer]: https://oxide.computer/blog/the-cloud-computer
 [Oxide Computer Company]: https://oxide.computer/
 * * *
