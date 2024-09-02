@@ -34,13 +34,15 @@ pwd: slides
 
     {% for item in site.data.slides %}
         {% if item.symlink %}
-            <td class = "term ls-la mobile-hidden">lrwxrwxrwx</td>
-            <td class = "term ls-la mobile-hidden num">1</td>
-            <td class = "term ls-la mobile-hidden author">eliza</td>
-            <td class = "term ls-la mobile-hidden">users</td>
-            <td class = "term ls-la mobile-hidden size">32</td>
-            <td class = "term ls-la date">{{ item.date | date: "%b" }}&nbsp;{{ item.date | date: "%_e%t%Y" }}</td>
-            <td><a class="term-nav symlink" href="{{ item.symlink }}">{{ item.title }}.mp4</a></td>
+            <tr>
+                <td class = "term ls-la mobile-hidden">lrwxrwxrwx</td>
+                <td class = "term ls-la mobile-hidden num">1</td>
+                <td class = "term ls-la mobile-hidden author">eliza</td>
+                <td class = "term ls-la mobile-hidden">users</td>
+                <td class = "term ls-la mobile-hidden size">32</td>
+                <td class = "term ls-la date">{{ item.date | date: "%b" }}&nbsp;{{ item.date | date: "%_e%t%Y" }}</td>
+                <td><a class="term-nav symlink" href="{{ item.symlink }}">{{ item.title }}.{{ item.extension | default: "mp4" }}</a></td>
+            </tr>
         {% endif %}
         {% if item.pdf %}
             <nav class="term">
