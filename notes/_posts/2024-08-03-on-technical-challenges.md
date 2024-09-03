@@ -29,7 +29,7 @@ lock-free programming — and I felt like it was worth sharing more broadly.
 
 ***
 
-## '"what work have you found most technically challenging in your career, and why?"
+## "what work have you found most technically challenging in your career, and why?"
 
 “Technically challenging” is a difficult term, because there’s been a lot of
 work which I’ve found difficult for technical, but not particularly
