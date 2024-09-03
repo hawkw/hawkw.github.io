@@ -5,8 +5,6 @@ categories: rust
 author: Eliza Weisman
 ---
 
-# on technical challenges: lock-free programming
-
 The [Oxide Computer Company](https://oxide.computer/) job application
 process[^1] asks applicants to answer a set of personal questions about their
 career and experiences. I found that the act of writing my answers to these
