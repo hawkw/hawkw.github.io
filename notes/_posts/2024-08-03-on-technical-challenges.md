@@ -117,5 +117,6 @@ Lock-free code I've written, with help from `loom`:
 
 [^1]: Which you can learn more about on [this podcast
     episode](https://oxide.computer/podcasts/oxide-and-friends/1590191)
+
 [^2]: If you’ve done much work with fuzzing or property testing, you probably
     know how this feels…
