@@ -1,3 +1,10 @@
+---
+layout: post
+title: "On Technical Challenges: Lock Free Programming"
+categories: rust
+author: Eliza Weisman
+---
+
 # on technical challenges: lock-free programming
 
 The [Oxide Computer Company](https://oxide.computer/) job application
