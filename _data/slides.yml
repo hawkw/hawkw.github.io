@@ -1,13 +1,21 @@
 # list of slides to generate links to
+- title: "oxide_and_friends-crates_we_love"
+  date: 2025-01-16
+  symlink: https://oxide-and-friends.transistor.fm/episodes/crates-we-love
+- title: "dtrace_conf-two_great_tastes_better_together"
+  date: 2024-12-11
+  symlink: https://www.youtube.com/watch?v=_ApAZ9F_dHI
+  pdf: "dtraceconf-12-2024.pdf"
+  size: 1818133
 - title: "oxide_and_friends-the_saga_of_sagas"
   date: 2024-08-14
-  symlink: https://oxide.computer/podcasts/oxide-and-friends/2043273
+  symlink: https://oxide-and-friends.transistor.fm/episodes/the-saga-of-sagas
   extension: "mp3"
 - title: "oxide_and_friends-mr_nagles_wild_ride"
   date: 2023-10-02
-  symlink: https://oxide.computer/podcasts/oxide-and-friends/1533140
+  symlink: https://oxide-and-friends.transistor.fm/episodes/the-saga-of-sagas
   extension: "mp3"
-- title: "service_mesh_controllers_in_rust"
+- title: "kubecon-service_mesh_controllers_in_rust"
   date: 2022-10-25
   symlink: https://www.youtube.com/watch?v=ONkWwoJoF3I
   pdf: "servicemeshcon-10-2022.pdf"
@@ -17,12 +25,12 @@
   symlink: "https://www.youtube.com/watch?v=bJni88lEvXM"
   pdf: "servicemesh-academy-7-2022.pdf"
   size: 2363560
-- title: tracing_rustconf
+- title: rustconf-tracing
   date: 2019-08-23
   symlink: https://www.youtube.com/watch?v=JjItsfqFId
   pdf: rustconf-8-2019.pdf
   size: 5129656
-- title: "announcing_tokio_trace"
+- title: "sf_rust-announcing_tokio_trace"
   date: 2019-03-13
   pdf: sf-rust-3-2019.pdf
   symlink: https://www.youtube.com/watch?v=JjItsfqFIdo
