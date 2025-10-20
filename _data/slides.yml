@@ -1,4 +1,12 @@
 # list of slides to generate links to
+- title: "oxide_and_friends-when_async_attacks"
+  date: 2025-06-27
+  symlink: https://oxide-and-friends.transistor.fm/episodes/when-async-attacks
+  extension: "mp3"
+- title: "oxide_and_friends-debugger-driven-development"
+  date: 2025-06-16
+  symlink: https://oxide-and-friends.transistor.fm/episodes/debugger-driven-development
+  extension: "mp3"
 - title: "oxide_and_friends-crates_we_love"
   date: 2025-01-16
   symlink: https://oxide-and-friends.transistor.fm/episodes/crates-we-love
