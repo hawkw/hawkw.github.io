@@ -96,3 +96,4 @@ _site/
 
 ### nix + direnv ###
 .direnv
+vendor/
