@@ -9,5 +9,6 @@ gem "github-pages", "~> 227", group: :jekyll_plugins
 # Github Pages plugins
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-github-metadata", "~> 2.13.0"
 end
 
