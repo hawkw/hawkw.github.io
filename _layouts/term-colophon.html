@@ -1,0 +1,20 @@
+---
+layout: common
+---
+<header class="term">
+  {% include term-nav.html %}
+  {% include term-prompt.html pwd=page.pwd cmd=page.cmd %}
+</header>
+<main class="content">
+  <!-- begin content -->
+  {{ content }}
+  <p>
+      Generated from commit
+      <a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}">
+          {{ site.github.build_revision }}</a>
+      on {{ site.time }}.
+      Jekyll v{{ site.github.versions.jekyll }}, Ruby v{{ site.github.versions.ruby }}.
+  </p>
+  <!-- end content -->
+</main>
+{% include term-footer.html %}

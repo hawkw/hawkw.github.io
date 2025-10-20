@@ -1,5 +1,5 @@
 ---
-layout: term
+layout: term-colophon
 title: eliza's website
 cmd: cat colophon.md
 ---
