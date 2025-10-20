@@ -2,13 +2,13 @@
 permalink: "/:title.html"
 
 # Setup
-title:            eliza's website
-url:              https://elizas.website
-baseurl:          /
-author: &default-author
-  name:           Eliza Weisman
-  url:            https://elizas.website
-  email:          eliza@elizas.website
+title: eliza's website
+url: https://elizas.website
+baseurl: /
+author: &default_author
+  name: Eliza Weisman
+  url: https://elizas.website
+  email: eliza@elizas.website
 
 encoding: utf-8
 
@@ -25,32 +25,30 @@ exclude:
   - "vendor"
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: main
-  -
-    scope:
+      author: *default_author
+  - scope:
       path: "notes"
       type: "posts"
     values:
       layout: "post"
-      author: "eliza"
       author: *default_author
-  -
-    scope:
+  - scope:
       path: "etc"
       type: "pages"
     values:
       layout: main
-  -
-    scope:
+      author: *default_author
+  - scope:
       path: "slides"
       type: "pages"
     values:
       layout: main
+      author: *default_author
 
 # plugins: ["jekyll-paginate"]
 
@@ -64,38 +62,38 @@ kramdown:
   toc_levels: 1..4
 
 sass:
-    sass_dir: _sass
-    style: compressed
+  sass_dir: _sass
+  style: compressed
 
 # Navigation
 nav:
-  - name:           "code"
-    href:           "https://github.com/hawkw"
-    kind:           "dir"
+  - name: "code"
+    href: "https://github.com/hawkw"
+    kind: "dir"
   # - name:           "art"
   #   href:           "/portfolio"
   #   kind:           "dir"
-  - name:           "notes"
-    href:           "/notes"
-    kind:           "dir"
-  - name:           "etc"
-    href:           "/etc"
-    kind:           "dir"
-  - name:           "slides"
-    href:           "/slides"
-    kind:           "dir"
-  - name:           "keys"
-    href:           "https://keybase.io/hawk"
-    kind:           "dir"
+  - name: "notes"
+    href: "/notes"
+    kind: "dir"
+  - name: "etc"
+    href: "/etc"
+    kind: "dir"
+  - name: "slides"
+    href: "/slides"
+    kind: "dir"
+  - name: "keys"
+    href: "https://keybase.io/hawk"
+    kind: "dir"
   # - name:           "mail"
   #   href:           "mailto://eliza@elizas.website"
   #   kind:           "exe"
-  - name:           "about.md"
-    href:           "/"
-    kind:           "file"
-  - name:           "colophon.md"
-    href:           "/colophon"
-    kind:           "file"
-  - name:           "résumé.pdf"
-    href:           "/resume.pdf"
-    kind:           "file"
+  - name: "about.md"
+    href: "/"
+    kind: "file"
+  - name: "colophon.md"
+    href: "/colophon"
+    kind: "file"
+  - name: "résumé.pdf"
+    href: "/resume.pdf"
+    kind: "file"
